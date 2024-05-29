@@ -143,7 +143,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="container mx-auto py-20">
+        <section id="about" className="container mx-auto py-20 text-black">
           <h2 className="text-3xl font-bold text-center mb-10">
             About APTICON 2024
           </h2>
@@ -159,7 +159,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="schedule" className="container mx-auto py-20">
+        <section id="schedule" className="container mx-auto py-20 text-black">
           <h2 className="text-3xl font-bold text-center mb-10">
             Conference Schedule
           </h2>
@@ -172,7 +172,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="speakers" className="container mx-auto py-20">
+        <section id="speakers" className="container mx-auto py-20 text-black">
           <h2 className="text-3xl font-bold text-center mb-10">
             Meet Our Speakers
           </h2>
@@ -184,7 +184,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="sponsors" className="container mx-auto py-20">
+        <section id="sponsors" className="container mx-auto py-20 text-black">
           <h2 className="text-3xl font-bold text-center mb-10">Our Sponsors</h2>
           <p className="text-center mb-10">
             We extend our gratitude to our sponsors whose generous support makes
@@ -193,7 +193,10 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="registration" className="container mx-auto py-20">
+        <section
+          id="registration"
+          className="container mx-auto py-20 text-black"
+        >
           <h2 className="text-3xl font-bold text-center mb-10">
             Register for APTICON 2024
           </h2>
@@ -205,7 +208,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="contact" className="container mx-auto py-20">
+        <section id="contact" className="container mx-auto py-20 text-black">
           <h2 className="text-3xl font-bold text-center mb-10">Contact Us</h2>
           <p className="text-center mb-10">
             Have questions or need more information? Get in touch with the
