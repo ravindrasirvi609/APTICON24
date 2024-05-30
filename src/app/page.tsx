@@ -4,12 +4,13 @@ import { SetStateAction, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import Link from "next/link";
+import Timestamps from "@/components/timesstamps";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings1 = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -148,6 +149,10 @@ export default function Home() {
             </Slider>
           </div>
         </section>
+
+        <div className="container mx-auto py-20 px-6">
+          <Timestamps />
+        </div>
 
         <section id="about" className="container mx-auto py-20 px-6 text-black">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
@@ -371,6 +376,216 @@ export default function Home() {
             <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
               <Link href="/registration">Register Now</Link>
             </button>
+          </div>
+        </section>
+
+        <section id="schedule" className="container mx-auto py-20 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
+            Conference Schedule
+          </h2>
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+            Stay updated with the detailed schedule of APTICON 2024. Explore the
+            timeline of keynote sessions, seminars, workshops, and deliberations
+            across various tracks, including Innovations in Pharmacy Education,
+            Bridging Academia and Industry, Enhancing Patient Care, Research and
+            Development in Pharmacy, and more.
+          </p>
+          <div className="max-w-7xl mx-auto p-6 bg-zinc-100 dark:bg-zinc-900 shadow rounded-lg">
+            <div className="flex justify-between items-center mb-6">
+              <div>
+                <p className="text-pink-500 uppercase font-semibold">
+                  Schedule Plan
+                </p>
+                <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+                  Information of <span className="text-pink-500">Event</span>{" "}
+                  Schedules
+                </h1>
+              </div>
+              <button className="bg-green text-white py-2 px-4 rounded-lg">
+                Buy Tickets Now!
+              </button>
+            </div>
+            <div className="flex space-x-4 mb-6">
+              <div className="bg-ochre text-white py-2 px-4 rounded-t-lg">
+                FIRST DAY <br /> 4 April 2024
+              </div>
+              <div className="bg-green text-white py-2 px-4 rounded-t-lg">
+                SECOND DAY <br /> 5 April 2024
+              </div>
+            </div>
+            <div className="bg-white dark:bg-zinc-800 shadow rounded-lg p-6">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b pb-4">
+                  <div>
+                    <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                      Reducing Test Anxiety
+                    </h2>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      By{" "}
+                      <a href="#" className="text-blue-500">
+                        Tom Cruise
+                      </a>{" "}
+                      CEO of EnvyTheme
+                    </p>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      13:00AM - 20:00PM
+                    </p>
+                  </div>
+                  <Image
+                    src="https://via.placeholder.com/50x50"
+                    alt="Speaker"
+                    className="rounded-full"
+                    height={50}
+                    width={50}
+                  />
+                </div>
+                <div className="flex justify-between items-center border-b pb-4">
+                  <div>
+                    <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                      Time Management, Getting A Smart Start, Setting Goals
+                    </h2>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      By{" "}
+                      <a href="#" className="text-blue-500">
+                        Leonardo DiCaprio
+                      </a>{" "}
+                      of USA Inc
+                    </p>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      13:00AM - 20:00PM
+                    </p>
+                  </div>
+                  <div className="flex -space-x-2">
+                    <Image
+                      src="https://via.placeholder.com/50x50"
+                      alt="Speaker"
+                      className="rounded-full"
+                      height={50}
+                      width={50}
+                    />
+                    <Image
+                      src="https://via.placeholder.com/50x50"
+                      alt="Speaker"
+                      className="rounded-full"
+                      height={50}
+                      width={50}
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-between items-center border-b pb-4">
+                  <div>
+                    <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                      Impact Of Mental Health On Academics
+                    </h2>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      By{" "}
+                      <a href="#" className="text-blue-500">
+                        Robert Downey
+                      </a>{" "}
+                      of USA Inc
+                    </p>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      13:00AM - 20:00PM
+                    </p>
+                  </div>
+                  <div className="flex -space-x-2">
+                    <Image
+                      src="https://via.placeholder.com/50x50"
+                      alt="Speaker"
+                      className="rounded-full"
+                      height={50}
+                      width={50}
+                    />
+                    <Image
+                      src="https://via.placeholder.com/50x50"
+                      alt="Speaker"
+                      className="rounded-full"
+                      height={50}
+                      width={50}
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                      Athletic Performance Enhancement
+                    </h2>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      By{" "}
+                      <a href="#" className="text-blue-500">
+                        Brad Pitt
+                      </a>{" "}
+                      of USA Inc
+                    </p>
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      13:00AM - 20:00PM
+                    </p>
+                  </div>
+                  <div className="flex -space-x-2">
+                    <Image
+                      src="https://via.placeholder.com/50x50"
+                      alt="Speaker"
+                      className="rounded-full"
+                      height={50}
+                      width={50}
+                    />
+                    <Image
+                      src="https://via.placeholder.com/50x50"
+                      alt="Speaker"
+                      className="rounded-full"
+                      height={50}
+                      width={50}
+                    />
+                    <Image
+                      src="https://via.placeholder.com/50x50"
+                      alt="Speaker"
+                      className="rounded-full"
+                      height={50}
+                      width={50}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="call-for-papers"
+          className="container mx-auto py-20 px-6 text-black"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
+            Call for Papers
+          </h2>
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+            Share your research, insights, and expertise at APTICON 2024. We
+            invite submissions for oral and poster presentations on topics
+            related to pharmacy education, practice, research, and innovation.
+            Submit your abstracts for consideration and contribute to the
+            advancement of the pharmacy profession.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                Submission Guidelines
+              </h3>
+              <ul className="list-disc list-inside leading-relaxed text-black">
+                <li>Abstracts should be no more than 250 words.</li>
+                <li>Include a title, author names, and affiliations.</li>
+                <li>Specify the presentation format (oral or poster).</li>
+                <li>Submit abstracts by August 15, 2024.</li>
+              </ul>
+            </div>
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                Presentation Topics
+              </h3>
+              <ul className="list-disc list-inside leading-relaxed text-black">
+                <li>Innovations in pharmacy education and practice.</li>
+                <li>Research and development in pharmacy.</li>
+                <li>Enhancing patient care through technology.</li>
+                <li>Regulatory and policy issues in pharmacy.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
