@@ -3,27 +3,19 @@ import Head from "next/head";
 import { SetStateAction, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
-// import banner1 from "/banner1.jpeg";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   beforeChange: (current: any, next: SetStateAction<number>) =>
-  //     setCurrentSlide(next),
-  // };
-
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
   };
 
   return (
@@ -143,45 +135,137 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="container mx-auto py-20 text-black">
-          <h2 className="text-3xl font-bold text-center mb-10">
+        <section id="about" className="container mx-auto py-20 px-6 text-black">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
             About APTICON 2024
           </h2>
-
-          <p className="text-center mb-10">
-            Discover the vision and mission of APTICON 2024. Learn about our
-            goal to revolutionize pharmacy education by bridging the gap between
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+            Discover the vision and mission of APTICON 2024. Our goal is to
+            revolutionize pharmacy education by bridging the gap between
             academia and industry, fostering innovation, enhancing the role of
             pharmacists in patient care, improving teacher and workplace
-            conditions, and refining the regulatory and policy framework. Get
-            insights into our objectives and the impact we aim to create in the
-            healthcare system.
+            conditions, and refining the regulatory and policy framework. Gain
+            insights into our objectives and the profound impact we aim to
+            create in the healthcare system.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                Our Vision
+              </h3>
+              <p className="leading-relaxed text-black">
+                To be a leader in pharmacy education by integrating advanced
+                technologies and innovative practices, ensuring that pharmacists
+                are well-equipped to meet the demands of modern healthcare.
+              </p>
+            </div>
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                Our Mission
+              </h3>
+              <p className="leading-relaxed text-black">
+                To bridge the gap between academia and industry, fostering an
+                environment of collaboration and continuous improvement, with a
+                focus on enhancing patient care and professional development.
+              </p>
+            </div>
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                Objectives
+              </h3>
+              <ul className="list-disc list-inside leading-relaxed text-black">
+                <li>Promote innovation in pharmacy education and practice.</li>
+                <li>Enhance the role of pharmacists in patient care.</li>
+                <li>Improve teacher and workplace conditions.</li>
+                <li>Refine regulatory and policy frameworks.</li>
+              </ul>
+            </div>
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">Impact</h3>
+              <p className="leading-relaxed text-black">
+                APTICON 2024 aims to make a significant impact on the healthcare
+                system by ensuring that pharmacists are well-prepared to
+                contribute effectively to patient care, policy development, and
+                industry advancements.
+              </p>
+            </div>
+          </div>
         </section>
-
-        <section id="schedule" className="container mx-auto py-20 text-black">
-          <h2 className="text-3xl font-bold text-center mb-10">
-            Conference Schedule
-          </h2>
-          <p className="text-center mb-10">
-            Stay updated with the detailed schedule of APTICON 2024. Explore the
-            timeline of keynote sessions, seminars, workshops, and deliberations
-            across various tracks, including Innovations in Pharmacy Education,
-            Bridging Academia and Industry, Enhancing Patient Care, Research and
-            Development in Pharmacy, and more.
-          </p>
-        </section>
-
-        <section id="speakers" className="container mx-auto py-20 text-black">
-          <h2 className="text-3xl font-bold text-center mb-10">
+        <section
+          id="speakers"
+          className="container mx-auto py-20 px-6 text-black"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
             Meet Our Speakers
           </h2>
-          <p className="text-center mb-10">
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             Get to know the esteemed speakers and subject matter experts who
             will be sharing their knowledge and insights at APTICON 2024. Learn
             about their backgrounds, areas of expertise, and the topics they
             will be presenting on.
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <Image
+                src="/user.jpg"
+                alt="Speaker 1"
+                className="w-full h-48 object-cover rounded-t-lg mb-6"
+                height={400}
+                width={400}
+              />
+              <h3 className="text-2xl font-semibold mb-2 text-ochre">
+                Dr. Jane Doe
+              </h3>
+              <p className="text-sm font-semibold mb-4 text-darkBrown">
+                Pharmacy Innovation Expert
+              </p>
+              <p className="leading-relaxed text-black">
+                Dr. Jane Doe has over 20 years of experience in pharmacy
+                innovation and will be discussing the latest trends in pharmacy
+                technology and patient care.
+              </p>
+            </div>
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <Image
+                src="/user.jpg"
+                alt="Speaker 2"
+                className="w-full h-48 object-cover rounded-t-lg mb-6"
+                height={400}
+                width={400}
+              />
+              <h3 className="text-2xl font-semibold mb-2 text-ochre">
+                John Smith
+              </h3>
+              <p className="text-sm font-semibold mb-4 text-darkBrown">
+                Healthcare Policy Analyst
+              </p>
+              <p className="leading-relaxed text-black">
+                John Smith is a renowned healthcare policy analyst who will be
+                presenting on the impact of recent regulatory changes on
+                pharmacy practices.
+              </p>
+            </div>
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <Image
+                src="/user.jpg"
+                alt="Speaker 3"
+                className="w-full h-48 object-cover rounded-t-lg mb-6"
+                height={400}
+                width={400}
+              />
+              <h3 className="text-2xl font-semibold mb-2 text-ochre">
+                Emily Johnson
+              </h3>
+              <p className="text-sm font-semibold mb-4 text-darkBrown">
+                Clinical Pharmacist
+              </p>
+              <p className="leading-relaxed text-black">
+                Emily Johnson, a clinical pharmacist, will share her insights on
+                improving patient outcomes through collaborative care models and
+                advanced clinical practices.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section id="sponsors" className="container mx-auto py-20 text-black">
