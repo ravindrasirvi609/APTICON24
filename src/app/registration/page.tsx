@@ -31,22 +31,22 @@ export default function Registration() {
                 </a>
               </li>
               <li>
-                <a href="/about" className="hover:text-ochre">
+                <a href="/#about" className="hover:text-ochre">
                   About
                 </a>
               </li>
               <li>
-                <a href="/schedule" className="hover:text-ochre">
+                <a href="/#schedule" className="hover:text-ochre">
                   Schedule
                 </a>
               </li>
               <li>
-                <a href="/speakers" className="hover:text-ochre">
+                <a href="/#speakers" className="hover:text-ochre">
                   Speakers
                 </a>
               </li>
               <li>
-                <a href="/sponsors" className="hover:text-ochre">
+                <a href="/#sponsors" className="hover:text-ochre">
                   Sponsors
                 </a>
               </li>
@@ -56,7 +56,7 @@ export default function Registration() {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-ochre">
+                <a href="/#contact" className="hover:text-ochre">
                   Contact
                 </a>
               </li>
