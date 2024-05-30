@@ -50,7 +50,7 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a href="#schedule" className="hover:text-ochre">
+                <a href="schedule" className="hover:text-ochre">
                   Schedule
                 </a>
               </li>
