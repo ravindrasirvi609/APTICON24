@@ -7,6 +7,8 @@ import Link from "next/link";
 import Timestamps from "@/components/timesstamps";
 import Schedule from "@/components/schedule";
 import Sponsors from "@/components/sponsors";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -42,45 +44,7 @@ export default function Home() {
         <meta name="description" content="APTICON 2024 Conference" />
       </Head>
 
-      <header className="bg-black text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">APTICON 2024</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li>
-                <a href="#about" className="hover:text-ochre">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#schedule" className="hover:text-ochre">
-                  Schedule
-                </a>
-              </li>
-              <li>
-                <a href="#speakers" className="hover:text-ochre">
-                  Speakers
-                </a>
-              </li>
-              <li>
-                <a href="#sponsors" className="hover:text-ochre">
-                  Sponsors
-                </a>
-              </li>
-              <li>
-                <a href="#registration" className="hover:text-ochre">
-                  Registration
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-ochre">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main>
         <section>
@@ -378,9 +342,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-black text-white py-4 text-center">
-        <p>&copy; 2024 APTICON. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
