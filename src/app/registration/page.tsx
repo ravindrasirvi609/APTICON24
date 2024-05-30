@@ -1,4 +1,6 @@
 "use client";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import Head from "next/head";
 import {
   AwaitedReactNode,
@@ -20,50 +22,7 @@ export default function Registration() {
         <meta name="description" content="Register for APTICON 2024" />
       </Head>
 
-      <header className="bg-black text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">APTICON 2024</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li>
-                <a href="/" className="hover:text-ochre">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/#about" className="hover:text-ochre">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/#schedule" className="hover:text-ochre">
-                  Schedule
-                </a>
-              </li>
-              <li>
-                <a href="/#speakers" className="hover:text-ochre">
-                  Speakers
-                </a>
-              </li>
-              <li>
-                <a href="/#sponsors" className="hover:text-ochre">
-                  Sponsors
-                </a>
-              </li>
-              <li>
-                <a href="/registration" className="hover:text-ochre">
-                  Registration
-                </a>
-              </li>
-              <li>
-                <a href="/#contact" className="hover:text-ochre">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main>
         <section
@@ -137,9 +96,7 @@ export default function Registration() {
         </section>
       </main>
 
-      <footer className="bg-black text-white py-4 text-center">
-        <p>&copy; 2024 APTICON. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
