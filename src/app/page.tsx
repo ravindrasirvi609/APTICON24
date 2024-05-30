@@ -71,7 +71,7 @@ export default function Home() {
             <Slider {...settings}>
               <div className="slide relative">
                 <Image
-                  src="/banner1.jpeg"
+                  src="/banner1.jpg"
                   alt="Slide 1"
                   className="w-full h-auto"
                   width={1920}
