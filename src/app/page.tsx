@@ -3,15 +3,29 @@ import Head from "next/head";
 import { SetStateAction, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import Link from "next/link";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const settings = {
+  const settings1 = {
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+  };
+
+  const settings2 = {
+    dots: false,
+    lazyLoad: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 2,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
@@ -68,7 +82,7 @@ export default function Home() {
       <main>
         <section>
           <div className="slider-container">
-            <Slider {...settings}>
+            <Slider {...settings1}>
               <div className="slide relative">
                 <Image
                   src="/banner1.jpg"
@@ -269,37 +283,114 @@ export default function Home() {
         </section>
 
         <section id="sponsors" className="container mx-auto py-20 text-black">
-          <h2 className="text-3xl font-bold text-center mb-10">Our Sponsors</h2>
-          <p className="text-center mb-10">
-            We extend our gratitude to our sponsors whose generous support makes
-            APTICON 2024 possible. Discover our sponsors, their contributions,
-            and how they play a crucial role in the success of the conference.
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
+            Our Sponsors
+          </h2>
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+            We extend our sincere gratitude to our sponsors whose generous
+            support makes APTICON 2024 possible. Discover our sponsors, their
+            contributions, and how they play a crucial role in the success of
+            the conference.
           </p>
+          <div className="slider-container">
+            <Slider {...settings2} lazyLoad="ondemand">
+              <div>
+                <Image
+                  src="https://via.placeholder.com/300x200"
+                  alt="Sponsor 1"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div>
+                <Image
+                  src="https://via.placeholder.com/300x200"
+                  alt="Sponsor 2"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div>
+                <Image
+                  src="https://via.placeholder.com/300x200"
+                  alt="Sponsor 3"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div>
+                <Image
+                  src="https://via.placeholder.com/300x200"
+                  alt="Sponsor 4"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div>
+                <Image
+                  src="https://via.placeholder.com/300x200"
+                  alt="Sponsor 5"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div>
+                <Image
+                  src="https://via.placeholder.com/300x200"
+                  alt="Sponsor 6"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div>
+                <Image
+                  src="https://via.placeholder.com/300x200"
+                  alt="Sponsor 7"
+                  width={300}
+                  height={200}
+                />
+              </div>
+            </Slider>
+          </div>
         </section>
 
         <section
           id="registration"
           className="container mx-auto py-20 text-black"
         >
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
             Register for APTICON 2024
           </h2>
-          <p className="text-center mb-10">
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             Secure your spot at APTICON 2024 by registering today. Find out
             about registration fees, deadlines, and the benefits of attending
             the conference. Join us for an enriching experience that promises to
             transform your understanding of pharmacy education and practice.
           </p>
+          <div className="flex justify-center">
+            <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
+              <Link href="/registration">Register Now</Link>
+            </button>
+          </div>
         </section>
 
         <section id="contact" className="container mx-auto py-20 text-black">
-          <h2 className="text-3xl font-bold text-center mb-10">Contact Us</h2>
-          <p className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
+            Contact Us
+          </h2>
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             Have questions or need more information? Get in touch with the
             APTICON 2024 organizing committee. Find our contact details, send us
             an email, or fill out the contact form. We’re here to assist you
             with any inquiries you may have regarding the conference.
           </p>
+          <div className="flex flex-col items-center">
+            <p className="text-lg mb-4">Contact Email: info@apticon2024.com</p>
+            <p className="text-lg mb-4">Phone: +1 (123) 456-7890</p>
+            <p className="text-lg mb-8">
+              Address: 123 Conference Center, City, Country
+            </p>
+          </div>
         </section>
       </main>
 
