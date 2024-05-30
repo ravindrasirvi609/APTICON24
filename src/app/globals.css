@@ -32,3 +32,8 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.slick-arrow {
+  display: none !important;
+}
