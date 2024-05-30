@@ -116,9 +116,6 @@ const Schedule: React.FC = () => {
               Information of <span className="text-ochre">Event</span> Schedules
             </h1>
           </div>
-          <button className="bg-green text-white py-2 px-4 rounded-lg">
-            Buy Tickets Now!
-          </button>
         </div>
         <div className="flex space-x-4 mb-6">
           <button
