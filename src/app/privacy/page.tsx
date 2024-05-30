@@ -1,6 +1,28 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import React from "react";
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  title: "Privacy Policy - APTICON 2024",
+  description:
+    "Learn how APTICON protects your privacy when you use our services. Discover what information we collect, how we use it, and how we share it.",
+  keywords: [
+    "APTICON 2024",
+    "Privacy Policy",
+    "Data Protection",
+    "Data Privacy",
+    "Personal Information",
+  ],
+  openGraph: {
+    title: "Privacy Policy - APTICON 2024",
+    description:
+      "Learn how APTICON protects your privacy when you use our services. Discover what information we collect, how we use it, and how we share it.",
+    images: [{ url: "/banner1.jpg" }],
+    url: "https://www.apticon2024.com/privacy",
+    type: "website",
+  },
+};
 
 const Privacy = () => {
   return (

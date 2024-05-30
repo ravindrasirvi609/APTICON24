@@ -1,6 +1,24 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import React from "react";
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  title: "Refund and Shipping Policy",
+  description: "APTICON 2024 Refund and Shipping Policy",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://apticon2024.com/refund",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@apticon2024",
+    creator: "@apticon2024",
+  },
+};
+
+export { metadata };
 
 const Refund = () => {
   return (

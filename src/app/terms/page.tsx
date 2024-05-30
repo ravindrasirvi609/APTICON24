@@ -1,6 +1,22 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import React from "react";
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  title: "Terms and Conditions",
+  description: "APTICON 2024 Terms and Conditions",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://apticon2024.com/terms",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@apticon2024",
+    creator: "@apticon2024",
+  },
+};
 
 const Terms = () => {
   return (

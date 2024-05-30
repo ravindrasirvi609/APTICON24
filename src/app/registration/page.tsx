@@ -1,6 +1,7 @@
 "use client";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { Metadata } from "next";
 import Head from "next/head";
 import {
   AwaitedReactNode,
@@ -12,6 +13,29 @@ import {
   useState,
 } from "react";
 
+const metadata: Metadata = {
+  title: "Registration - APTICON 2024",
+  description:
+    "Register for APTICON 2024 to secure your spot at this prestigious pharmacy conference held on September 27-28, 2024, in Bhubaneswar, Odisha. Discover registration fees, deadlines, and benefits of attending.",
+  keywords: [
+    "APTICON 2024",
+    "Registration",
+    "Pharmacy Conference",
+    "Bhubaneswar",
+    "Odisha",
+    "Pharmacy Education",
+    "Conference Registration",
+  ],
+  openGraph: {
+    title: "Registration - APTICON 2024",
+    description:
+      "Register for APTICON 2024 to secure your spot at this prestigious pharmacy conference held on September 27-28, 2024, in Bhubaneswar, Odisha.",
+    images: [{ url: "/banner1.jpg" }],
+    url: "https://www.apticon2024.com/registration",
+    type: "website",
+  },
+};
+
 export default function Registration() {
   const [hoveredPlan, setHoveredPlan] = useState("");
 
@@ -19,7 +43,33 @@ export default function Registration() {
     <div className="bg-white">
       <Head>
         <title>Registration - APTICON 2024</title>
-        <meta name="description" content="Register for APTICON 2024" />
+        <meta
+          name="description"
+          content="Register for APTICON 2024 to secure your spot at this prestigious pharmacy conference held on September 27-28, 2024, in Bhubaneswar, Odisha. Discover registration fees, deadlines, and benefits of attending."
+        />
+        <meta
+          name="keywords"
+          content="APTICON 2024, Registration, Pharmacy Conference, Bhubaneswar, Odisha, Pharmacy Education, Conference Registration"
+        />
+        <meta name="author" content="APTICON Organizing Committee" />
+        <meta property="og:title" content="Registration - APTICON 2024" />
+        <meta
+          property="og:description"
+          content="Register for APTICON 2024 to secure your spot at this prestigious pharmacy conference held on September 27-28, 2024, in Bhubaneswar, Odisha."
+        />
+        <meta property="og:image" content="/banner1.jpg" />
+        <meta
+          property="og:url"
+          content="https://www.apticon2024.com/registration"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Registration - APTICON 2024" />
+        <meta
+          name="twitter:description"
+          content="Register for APTICON 2024 to secure your spot at this prestigious pharmacy conference held on September 27-28, 2024, in Bhubaneswar, Odisha."
+        />
+        <meta name="twitter:image" content="/banner1.jpg" />
       </Head>
 
       <Header />

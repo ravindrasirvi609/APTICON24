@@ -11,8 +11,6 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const settings1 = {
     dots: false,
     infinite: true,
@@ -40,8 +38,38 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Head>
-        <title>APTICON 2024</title>
+        <title>APTICON 2024 - Transforming Pharmacy Education</title>
         <meta name="description" content="APTICON 2024 Conference" />
+        <meta
+          name="description"
+          content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
+        />
+        <meta
+          name="keywords"
+          content="APTICON 2024, Pharmacy Conference, Bhubaneswar, Odisha, Pharmacy Education, Submit Abstract, Register Now"
+        />
+        <meta name="author" content="APTICON Organizing Committee" />
+        <meta
+          property="og:title"
+          content="APTICON 2024 - Transforming Pharmacy Education"
+        />
+        <meta
+          property="og:description"
+          content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
+        />
+        <meta property="og:image" content="/banner1.jpg" />
+        <meta property="og:url" content="https://www.apticon2024.com" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="APTICON 2024 - Transforming Pharmacy Education"
+        />
+        <meta
+          name="twitter:description"
+          content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
+        />
+        <meta name="twitter:image" content="/banner1.jpg" />
       </Head>
 
       <Header />
