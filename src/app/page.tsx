@@ -58,22 +58,26 @@ export default function Home() {
                   width={1920}
                   height={1080}
                 />
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10">
-                  <h2 className="text-4xl font-bold mb-4">APTICON 2024</h2>
-                  <p className="text-xl mb-4">
+                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10 transition-transform duration-300 ease-in-out hover:scale-105">
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                    APTICON 2024
+                  </h2>
+                  <p className="text-lg md:text-2xl mb-4">
                     Join us on September 27-28, 2024
                   </p>
-                  <p className="text-lg mb-4">Location: Bhubaneswar, Odisha</p>
+                  <p className="text-md md:text-xl mb-4">
+                    Location: Bhubaneswar, Odisha
+                  </p>
                   <div className="flex space-x-4">
                     <a
                       href="#registration"
-                      className="bg-ochre px-4 py-2 rounded text-white"
+                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
                       Register Now
                     </a>
                     <a
                       href="#call-for-papers"
-                      className="bg-ochre px-4 py-2 rounded text-white"
+                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
                       Submit Abstract
                     </a>
@@ -88,24 +92,26 @@ export default function Home() {
                   width={1920}
                   height={1080}
                 />
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10">
-                  <h2 className="text-4xl font-bold mb-4">
+                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10 transition-transform duration-300 ease-in-out hover:scale-105">
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4">
                     Transforming Pharmacy Education
                   </h2>
-                  <p className="text-xl mb-4">Theme: Beyond the Counter</p>
-                  <p className="text-lg mb-4">
+                  <p className="text-lg md:text-2xl mb-4">
+                    Theme: Beyond the Counter
+                  </p>
+                  <p className="text-md md:text-xl mb-4">
                     Join industry experts and educators
                   </p>
                   <div className="flex space-x-4">
                     <a
                       href="#registration"
-                      className="bg-ochre px-4 py-2 rounded text-white"
+                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
                       Register Now
                     </a>
                     <a
                       href="#call-for-papers"
-                      className="bg-ochre px-4 py-2 rounded text-white"
+                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
                       Submit Abstract
                     </a>
