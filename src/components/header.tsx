@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons for menu toggle
 
@@ -10,10 +11,15 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-black text-white p-4">
+    <header className="bg-black text-white px-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">APTICON 2024</h1>
-        {/* Mobile Menu Button */}
+        <Image
+          src="/APTICON.png"
+          alt="APTICON 2024"
+          className="cursor-pointer"
+          width={160}
+          height={40}
+        />
         <button
           className="block lg:hidden focus:outline-none"
           onClick={toggleMenu}
