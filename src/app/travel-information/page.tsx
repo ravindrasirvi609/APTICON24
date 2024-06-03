@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/image";
 import React from "react";
@@ -83,6 +84,7 @@ const TravelInformation = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
