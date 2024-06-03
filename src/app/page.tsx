@@ -173,6 +173,11 @@ export default function Home() {
             insights into our objectives and the profound impact we aim to
             create in the healthcare system.
           </p>
+          <div className="flex justify-center m-4">
+            <button className="bg-ochre text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
+              <Link href="/loc">Local Organizing Committee </Link>
+            </button>
+          </div>{" "}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
