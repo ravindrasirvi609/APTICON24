@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons for menu toggle
 
@@ -11,15 +12,18 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-black text-white px-4">
+    <header className="bg-white text-black px-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Image
-          src="/APTICON.png"
-          alt="APTICON 2024"
-          className="cursor-pointer"
-          width={160}
-          height={40}
-        />
+        <Link href={"/"}>
+          <Image
+            src="/APTICON.png"
+            alt="APTICON 2024"
+            className="cursor-pointer"
+            width={160}
+            height={40}
+          />
+        </Link>
+
         <button
           className="block lg:hidden focus:outline-none"
           onClick={toggleMenu}
@@ -43,7 +47,7 @@ const Header: React.FC = () => {
                 About
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/#schedule" className="hover:text-ochre">
                 Schedule
               </a>
@@ -57,7 +61,7 @@ const Header: React.FC = () => {
               <a href="/#sponsors" className="hover:text-ochre">
                 Sponsors
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="/registration" className="hover:text-ochre">
                 Registration
@@ -90,7 +94,7 @@ const Header: React.FC = () => {
                 About
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/#schedule" className="hover:text-ochre">
                 Schedule
               </a>
@@ -104,7 +108,7 @@ const Header: React.FC = () => {
               <a href="/#sponsors" className="hover:text-ochre">
                 Sponsors
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="/registration" className="hover:text-ochre">
                 Registration

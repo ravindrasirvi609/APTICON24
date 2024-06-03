@@ -1,6 +1,5 @@
 "use client";
 import Head from "next/head";
-import { SetStateAction, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import Link from "next/link";
@@ -17,8 +16,8 @@ export default function Home() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 5000,
+    autoplaySpeed: 5000,
     cssEase: "linear",
   };
 
@@ -30,13 +29,13 @@ export default function Home() {
     slidesToScroll: 1,
     initialSlide: 2,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 4000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       <Head>
         <title>APTICON 2024 - Transforming Pharmacy Education</title>
         <meta name="description" content="APTICON 2024 Conference" />
@@ -75,79 +74,145 @@ export default function Home() {
       <Header />
 
       <main>
-        <section>
-          <div className="slider-container">
+        <section className="overflow-hidden">
+          <div className="relative slider-container overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10">
+              <Image
+                src="/APTICON.png"
+                alt="APTICON 2024"
+                className="bg-white"
+                height={270}
+                width={270}
+              />
+              <p className="text-lg md:text-2xl mb-4">
+                Join us on September 27-28, 2024
+              </p>
+              <p className="text-md md:text-xl mb-4">
+                Location: Bhubaneswar, Odisha
+              </p>
+              <div className="flex space-x-4">
+                <a
+                  href="#registration"
+                  className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
+                >
+                  Register Now
+                </a>
+                <a
+                  href="#call-for-papers"
+                  className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
+                >
+                  Submit Abstract
+                </a>
+              </div>
+            </div>
             <Slider {...settings1}>
-              <div className="slide relative">
+              <div className="slide">
                 <Image
-                  src="/banner1.jpg"
+                  src="/new/1.png"
                   alt="Slide 1"
                   className="w-full h-auto"
-                  width={1920}
-                  height={1080}
+                  width={1620}
+                  height={880}
                 />
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10 transition-transform duration-300 ease-in-out hover:scale-105">
-                  <Image
-                    src="/APTICON.png"
-                    alt="APTICON 2024"
-                    height={270}
-                    width={270}
-                  />
-                  <p className="text-lg md:text-2xl mb-4">
-                    Join us on September 27-28, 2024
-                  </p>
-                  <p className="text-md md:text-xl mb-4">
-                    Location: Bhubaneswar, Odisha
-                  </p>
-                  <div className="flex space-x-4">
-                    <a
-                      href="#registration"
-                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    >
-                      Register Now
-                    </a>
-                    <a
-                      href="#call-for-papers"
-                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    >
-                      Submit Abstract
-                    </a>
-                  </div>
-                </div>
               </div>
-              <div className="slide relative">
+              <div className="slide">
                 <Image
-                  src="/banner2.jpeg"
+                  src="/new/2.png"
                   alt="Slide 2"
                   className="w-full h-auto"
-                  width={1920}
-                  height={1080}
+                  width={1620}
+                  height={880}
                 />
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10 transition-transform duration-300 ease-in-out hover:scale-105">
-                  <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                    Transforming Pharmacy Education
-                  </h2>
-                  <p className="text-lg md:text-2xl mb-4">
-                    Theme: Beyond the Counter
-                  </p>
-                  <p className="text-md md:text-xl mb-4">
-                    Join industry experts and educators
-                  </p>
-                  <div className="flex space-x-4">
-                    <a
-                      href="#registration"
-                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    >
-                      Register Now
-                    </a>
-                    <a
-                      href="#call-for-papers"
-                      className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    >
-                      Submit Abstract
-                    </a>
-                  </div>
-                </div>
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/3.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/4.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/5.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/6.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/7.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/8.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/9.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/10.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/11.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
+              </div>
+              <div className="slide">
+                <Image
+                  src="/new/12.png"
+                  alt="Slide 2"
+                  className="w-full h-auto"
+                  width={1620}
+                  height={880}
+                />
               </div>
             </Slider>
           </div>
@@ -170,11 +235,11 @@ export default function Home() {
             insights into our objectives and the profound impact we aim to
             create in the healthcare system.
           </p>
-          <div className="flex justify-center m-4">
+          {/* <div className="flex justify-center m-4">
             <button className="bg-ochre text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
               <Link href="/loc">Local Organizing Committee </Link>
             </button>
-          </div>{" "}
+          </div>{" "} */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
@@ -218,7 +283,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
+        {/* <section
           id="speakers"
           className="container mx-auto py-20 px-6 text-black"
         >
@@ -293,8 +358,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
-
+        </section> */}
+        {/* 
         <div id="schedule" className="container mx-auto py-20">
           <Schedule />
         </div>
@@ -302,7 +367,7 @@ export default function Home() {
         <section id="sponsors" className="container mx-auto py-20 px-6">
           {" "}
           <Sponsors />
-        </section>
+        </section> */}
 
         <section
           id="registration"
