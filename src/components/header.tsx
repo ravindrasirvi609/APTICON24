@@ -78,7 +78,7 @@ const Header: React.FC = () => {
       </div>
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="lg:hidden mt-4">
+        <nav className="lg:hidden mt-4 pb-4">
           <ul className="flex flex-col space-y-4">
             <li>
               <a href="/" className="hover:text-ochre">
