@@ -28,12 +28,7 @@ const TravelInformation = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image
-                src="https://via.placeholder.com/500x300"
-                alt="Place 1"
-                width={500}
-                height={300}
-              />
+              <Image src="/new/1.png" alt="Place 1" width={500} height={300} />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 1
@@ -42,12 +37,7 @@ const TravelInformation = () => {
           </div>
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image
-                src="https://via.placeholder.com/500x300"
-                alt="Place 2"
-                width={500}
-                height={300}
-              />
+              <Image src="/new/2.png" alt="Place 2" width={500} height={300} />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 2
@@ -56,12 +46,7 @@ const TravelInformation = () => {
           </div>
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image
-                src="https://via.placeholder.com/500x300"
-                alt="Place 3"
-                width={500}
-                height={300}
-              />
+              <Image src="/new/3.png" alt="Place 3" width={500} height={300} />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 3
@@ -70,12 +55,79 @@ const TravelInformation = () => {
           </div>
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image
-                src="https://via.placeholder.com/500x300"
-                alt="Place 4"
-                width={500}
-                height={300}
-              />
+              <Image src="/new/4.png" alt="Place 4" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 4
+            </h3>
+            <p className="text-green">A brief description of Place 4.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/5.png" alt="Place 1" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 1
+            </h3>
+            <p className="text-green">A brief description of Place 1.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/6.png" alt="Place 2" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 2
+            </h3>
+            <p className="text-green">A brief description of Place 2.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/7.png" alt="Place 3" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 3
+            </h3>
+            <p className="text-green">A brief description of Place 3.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/8.png" alt="Place 4" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 4
+            </h3>
+            <p className="text-green">A brief description of Place 4.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/9.png" alt="Place 1" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 1
+            </h3>
+            <p className="text-green">A brief description of Place 1.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/10.png" alt="Place 2" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 2
+            </h3>
+            <p className="text-green">A brief description of Place 2.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/11.png" alt="Place 3" width={500} height={300} />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+              Place 3
+            </h3>
+            <p className="text-green">A brief description of Place 3.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-full h-64 mx-auto  overflow-hidden">
+              <Image src="/new/12.png" alt="Place 4" width={500} height={300} />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 4
