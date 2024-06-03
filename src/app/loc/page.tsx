@@ -44,7 +44,7 @@ const Loc = () => {
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Dr. S. P. Dhanabal
             </h3>
-            <p className="text-grey">Convener</p>
+            <p className="text-green">Convener</p>
           </div>
           <div className="text-center">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -58,7 +58,7 @@ const Loc = () => {
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Dr. R. Kalirajan
             </h3>
-            <p className="text-grey">Organising Secretary</p>
+            <p className="text-green">Organising Secretary</p>
           </div>
           <div className="text-center">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -73,8 +73,8 @@ const Loc = () => {
               Dr. S. Jubie
             </h3>
             <p className="text-ochre">Chairman</p>
-            <p className="text-grey">Scientific Committee (Presentations)</p>
-            <p className="text-grey">Cell: 9894618588</p>
+            <p className="text-green">Scientific Committee (Presentations)</p>
+            <p className="text-green">Cell: 9894618588</p>
           </div>
           <div className="text-center">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -89,8 +89,8 @@ const Loc = () => {
               Dr. B Gowramma
             </h3>
             <p className="text-ochre">Chairman</p>
-            <p className="text-grey">Registration Committee</p>
-            <p className="text-grey">Cell: 9442111172</p>
+            <p className="text-green">Registration Committee</p>
+            <p className="text-green">Cell: 9442111172</p>
           </div>
           <div className="text-center">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -105,8 +105,10 @@ const Loc = () => {
               Dr. S. Gomathy
             </h3>
             <p className="text-ochre">Chairman</p>
-            <p className="text-grey">Scientific Committee (Plenary sessions)</p>
-            <p className="text-grey">Cell: 9486433876</p>
+            <p className="text-green">
+              Scientific Committee (Plenary sessions)
+            </p>
+            <p className="text-green">Cell: 9486433876</p>
           </div>
           <div className="text-center">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -121,8 +123,8 @@ const Loc = () => {
               Dr. T. Durai A. K.
             </h3>
             <p className="text-ochre">Chairman</p>
-            <p className="text-grey">Hospitality / Catering Committee</p>
-            <p className="text-grey">Cell: 9866852707</p>
+            <p className="text-green">Hospitality / Catering Committee</p>
+            <p className="text-green">Cell: 9866852707</p>
           </div>
           <div className="text-center">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -137,10 +139,10 @@ const Loc = () => {
               Dr. Gomathi S.
             </h3>
             <p className="text-ochre">Chairman</p>
-            <p className="text-grey">
+            <p className="text-green">
               Stage Committee (Inauguration & Valedictory Function)
             </p>
-            <p className="text-grey">Cell: 9790095279</p>
+            <p className="text-green">Cell: 9790095279</p>
           </div>
           <div className="text-center">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -155,8 +157,8 @@ const Loc = () => {
               Dr. Srikanth J.
             </h3>
             <p className="text-ochre">Chairman</p>
-            <p className="text-grey">Accommodation / Transport Committee</p>
-            <p className="text-grey">Cell: 9393011114</p>
+            <p className="text-green">Accommodation / Transport Committee</p>
+            <p className="text-green">Cell: 9393011114</p>
           </div>
         </div>
       </div>

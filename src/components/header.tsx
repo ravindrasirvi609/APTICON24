@@ -68,6 +68,11 @@ const Header: React.FC = () => {
                 Contact
               </a>
             </li>
+            <li>
+              <a href="/travel-information" className="hover:text-ochre">
+                Travel places
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -108,6 +113,11 @@ const Header: React.FC = () => {
             <li>
               <a href="/#contact" className="hover:text-ochre">
                 Contact
+              </a>
+            </li>
+            <li>
+              <a href="/travel-information" className="hover:text-ochre">
+                Travel places
               </a>
             </li>
           </ul>

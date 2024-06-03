@@ -29,58 +29,58 @@ const TravelInformation = () => {
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
               <Image
-                src="https://via.placeholder.com/200X200"
+                src="https://via.placeholder.com/500x300"
                 alt="Place 1"
-                layout="fill"
-                objectFit="cover"
+                width={500}
+                height={300}
               />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 1
             </h3>
-            <p className="text-grey">A brief description of Place 1.</p>
+            <p className="text-green">A brief description of Place 1.</p>
           </div>
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
               <Image
-                src="https://via.placeholder.com/200X200"
+                src="https://via.placeholder.com/500x300"
                 alt="Place 2"
-                layout="fill"
-                objectFit="cover"
+                width={500}
+                height={300}
               />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 2
             </h3>
-            <p className="text-grey">A brief description of Place 2.</p>
+            <p className="text-green">A brief description of Place 2.</p>
           </div>
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
               <Image
-                src="https://via.placeholder.com/200X200"
+                src="https://via.placeholder.com/500x300"
                 alt="Place 3"
-                layout="fill"
-                objectFit="cover"
+                width={500}
+                height={300}
               />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 3
             </h3>
-            <p className="text-grey">A brief description of Place 3.</p>
+            <p className="text-green">A brief description of Place 3.</p>
           </div>
           <div className="text-center">
             <div className="w-full h-64 mx-auto  overflow-hidden">
               <Image
-                src="https://via.placeholder.com/200X200"
+                src="https://via.placeholder.com/500x300"
                 alt="Place 4"
-                layout="fill"
-                objectFit="cover"
+                width={500}
+                height={300}
               />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-darkBrown">
               Place 4
             </h3>
-            <p className="text-grey">A brief description of Place 4.</p>
+            <p className="text-green">A brief description of Place 4.</p>
           </div>
         </div>
       </div>
