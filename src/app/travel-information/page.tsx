@@ -1,9 +1,91 @@
+"use client";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Modal from "react-modal";
 
 const TravelInformation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedPlace, setSelectedPlace] = useState({
+    src: "",
+    alt: "",
+    description: "",
+  });
+
+  const handleImageClick = (place: any) => {
+    setSelectedPlace(place);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedPlace({ src: "", alt: "", description: "" });
+  };
+
+  const places = [
+    {
+      src: "/new/1.png",
+      alt: "Place 1",
+      description: "A brief description of Place 1.",
+    },
+    {
+      src: "/new/2.png",
+      alt: "Place 2",
+      description: "A brief description of Place 2.",
+    },
+    {
+      src: "/new/3.png",
+      alt: "Place 3",
+      description: "A brief description of Place 3.",
+    },
+    {
+      src: "/new/4.png",
+      alt: "Place 4",
+      description: "A brief description of Place 4.",
+    },
+    {
+      src: "/new/5.png",
+      alt: "Place 1",
+      description: "A brief description of Place 1.",
+    },
+    {
+      src: "/new/6.png",
+      alt: "Place 2",
+      description: "A brief description of Place 2.",
+    },
+    {
+      src: "/new/7.png",
+      alt: "Place 3",
+      description: "A brief description of Place 3.",
+    },
+    {
+      src: "/new/8.png",
+      alt: "Place 4",
+      description: "A brief description of Place 4.",
+    },
+    {
+      src: "/new/9.png",
+      alt: "Place 1",
+      description: "A brief description of Place 1.",
+    },
+    {
+      src: "/new/10.png",
+      alt: "Place 2",
+      description: "A brief description of Place 2.",
+    },
+    {
+      src: "/new/11.png",
+      alt: "Place 3",
+      description: "A brief description of Place 3.",
+    },
+    {
+      src: "/new/12.png",
+      alt: "Place 4",
+      description: "A brief description of Place 4.",
+    },
+  ];
+
   return (
     <div>
       <Header />
@@ -26,116 +108,59 @@ const TravelInformation = () => {
           <h2 className="text-2xl font-bold text-darkBrown">Places to Visit</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/1.png" alt="Place 1" width={500} height={300} />
+          {places.map((place, index) => (
+            <div className="text-center" key={index}>
+              <div
+                className="w-full h-64 mx-auto overflow-hidden cursor-pointer"
+                onClick={() => handleImageClick(place)}
+              >
+                <Image
+                  src={place.src}
+                  alt={place.alt}
+                  width={500}
+                  height={300}
+                />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-darkBrown">
+                {place.alt}
+              </h3>
+              <p className="text-green">{place.description}</p>
             </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 1
-            </h3>
-            <p className="text-green">A brief description of Place 1.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/2.png" alt="Place 2" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 2
-            </h3>
-            <p className="text-green">A brief description of Place 2.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/3.png" alt="Place 3" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 3
-            </h3>
-            <p className="text-green">A brief description of Place 3.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/4.png" alt="Place 4" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 4
-            </h3>
-            <p className="text-green">A brief description of Place 4.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/5.png" alt="Place 1" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 1
-            </h3>
-            <p className="text-green">A brief description of Place 1.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/6.png" alt="Place 2" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 2
-            </h3>
-            <p className="text-green">A brief description of Place 2.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/7.png" alt="Place 3" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 3
-            </h3>
-            <p className="text-green">A brief description of Place 3.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/8.png" alt="Place 4" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 4
-            </h3>
-            <p className="text-green">A brief description of Place 4.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/9.png" alt="Place 1" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 1
-            </h3>
-            <p className="text-green">A brief description of Place 1.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/10.png" alt="Place 2" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 2
-            </h3>
-            <p className="text-green">A brief description of Place 2.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/11.png" alt="Place 3" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 3
-            </h3>
-            <p className="text-green">A brief description of Place 3.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-full h-64 mx-auto  overflow-hidden">
-              <Image src="/new/12.png" alt="Place 4" width={500} height={300} />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-darkBrown">
-              Place 4
-            </h3>
-            <p className="text-green">A brief description of Place 4.</p>
-          </div>
+          ))}
         </div>
       </div>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        contentLabel="Image Modal"
+        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
+      >
+        <div className="p-4 rounded flex flex-col">
+          <div className="self-end">
+            <button
+              onClick={closeModal}
+              className="mb-4 bg-red-500 text-black bg-white px-4 py-2 rounded"
+            >
+              Close
+            </button>
+          </div>
+          <h3 className="text-lg font-bold text-white">{selectedPlace.alt}</h3>
+          <p className="text-white font-medium">{selectedPlace.description}</p>
+          <div className="w-full h-96">
+            {selectedPlace.src && (
+              <Image
+                src={selectedPlace.src}
+                alt={selectedPlace.alt}
+                layout="responsive"
+                width={1000}
+                height={800}
+                className="max-w-full h-auto"
+              />
+            )}
+          </div>
+        </div>
+      </Modal>
+
       <Footer />
     </div>
   );
