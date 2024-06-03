@@ -87,14 +87,11 @@ export default function Home() {
                   height={1080}
                 />
                 <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10 transition-transform duration-300 ease-in-out hover:scale-105">
-                  {/* <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                    APTICON 2024
-                  </h2> */}
                   <Image
                     src="/APTICON.png"
                     alt="APTICON 2024"
-                    width={400}
-                    height={400}
+                    height={270}
+                    width={270}
                   />
                   <p className="text-lg md:text-2xl mb-4">
                     Join us on September 27-28, 2024
