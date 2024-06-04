@@ -76,144 +76,66 @@ export default function Home() {
       <main>
         <section className="overflow-hidden">
           <div className="relative slider-container overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white z-10">
-              <Image
-                src="/APTICON.png"
-                alt="APTICON 2024"
-                className="bg-white"
-                height={270}
-                width={270}
-              />
-              <p className="text-lg md:text-2xl mb-4">
-                Join us on September 27-28, 2024
-              </p>
-              <p className="text-md md:text-xl mb-4">
-                Location: Bhubaneswar, Odisha
-              </p>
-              <div className="flex space-x-4">
-                <a
-                  href="#registration"
-                  className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
-                >
-                  Register Now
-                </a>
-                <a
-                  href="#call-for-papers"
-                  className="bg-ochre px-4 py-2 rounded text-white transition-transform duration-300 ease-in-out transform hover:scale-110"
-                >
-                  Submit Abstract
-                </a>
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 text-white z-10 flex flex-col items-center justify-center p-4 lg:items-start lg:justify-start">
+              <div className="absolute top-20 left-0 lg:top-48 lg:left-48 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4">
+                <Image
+                  src="/APTICON.png"
+                  alt="APTICON 2024"
+                  className="bg-white mb-4"
+                  height={150}
+                  width={150}
+                  sizes="(max-width: 640px) 100px, (max-width: 768px) 150px, 270px"
+                />
+                <div className="text-center lg:text-left">
+                  <p className="text-sm md:text-lg lg:text-2xl mb-4">
+                    Join us on September 27-28, 2024
+                  </p>
+                  <p className="text-xs md:text-md lg:text-xl mb-4">
+                    Location: Bhubaneswar, Odisha
+                  </p>
+                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+                    <a
+                      href="#registration"
+                      className="bg-ochre px-4 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
+                    >
+                      Register Now
+                    </a>
+                    <a
+                      href="#call-for-papers"
+                      className="bg-ochre px-4 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
+                    >
+                      Submit Abstract
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <Slider {...settings1}>
-              <div className="slide">
-                <Image
-                  src="/new/1.png"
-                  alt="Slide 1"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/2.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/3.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/4.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/5.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/6.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/7.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/8.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/9.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/10.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/11.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
-              <div className="slide">
-                <Image
-                  src="/new/12.png"
-                  alt="Slide 2"
-                  className="w-full h-auto"
-                  width={1620}
-                  height={880}
-                />
-              </div>
+              {[
+                { src: "/new/1.png", alt: "Slide 1" },
+                { src: "/new/2.png", alt: "Slide 2" },
+                { src: "/new/3.png", alt: "Slide 3" },
+                { src: "/new/4.png", alt: "Slide 4" },
+                { src: "/new/5.png", alt: "Slide 5" },
+                { src: "/new/6.png", alt: "Slide 6" },
+                { src: "/new/7.png", alt: "Slide 7" },
+                { src: "/new/8.png", alt: "Slide 8" },
+                { src: "/new/9.png", alt: "Slide 9" },
+                { src: "/new/10.png", alt: "Slide 10" },
+                { src: "/new/11.png", alt: "Slide 11" },
+                { src: "/new/12.png", alt: "Slide 12" },
+              ].map((slide, index) => (
+                <div key={index} className="slide">
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    className="w-full h-auto"
+                    width={1620}
+                    height={880}
+                    layout="responsive"
+                  />
+                </div>
+              ))}
             </Slider>
           </div>
         </section>
