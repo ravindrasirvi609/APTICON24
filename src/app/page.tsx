@@ -102,7 +102,7 @@ export default function Home() {
                     </a>
                     <a
                       href="#call-for-papers"
-                      className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
+                      className="bg-green px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
                       Submit Abstract
                     </a>

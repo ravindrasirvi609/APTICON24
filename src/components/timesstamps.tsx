@@ -26,12 +26,21 @@ const calculateTimeLeft = () => {
 };
 
 const Timestamps: React.FC = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<{
+    days?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
+  }>({});
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    // Calculate time left only on the client side
+    const calculateAndSetTimeLeft = () => {
       setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    };
+
+    calculateAndSetTimeLeft(); // Initial call to set the state
+    const timer = setInterval(calculateAndSetTimeLeft, 1000);
 
     return () => clearInterval(timer); // Clean up the interval on component unmount
   }, []);
