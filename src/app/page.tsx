@@ -77,32 +77,32 @@ export default function Home() {
         <section className="overflow-hidden">
           <div className="relative slider-container overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 text-white z-10 flex flex-col items-center justify-center p-4 lg:items-start lg:justify-start">
-              <div className="absolute top-20 left-0 lg:top-48 lg:left-48 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4">
+              <div className="absolute top-5 left-0 lg:top-48 lg:left-48 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4">
                 <Image
                   src="/APTICON.png"
                   alt="APTICON 2024"
                   className="bg-white mb-4"
-                  height={150}
-                  width={150}
+                  height={120}
+                  width={120}
                   sizes="(max-width: 640px) 100px, (max-width: 768px) 150px, 270px"
                 />
                 <div className="text-center lg:text-left">
-                  <p className="text-sm md:text-lg lg:text-2xl mb-4">
+                  <p className="text-xs md:text-lg lg:text-4xl mb-2 md:mb-4 font-black">
                     Join us on September 27-28, 2024
                   </p>
-                  <p className="text-xs md:text-md lg:text-xl mb-4">
+                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
                     Location: Bhubaneswar, Odisha
                   </p>
-                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+                  <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
                     <a
                       href="#registration"
-                      className="bg-ochre px-4 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
+                      className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
                       Register Now
                     </a>
                     <a
                       href="#call-for-papers"
-                      className="bg-ochre px-4 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
+                      className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
                       Submit Abstract
                     </a>
