@@ -53,25 +53,25 @@ const Timestamps: React.FC = () => {
             <span className="text-6xl font-bold text-rose-500">
               {timeLeft.days !== undefined ? timeLeft.days : "0"}
             </span>
-            <span className="text-white tracking-widest">DAYS</span>
+            <span className="text-black tracking-widest">DAYS</span>
           </div>
           <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">
             <span className="text-6xl font-bold text-sky-500">
               {timeLeft.hours !== undefined ? timeLeft.hours : "0"}
             </span>
-            <span className="text-white tracking-widest">HOURS</span>
+            <span className="text-black tracking-widest">HOURS</span>
           </div>
           <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">
             <span className="text-6xl font-bold text-lightBrown">
               {timeLeft.minutes !== undefined ? timeLeft.minutes : "0"}
             </span>
-            <span className="text-white tracking-widest">MINUTES</span>
+            <span className="text-black tracking-widest">MINUTES</span>
           </div>
           <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">
             <span className="text-6xl font-bold text-darkBrown">
               {timeLeft.seconds !== undefined ? timeLeft.seconds : "0"}
             </span>
-            <span className="text-white tracking-widest">SECONDS</span>
+            <span className="text-black tracking-widest">SECONDS</span>
           </div>
         </div>
       </div>
