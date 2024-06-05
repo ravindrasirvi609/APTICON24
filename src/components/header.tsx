@@ -63,7 +63,7 @@ const Header: React.FC = () => {
               </a>
             </li> */}
             <li>
-              <a href="/registration" className="hover:text-ochre">
+              <a href="/#registration" className="hover:text-ochre">
                 Registration
               </a>
             </li>
