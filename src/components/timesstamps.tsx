@@ -49,25 +49,25 @@ const Timestamps: React.FC = () => {
     <section id="about" className="container py-5 px-6">
       <div className="flex justify-center items-center text-center p-4 rounded-lg">
         <div className="flex flex-wrap justify-center space-x-8">
-          <div className="flex flex-col items-center m-2">
+          <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">
             <span className="text-6xl font-bold text-rose-500">
               {timeLeft.days !== undefined ? timeLeft.days : "0"}
             </span>
             <span className="text-white tracking-widest">DAYS</span>
           </div>
-          <div className="flex flex-col items-center m-2">
+          <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">
             <span className="text-6xl font-bold text-sky-500">
               {timeLeft.hours !== undefined ? timeLeft.hours : "0"}
             </span>
             <span className="text-white tracking-widest">HOURS</span>
           </div>
-          <div className="flex flex-col items-center m-2">
+          <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">
             <span className="text-6xl font-bold text-lightBrown">
               {timeLeft.minutes !== undefined ? timeLeft.minutes : "0"}
             </span>
             <span className="text-white tracking-widest">MINUTES</span>
           </div>
-          <div className="flex flex-col items-center m-2">
+          <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">
             <span className="text-6xl font-bold text-darkBrown">
               {timeLeft.seconds !== undefined ? timeLeft.seconds : "0"}
             </span>
