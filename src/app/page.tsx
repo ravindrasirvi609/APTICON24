@@ -79,7 +79,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 text-white z-10 flex flex-col items-center justify-center p-4 lg:items-start lg:justify-start">
               <div className="absolute top-5 left-0 lg:top-48 lg:left-48 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4">
                 <div className="text-center lg:text-left">
-                  <h1 className="bg-white font-black text-xs md:text-lg lg:text-4xl mb-2 md:mb-4">
+                  <h1 className="text-white font-black text-xs md:text-lg lg:text-4xl mb-2 md:mb-4">
                     {" "}
                     THEME: Innovations in Pharmacy Education and Practice
                   </h1>
