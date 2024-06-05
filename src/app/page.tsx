@@ -78,14 +78,12 @@ export default function Home() {
           <div className="relative slider-container overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 text-white z-10 flex flex-col items-center justify-center p-4 lg:items-start lg:justify-start">
               <div className="absolute top-5 left-0 lg:top-48 lg:left-48 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4">
-                <Image
-                  src="/APTICON.png"
-                  alt="APTICON 2024"
-                  className="bg-white mb-4"
-                  height={120}
-                  width={120}
-                  sizes="(max-width: 640px) 100px, (max-width: 768px) 150px, 270px"
-                />
+                <div className="text-center lg:text-left">
+                  <h1 className="text-ochre font-black text-xs md:text-lg lg:text-4xl mb-2 md:mb-4">
+                    {" "}
+                    THEME: Innovations in Pharmacy Education and Practice
+                  </h1>
+                </div>
                 <div className="text-center lg:text-left">
                   <p className="text-xs md:text-lg lg:text-4xl mb-2 md:mb-4 font-black">
                     Join us on September 27-28, 2024
@@ -107,6 +105,7 @@ export default function Home() {
                       Submit Abstract
                     </a>
                   </div>
+                  <Timestamps />
                 </div>
               </div>
             </div>
@@ -140,9 +139,9 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container mx-auto py-20 px-6">
+        {/* <div className="container mx-auto py-20 px-6">
           <Timestamps />
-        </div>
+        </div> */}
 
         <section id="about" className="container mx-auto py-20 px-6 text-black">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
