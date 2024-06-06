@@ -185,7 +185,7 @@ export default function Home() {
             Welcome to APTICON 2024, The Annual National Convention of the
             Association of Pharmaceutical Teachers of India!
           </p>
-          <p className="text-lg md:text-md text-black font-black text-center lg:text-xl">
+          <p className="text-lg md:text-md text-black font-semibold text-center lg:text-xl">
             Participate and contribute to the evolving role of pharmacy
             education in shaping the future of healthcare.
           </p>
