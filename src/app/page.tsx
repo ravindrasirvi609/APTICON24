@@ -188,7 +188,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container mx-auto py-20 px-6 lg:hidden">
+        <div className="container mx-auto py-4 px-6 lg:hidden">
           <Timestamps />
         </div>
 
