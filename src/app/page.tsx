@@ -36,19 +36,6 @@ export default function Home() {
     cssEase: "linear",
   };
 
-  const [svgSize, setSvgSize] = useState(24); // Initial size, adjust as needed
-
-  // Function to calculate the appropriate size based on text length
-  const calculateSvgSize = () => {
-    const textLength = "Bhubaneshwar | 27 & 28th of September 2024".length; // You can adjust this text
-    const newSize = 24 + (textLength - 30); // Adjust 30 as needed based on your design
-    setSvgSize(newSize < 24 ? 24 : newSize); // Ensure minimum size is 24
-  };
-
-  useEffect(() => {
-    calculateSvgSize();
-  }, []);
-
   return (
     <div className="bg-white overflow-hidden">
       <Head>
@@ -105,7 +92,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-center lg:text-left">
-                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4 flex items-center">
+                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4 flex items-center justify-center lg:justify-start">
                     <span className="inline-block align-middle mr-2">
                       <svg
                         fill="#ffffff"
@@ -116,8 +103,8 @@ export default function Home() {
                         viewBox="0 0 395.71 395.71"
                         xmlSpace="preserve"
                         stroke="#ffffff"
-                        width={svgSize}
-                        height={svgSize}
+                        width={24}
+                        height={24}
                       >
                         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                         <g
@@ -132,10 +119,12 @@ export default function Home() {
                         </g>
                       </svg>
                     </span>{" "}
-                    Bhubaneshwar | 27 & 28th of September 2024
+                    <span className="block lg:inline-block text-center lg:text-left">
+                      Bhubaneshwar | 27 & 28th of September 2024
+                    </span>
                   </p>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
-                    Organized by: APTI Eastern Region (Assam, Bihar, Odisha,
+                    organized by: APTI Eastern Region (Assam, Bihar, Odisha,
                     Sikkim, Tripura, and West Bengal )
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
