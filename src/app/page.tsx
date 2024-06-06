@@ -177,11 +177,14 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container mx-auto py-4 px-6 lg:hidden">
+        <div className="container mx-auto py-2 px-6 lg:hidden">
           <Timestamps />
         </div>
 
-        <section id="about" className="container mx-auto py-20 px-6 text-black">
+        <section
+          id="about"
+          className="container mx-auto lg:py-20 py-5 px-6 text-black"
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
             About APTICON 2024
           </h2>
