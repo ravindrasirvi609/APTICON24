@@ -18,7 +18,6 @@ export default function Home() {
     autoplay: true,
     speed: 10000,
     autoplaySpeed: 10000,
-    cssEase: "linear",
   };
 
   const settings2 = {
