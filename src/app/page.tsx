@@ -181,9 +181,9 @@ export default function Home() {
         </section>
 
         <div className="container mx-auto py-2 px-6 lg:hidden">
-          <p className="text-sm md:text-md text-black font-medium text-center lg:text-xl">
-            Welcome to APTICON 2024, The Annual National Convention of the
-            Association of Pharmaceutical Teachers of India!
+          <p className="text-sm md:text-md text-black font-medium text-center lg:text-xl mb-3">
+            &quot;Welcome to APTICON 2024, The Annual National Convention of the
+            Association of Pharmaceutical Teachers of India!&quot;
           </p>
           <p className="text-sm md:text-md text-black font-normal text-center lg:text-xl">
             Participate and contribute to the evolving role of pharmacy
