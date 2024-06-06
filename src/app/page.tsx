@@ -135,7 +135,7 @@ export default function Home() {
                     Bhubaneshwar | 27 & 28th of September 2024
                   </p>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
-                    organized by: APTI Eastern Region (Assam, Bihar, Odisha,
+                    Organized by: APTI Eastern Region (Assam, Bihar, Odisha,
                     Sikkim, Tripura, and West Bengal )
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
