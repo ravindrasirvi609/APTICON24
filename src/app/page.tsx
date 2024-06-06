@@ -85,12 +85,12 @@ export default function Home() {
                     Welcome to APTICON 2024, The Annual National Convention of
                     the Association of Pharmaceutical Teachers of India!
                   </p>
-                  <h1 className="text-white font-black text-xs md:text-lg lg:text-3xl mb-2 md:mb-4">
+                  <h1 className="text-white font-black text-xs md:text-lg lg:text-3xl mb-2 md:mb-4 ">
                     {" "}
                     Beyond the Counter : Transforming Pharmacy Education for
                     Industry and Patient Impact
                   </h1>
-                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
+                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4 sm:block hidden">
                     Participate and contribute to the evolving role of pharmacy
                     education in shaping the future of healthcare.
                   </p>
@@ -184,6 +184,10 @@ export default function Home() {
           <p className="text-lg md:text-md text-black font-black text-center lg:text-xl">
             Welcome to APTICON 2024, The Annual National Convention of the
             Association of Pharmaceutical Teachers of India!
+          </p>
+          <p className="text-lg md:text-md text-black font-black text-center lg:text-xl">
+            Participate and contribute to the evolving role of pharmacy
+            education in shaping the future of healthcare.
           </p>
           <Timestamps />
         </div>
