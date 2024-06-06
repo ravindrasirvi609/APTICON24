@@ -104,7 +104,7 @@ export default function Home() {
                       Submit Abstract
                     </a>
                   </div>
-                  <div className="text-center lg:text-left mt-4">
+                  <div className="hidden sm:block text-center lg:text-left mt-4">
                     <Timestamps />
                   </div>
                 </div>
@@ -140,9 +140,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <div className="container mx-auto py-20 px-6">
+        <div className="container mx-auto py-20 px-6 lg:hidden">
           <Timestamps />
-        </div> */}
+        </div>
 
         <section id="about" className="container mx-auto py-20 px-6 text-black">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
