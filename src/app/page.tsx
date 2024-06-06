@@ -124,8 +124,7 @@ export default function Home() {
                     </span>
                   </p>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
-                    organized by: APTI Eastern Region (Assam, Bihar, Odisha,
-                    Sikkim, Tripura, and West Bengal )
+                    organized by: APTI Eastern Region
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
                     <a
