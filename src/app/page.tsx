@@ -422,6 +422,14 @@ export default function Home() {
               </ul>
             </div>
           </div>
+
+          <div className="flex justify-center mt-6">
+            <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
+              <Link href="https://forms.gle/SeBkWPaopQE16awd9">
+                Submit Abstract
+              </Link>
+            </button>
+          </div>
           <div className="bg-ashGrey p-6 rounded-lg shadow-md mt-10">
             <h3 className="text-2xl font-semibold mb-4 text-ochre">
               Review Process
