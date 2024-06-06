@@ -103,8 +103,8 @@ export default function Home() {
                         viewBox="0 0 395.71 395.71"
                         xmlSpace="preserve"
                         stroke="#ffffff"
-                        width={24}
-                        height={24}
+                        width={20}
+                        height={20}
                       >
                         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                         <g
