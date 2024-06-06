@@ -8,6 +8,8 @@ import Schedule from "@/components/schedule";
 import Sponsors from "@/components/sponsors";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Contact from "@/components/contact";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function Home() {
   const settings1 = {
@@ -80,15 +82,19 @@ export default function Home() {
                 <div className="text-center lg:text-left">
                   <h1 className="text-white font-black text-xs md:text-lg lg:text-4xl mb-2 md:mb-4">
                     {" "}
-                    THEME: Innovations in Pharmacy Education and Practice
+                    Beyond the Counter - Transforming Pharmacy Education for
+                    Industry and Patient Impact Participate and contribute to
+                    the evolving role of pharmacy education in shaping the
+                    future of healthcare.
                   </h1>
                 </div>
                 <div className="text-center lg:text-left">
-                  <p className="text-xs md:text-lg lg:text-4xl mb-2 md:mb-4 font-black">
-                    Join us on September 27-28, 2024
+                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
+                    Bhubaneshwar | 27 & 28th of September 2024
                   </p>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
-                    Location: Bhubaneswar, Odisha
+                    organized by: APTI Eastern Region (Assam, Bihar, Odisha,
+                    Sikkim, Tripura, and West Bengal )
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
                     <a
@@ -149,13 +155,13 @@ export default function Home() {
             About APTICON 2024
           </h2>
           <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
-            Discover the vision and mission of APTICON 2024. Our goal is to
-            revolutionize pharmacy education by bridging the gap between
-            academia and industry, fostering innovation, enhancing the role of
-            pharmacists in patient care, improving teacher and workplace
-            conditions, and refining the regulatory and policy framework. Gain
-            insights into our objectives and the profound impact we aim to
-            create in the healthcare system.
+            We are delighted to invite you to the 27th Annual National
+            Convention of the Association of Pharmaceutical Teachers of India
+            (APTICON), themed &quot;Beyond the Counter: Transforming Pharmacy
+            Education for Industry and Patient Impact.&quot; This year&apos;s
+            convention will be held at Bhubaneshwar, on September 27-28, 2024,
+            and promises to be a landmark event dedicated to the advancement of
+            pharmacy education and practice.
           </p>
           {/* <div className="flex justify-center m-4">
             <button className="bg-ochre text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
@@ -164,34 +170,63 @@ export default function Home() {
           </div>{" "} */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                Our Vision
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">Vision</h3>
               <p className="leading-relaxed text-black">
-                To be a leader in pharmacy education by integrating advanced
-                technologies and innovative practices, ensuring that pharmacists
-                are well-equipped to meet the demands of modern healthcare.
+                To revolutionize pharmacy education by bridging the gap between
+                academia and industry, fostering innovation, and enhancing the
+                role of pharmacists in patient care to ensure comprehensive
+                healthcare solutions.
               </p>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                Our Mission
+                Mission
               </h3>
               <p className="leading-relaxed text-black">
-                To bridge the gap between academia and industry, fostering an
-                environment of collaboration and continuous improvement, with a
-                focus on enhancing patient care and professional development.
+                <ul className="list-disc pl-5 md:pl-8 lg:pl-10">
+                  <li>
+                    To provide a platform for educators, industry experts, and
+                    students to collaborate and share knowledge.
+                  </li>
+                  <li>
+                    To explore and integrate cutting-edge advancements in
+                    pharmacy education.
+                  </li>
+                  <li>
+                    To enhance the professional skills and industry-readiness of
+                    pharmacy students.
+                  </li>
+                  <li>
+                    To promote the significant impact of pharmacists in patient
+                    care and the healthcare system.
+                  </li>
+                </ul>
               </p>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                Objectives
+                Event Highlights
               </h3>
               <ul className="list-disc list-inside leading-relaxed text-black">
-                <li>Promote innovation in pharmacy education and practice.</li>
-                <li>Enhance the role of pharmacists in patient care.</li>
-                <li>Improve teacher and workplace conditions.</li>
-                <li>Refine regulatory and policy frameworks.</li>
+                <li>
+                  In-depth Sessions: Engage with a variety of sessions covering
+                  the latest trends, research, and practices in pharmaceutical
+                  education.
+                </li>
+                <li>
+                  Renowned Speakers: Hear from academic experts and industry
+                  leaders who are at the forefront of pharmacy education and
+                  practice.
+                </li>
+                <li>
+                  Networking Opportunities: Connect with peers, mentors, and
+                  potential collaborators from across the country.
+                </li>
+                <li>
+                  Workshops and Panels: Participate in interactive workshops and
+                  panel discussions designed to provide practical insights and
+                  foster collaboration.
+                </li>
               </ul>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
@@ -316,59 +351,116 @@ export default function Home() {
           className="container mx-auto py-20 px-6 text-black"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
-            Call for Papers
+            Submit Abstract
           </h2>
           <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
-            Share your research, insights, and expertise at APTICON 2024. We
-            invite submissions for oral and poster presentations on topics
-            related to pharmacy education, practice, research, and innovation.
-            Submit your abstracts for consideration and contribute to the
-            advancement of the pharmacy profession.
+            The APTICON Scientific Committee (ASC) is delighted to invite
+            delegates to submit their original scientific work as abstracts for
+            presentation during the Congress as Poster and/or Oral
+            presentations. The ASC will review all submitted abstracts and
+            select those for Poster and/or Oral presentation. The best Poster
+            and/or Oral presentations in each category will be announced by the
+            ASC during the valedictory function. Winners will receive a
+            certificate, memento, and cash prize.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                Submission Guidelines
+                Areas of Specialization
               </h3>
               <ul className="list-disc list-inside leading-relaxed text-black">
-                <li>Abstracts should be no more than 250 words.</li>
-                <li>Include a title, author names, and affiliations.</li>
-                <li>Specify the presentation format (oral or poster).</li>
-                <li>Submit abstracts by August 15, 2024.</li>
+                {[
+                  "Pharmaceutical Technology",
+                  "Medicinal Chemistry",
+                  "Pharmacognosy, Indigenous Drugs, Herbal Formulations, and Phytochemistry",
+                  "Pharmacology and Toxicology, Clinical Research & Pharmacovigilance",
+                  "Pharmaceutical Analysis and Quality Assurance",
+                  "Biopharmaceutics, Pharmacokinetics & Drug Metabolism",
+                  "Biotechnology and Biotherapeutics",
+                  "Hospital, Community, and Clinical Pharmacy",
+                  "Pharmaceutical Education and Professional Pharmacy",
+                  "Drug Regulatory Affairs & Pharmaceutical Management",
+                  "Pharmacoeconomics and Pharmacoepidemiology",
+                  "Artificial Intelligence / Bioinformatics / Data Analytics",
+                ].map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                Presentation Topics
+                Abstract Content
               </h3>
               <ul className="list-disc list-inside leading-relaxed text-black">
-                <li>Innovations in pharmacy education and practice.</li>
-                <li>Research and development in pharmacy.</li>
-                <li>Enhancing patient care through technology.</li>
-                <li>Regulatory and policy issues in pharmacy.</li>
+                <li>
+                  The abstract should summarize the work proposed to be
+                  presented, including the objectives, methods, results, and
+                  conclusions.
+                </li>
+                <li>
+                  Abstracts must be original and not previously published or
+                  presented at another conference.
+                </li>
+              </ul>
+              <h3 className="text-2xl font-semibold mb-4 text-ochre mt-6">
+                Submission Instructions
+              </h3>
+              <ul className="list-disc list-inside leading-relaxed text-black">
+                <li>
+                  The abstract should be prepared according to the guidelines
+                  provided on the website.
+                </li>
+                <li>
+                  Submit the abstract in the prescribed format and paste it into
+                  the designated space on the submission portal.
+                </li>
+                <li>Abstracts must be submitted online only.</li>
+                <li>The deadline for submission is XX XXX, 2024.</li>
+                <li>
+                  A model abstract is available for reference on the website.
+                </li>
               </ul>
             </div>
           </div>
-        </section>
-
-        <section id="contact" className="container mx-auto py-20 text-black">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
-            Contact Us
-          </h2>
-          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
-            Have questions or need more information? Get in touch with the
-            APTICON 2024 organizing committee. Find our contact details, send us
-            an email, or fill out the contact form. We’re here to assist you
-            with any inquiries you may have regarding the conference.
-          </p>
-          <div className="flex flex-col items-center">
-            <p className="text-lg mb-4">Contact Email: info@apticon2024.com</p>
-            <p className="text-lg mb-4">Phone: +1 (123) 456-7890</p>
-            <p className="text-lg mb-8">
-              Address: 123 Conference Center, City, Country
-            </p>
+          <div className="bg-ashGrey p-6 rounded-lg shadow-md mt-10">
+            <h3 className="text-2xl font-semibold mb-4 text-ochre">
+              Review Process
+            </h3>
+            <ul className="list-disc list-inside leading-relaxed text-black">
+              <li>All submitted abstracts will be reviewed by the ASC.</li>
+              <li>
+                Selected abstracts will be notified for Poster and/or Oral
+                presentation.
+              </li>
+              <li>
+                The best Poster and/or Oral presentations will be selected from
+                each category and announced during the valedictory function.
+              </li>
+            </ul>
+            <h3 className="text-2xl font-semibold mb-4 text-ochre mt-6">
+              Presentation Guidelines
+            </h3>
+            <ul className="list-disc list-inside leading-relaxed text-black">
+              <li>
+                Detailed guidelines for Poster and Oral presentations will be
+                provided upon acceptance of the abstract.
+              </li>
+              <li>Presenters must be registered delegates of APTICON 2024.</li>
+            </ul>
+            <h3 className="text-2xl font-semibold mb-4 text-ochre mt-6">
+              Rewards
+            </h3>
+            <ul className="list-disc list-inside leading-relaxed text-black">
+              <li>
+                The best Poster and/or Oral presentations in each category will
+                receive a certificate, memento, and cash prize.
+              </li>
+            </ul>
           </div>
         </section>
+
+        <Contact />
+        <ScrollToTopButton />
       </main>
 
       <Footer />
