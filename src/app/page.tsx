@@ -81,9 +81,13 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 text-white z-10 flex flex-col items-center justify-center p-4 lg:items-start lg:justify-start">
               <div className="absolute top-5 left-0 lg:top-48 lg:left-48 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4">
                 <div className="text-center lg:text-left">
+                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
+                    Welcome to APTICON 2024, The Annual National Convention of
+                    the Association of Pharmaceutical Teachers of India!
+                  </p>
                   <h1 className="text-white font-black text-xs md:text-lg lg:text-3xl mb-2 md:mb-4">
                     {" "}
-                    Beyond the Counter - Transforming Pharmacy Education for
+                    Beyond the Counter : Transforming Pharmacy Education for
                     Industry and Patient Impact
                   </h1>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
@@ -124,7 +128,7 @@ export default function Home() {
                     </span>
                   </p>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
-                    organized by: APTI Eastern Region
+                    Organized by: APTI Eastern Region
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
                     <a
