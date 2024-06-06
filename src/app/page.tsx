@@ -83,9 +83,7 @@ export default function Home() {
                   <h1 className="text-white font-black text-xs md:text-lg lg:text-4xl mb-2 md:mb-4">
                     {" "}
                     Beyond the Counter - Transforming Pharmacy Education for
-                    Industry and Patient Impact Participate and contribute to
-                    the evolving role of pharmacy education in shaping the
-                    future of healthcare.
+                    Industry and Patient Impact
                   </h1>
                 </div>
                 <div className="text-center lg:text-left">
