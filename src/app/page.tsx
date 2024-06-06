@@ -141,7 +141,7 @@ export default function Home() {
                       Submit Abstract
                     </a>
                   </div>
-                  <div className="hidden sm:block text-center lg:text-left mt-4">
+                  <div className="hidden sm:block md:block text-center lg:text-left mt-4">
                     <Timestamps />
                   </div>
                 </div>
@@ -362,7 +362,7 @@ export default function Home() {
 
         <section
           id="registration"
-          className="container mx-auto py-20 text-black"
+          className="container mx-auto lg:py-20 py-5 text-black"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
             Register for APTICON 2024
@@ -382,7 +382,7 @@ export default function Home() {
 
         <section
           id="call-for-papers"
-          className="container mx-auto py-20 px-6 text-black"
+          className="container mx-auto lg:py-20 py-5 px-6 text-black"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
             Submit Abstract
