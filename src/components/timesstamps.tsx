@@ -46,7 +46,7 @@ const Timestamps: React.FC = () => {
   }, []);
 
   return (
-    <section id="about" className="container py-5 px-6">
+    <section id="about" className="container py-2 px-6">
       <div className="flex justify-center items-center text-center p-4 rounded-lg">
         <div className="flex flex-wrap justify-center space-x-8">
           <div className="flex flex-col items-center m-2 bg-white rounded-lg p-4">

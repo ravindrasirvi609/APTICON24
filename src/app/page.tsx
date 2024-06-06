@@ -81,7 +81,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 text-white z-10 flex flex-col items-center justify-center p-4 lg:items-start lg:justify-start">
               <div className="absolute top-5 left-0 lg:top-48 lg:left-48 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4">
                 <div className="text-center lg:text-left">
-                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
+                  <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4 sm:block hidden">
                     Welcome to APTICON 2024, The Annual National Convention of
                     the Association of Pharmaceutical Teachers of India!
                   </p>
@@ -181,6 +181,10 @@ export default function Home() {
         </section>
 
         <div className="container mx-auto py-2 px-6 lg:hidden">
+          <p className="text-lg md:text-md text-black font-black text-center lg:text-xl">
+            Welcome to APTICON 2024, The Annual National Convention of the
+            Association of Pharmaceutical Teachers of India!
+          </p>
           <Timestamps />
         </div>
 
