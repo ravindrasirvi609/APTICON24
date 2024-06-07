@@ -222,66 +222,66 @@ export default function Registration() {
                   className="bg-white shadow-md rounded-lg mb-4 p-4"
                 >
                   <h4 className="text-lg font-bold mb-2">{fee.type}</h4>
-                  <div className="mb-2">
-                    <span className="font-semibold">Members of APTI:</span>{" "}
+                  <div className="mb-2 flex justify-between items-center">
+                    <span className="font-semibold">Members of APTI:</span>
                     {fee.members}
-                    <a
-                      href={paymentLinks.members}
-                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                    >
-                      Pay Now
-                    </a>
                   </div>
-                  <div className="mb-2">
-                    <span className="font-semibold">Students:</span>{" "}
+                  <a
+                    href={paymentLinks.members}
+                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                  >
+                    Pay Now
+                  </a>
+                  <div className="mb-2 flex justify-between items-center mt-4">
+                    <span className="font-semibold">Students:</span>
                     {fee.students}
-                    <a
-                      href={paymentLinks.students}
-                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                    >
-                      Pay Now
-                    </a>
                   </div>
-                  <div className="mb-2">
-                    <span className="font-semibold">Non-Members:</span>{" "}
+                  <a
+                    href={paymentLinks.students}
+                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                  >
+                    Pay Now
+                  </a>
+                  <div className="mb-2 flex justify-between items-center mt-4">
+                    <span className="font-semibold">Non-Members:</span>
                     {fee.nonMembers}
-                    <a
-                      href={paymentLinks.nonMembers}
-                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                    >
-                      Pay Now
-                    </a>
                   </div>
-                  <div className="mb-2">
-                    <span className="font-semibold">Industry:</span>{" "}
+                  <a
+                    href={paymentLinks.nonMembers}
+                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                  >
+                    Pay Now
+                  </a>
+                  <div className="mb-2 flex justify-between items-center mt-4">
+                    <span className="font-semibold">Industry:</span>
                     {fee.industry}
-                    <a
-                      href={paymentLinks.industry}
-                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                    >
-                      Pay Now
-                    </a>
                   </div>
-                  <div className="mb-2">
-                    <span className="font-semibold">Companion:</span>{" "}
+                  <a
+                    href={paymentLinks.industry}
+                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                  >
+                    Pay Now
+                  </a>
+                  <div className="mb-2 flex justify-between items-center mt-4">
+                    <span className="font-semibold">Companion:</span>
                     {fee.companion}
-                    <a
-                      href={paymentLinks.companion}
-                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                    >
-                      Pay Now
-                    </a>
                   </div>
-                  <div className="mb-2">
-                    <span className="font-semibold">International:</span>{" "}
+                  <a
+                    href={paymentLinks.companion}
+                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                  >
+                    Pay Now
+                  </a>
+                  <div className="mb-2 flex justify-between items-center mt-4">
+                    <span className="font-semibold">International:</span>
                     {fee.international}
-                    <a
-                      href={paymentLinks.international}
-                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                    >
-                      Pay Now
-                    </a>
                   </div>
+                  <a
+                    href={paymentLinks.international}
+                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                  >
+                    Pay Now
+                  </a>
                 </div>
               ))}
               <p className="text-center mt-4 text-sm text-gray-600">
