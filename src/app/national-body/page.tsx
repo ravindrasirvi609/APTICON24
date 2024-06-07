@@ -98,6 +98,30 @@ const NationalBody = () => {
         "https://aptiindia.org/images/committee/PRAVIN_DIGAMBAR_CHAUDHARI.jpg",
       APTI_post: "Immediate Past President",
     },
+    {
+      id: 12,
+      name: "Dr. Niraj Vyawahare",
+      designation: "Principal and Professor",
+      college: "Dr D Y Patil College of Pharmacy, Akurdi, Pune",
+      image: "https://aptiindia.org/images/committee/central/niraj.png",
+      APTI_post: "International Coordinator",
+    },
+    {
+      id: 13,
+      name: "Dr. Vandana Patravale",
+      designation: "Professor",
+      college: "Institute of Chemical Technology, Mumbai, Maharashtra",
+      image: "https://aptiindia.org/images/committee/central/vandana.png",
+      APTI_post: "National Convenor (Women Forum)",
+    },
+    {
+      id: 14,
+      name: "Dr. Md Salahuddin",
+      designation: "Principal",
+      college: "Al-Ameen College of Pharmacy, Banglore, Karnataka",
+      image: "https://aptiindia.org/images/committee/central/mdsala.png",
+      APTI_post: "National Coordination, Teachers Training Institute",
+    },
   ];
 
   return (

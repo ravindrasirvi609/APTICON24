@@ -205,11 +205,12 @@ export default function Home() {
           <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             We are delighted to invite you to the 27th Annual National
             Convention of the Association of Pharmaceutical Teachers of India
-            (APTICON), themed &quot;Beyond the Counter: Transforming Pharmacy
-            Education for Industry and Patient Impact.&quot; This year&apos;s
-            convention will be held at Bhubaneshwar, on September 27-28, 2024,
-            and promises to be a landmark event dedicated to the advancement of
-            pharmacy education and practice.
+            (APTICON-2024), themed &quot;Beyond the Counter: Transforming
+            Pharmacy Education for Industry and Patient Impact.&quot; This
+            year&apos;s convention will be held at Utkal University, Vani Vihar,
+            Bhubaneswar, Odisha, on 27th & 28th September, 2024, and promises to
+            be a landmark event dedicated to the advancement of pharmacy
+            education and practice.
           </p>
           {/* <div className="flex justify-center m-4">
             <button className="bg-ochre text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
