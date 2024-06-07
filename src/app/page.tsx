@@ -42,6 +42,8 @@ export default function Home() {
       <Head>
         <title>APTICON 2024 - Transforming Pharmacy Education</title>
         <meta name="description" content="APTICON 2024 Conference" />
+        <link rel="icon" href="/favicon.ico" />
+
         <meta
           name="description"
           content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
@@ -59,7 +61,7 @@ export default function Home() {
           property="og:description"
           content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
         />
-        <meta property="og:image" content="/banner1.jpg" />
+        <meta property="og:image" content="/1.png" />
         <meta property="og:url" content="https://www.apticon2024.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -71,7 +73,7 @@ export default function Home() {
           name="twitter:description"
           content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
         />
-        <meta name="twitter:image" content="/banner1.jpg" />
+        <meta name="twitter:image" content="/1.png" />
       </Head>
 
       <Header />
