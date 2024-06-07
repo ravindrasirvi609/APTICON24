@@ -40,6 +40,27 @@ export default function Registration() {
     international: "https://your-payment-page-url/international",
   };
 
+  const registrationFees = [
+    {
+      type: "Early Bird (Upto June 30)",
+      members: "₹ 2800",
+      students: "₹ 2500",
+      nonMembers: "₹ 3500",
+      industry: "₹ 4000",
+      companion: "₹ 1500",
+      international: "118 USD",
+    },
+    {
+      type: "Regular (Upto August 31)",
+      members: "₹ 3500",
+      students: "₹ 2900",
+      nonMembers: "₹ 4000",
+      industry: "₹ 4500",
+      companion: "-",
+      international: "118 USD",
+    },
+  ];
+
   return (
     <div className="bg-white">
       <Head>
@@ -93,150 +114,179 @@ export default function Registration() {
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-ochre">
               Registration Fees
             </h3>
-            <div className="bg-grey text-black">
-              <div className="container mx-auto p-6">
-                <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                  <table className="min-w-full bg-white">
-                    <thead>
-                      <tr>
-                        <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                          Registration Fee
-                        </th>
-                        <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                          Members of APTI
-                        </th>
-                        <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                          Students
-                        </th>
-                        <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                          Non-Members
-                        </th>
-                        <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                          Industry
-                        </th>
-                        <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                          Companion
-                        </th>
-                        <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                          International
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="py-2 px-4 border-b border-grey">
-                          Early Bird (Upto June 30)
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 2800 <br />
-                          <a
-                            href={paymentLinks.members}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 2500 <br />
-                          <a
-                            href={paymentLinks.students}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 3500 <br />
-                          <a
-                            href={paymentLinks.nonMembers}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 4000 <br />
-                          <a
-                            href={paymentLinks.industry}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 1500 <br />
-                          <a
-                            href={paymentLinks.companion}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          118 USD <br />
-                          <a
-                            href={paymentLinks.international}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-4 border-b border-grey">
-                          Regular (Upto August 31)
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 3500 <br />
-                          <a
-                            href={paymentLinks.members}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 2900 <br />
-                          <a
-                            href={paymentLinks.students}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 4000 <br />
-                          <a
-                            href={paymentLinks.nonMembers}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          ₹ 4500 <br />
-                          <a
-                            href={paymentLinks.industry}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                        <td className="py-2 px-4 border-b border-grey">-</td>
-                        <td className="py-2 px-4 border-b border-grey">
-                          118 USD <br />
-                          <a
-                            href={paymentLinks.international}
-                            className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                          >
-                            Pay Now
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <div className="hidden md:block">
+              <div className="bg-grey text-black">
+                <div className="container mx-auto p-6">
+                  <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                    <table className="min-w-full bg-white">
+                      <thead>
+                        <tr>
+                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
+                            Registration Fee
+                          </th>
+                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
+                            Members of APTI
+                          </th>
+                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
+                            Students
+                          </th>
+                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
+                            Non-Members
+                          </th>
+                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
+                            Industry
+                          </th>
+                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
+                            Companion
+                          </th>
+                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
+                            International
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {registrationFees.map((fee, index) => (
+                          <tr key={index}>
+                            <td className="py-2 px-4 border-b border-grey">
+                              {fee.type}
+                            </td>
+                            <td className="py-2 px-4 border-b border-grey">
+                              {fee.members} <br />
+                              <a
+                                href={paymentLinks.members}
+                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                              >
+                                Pay Now
+                              </a>
+                            </td>
+                            <td className="py-2 px-4 border-b border-grey">
+                              {fee.students} <br />
+                              <a
+                                href={paymentLinks.students}
+                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                              >
+                                Pay Now
+                              </a>
+                            </td>
+                            <td className="py-2 px-4 border-b border-grey">
+                              {fee.nonMembers} <br />
+                              <a
+                                href={paymentLinks.nonMembers}
+                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                              >
+                                Pay Now
+                              </a>
+                            </td>
+                            <td className="py-2 px-4 border-b border-grey">
+                              {fee.industry} <br />
+                              <a
+                                href={paymentLinks.industry}
+                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                              >
+                                Pay Now
+                              </a>
+                            </td>
+                            <td className="py-2 px-4 border-b border-grey">
+                              {fee.companion} <br />
+                              <a
+                                href={paymentLinks.companion}
+                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                              >
+                                Pay Now
+                              </a>
+                            </td>
+                            <td className="py-2 px-4 border-b border-grey">
+                              {fee.international} <br />
+                              <a
+                                href={paymentLinks.international}
+                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                              >
+                                Pay Now
+                              </a>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                    <p className="text-center mt-4 text-sm text-gray-600">
+                      Note: Fees include 18% GST.
+                    </p>
+                  </div>
                 </div>
               </div>
+            </div>
+            <div className="block md:hidden">
+              {registrationFees.map((fee, index) => (
+                <div
+                  key={index}
+                  className="bg-white shadow-md rounded-lg mb-4 p-4"
+                >
+                  <h4 className="text-lg font-bold mb-2">{fee.type}</h4>
+                  <div className="mb-2">
+                    <span className="font-semibold">Members of APTI:</span>{" "}
+                    {fee.members}
+                    <a
+                      href={paymentLinks.members}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                    >
+                      Pay Now
+                    </a>
+                  </div>
+                  <div className="mb-2">
+                    <span className="font-semibold">Students:</span>{" "}
+                    {fee.students}
+                    <a
+                      href={paymentLinks.students}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                    >
+                      Pay Now
+                    </a>
+                  </div>
+                  <div className="mb-2">
+                    <span className="font-semibold">Non-Members:</span>{" "}
+                    {fee.nonMembers}
+                    <a
+                      href={paymentLinks.nonMembers}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                    >
+                      Pay Now
+                    </a>
+                  </div>
+                  <div className="mb-2">
+                    <span className="font-semibold">Industry:</span>{" "}
+                    {fee.industry}
+                    <a
+                      href={paymentLinks.industry}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                    >
+                      Pay Now
+                    </a>
+                  </div>
+                  <div className="mb-2">
+                    <span className="font-semibold">Companion:</span>{" "}
+                    {fee.companion}
+                    <a
+                      href={paymentLinks.companion}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                    >
+                      Pay Now
+                    </a>
+                  </div>
+                  <div className="mb-2">
+                    <span className="font-semibold">International:</span>{" "}
+                    {fee.international}
+                    <a
+                      href={paymentLinks.international}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
+                    >
+                      Pay Now
+                    </a>
+                  </div>
+                </div>
+              ))}
+              <p className="text-center mt-4 text-sm text-gray-600">
+                Note: Fees include 18% GST.
+              </p>
             </div>
           </div>
         </section>
