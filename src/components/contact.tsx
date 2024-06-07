@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
       </p>
       <div className="flex flex-col items-center mb-10">
         <p className="text-lg mb-4">Contact Email: info@apticon2024.com</p>
-        <p className="text-lg mb-4">Phone: +1 (123) 456-7890</p>
+        <p className="text-lg mb-4">Phone: 8249906480 & 8328848093</p>
         <p className="text-lg mb-8 text-center">
           Address: Secretary, APTI Odisha State Branch, University Department of
           Pharmaceutical Sciences (UDPS), Utkal University, Vani Vihar,
