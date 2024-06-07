@@ -11,6 +11,10 @@ export async function POST(req: NextRequest) {
     }
 
     const formData = await req.formData();
+    const attachment = formData.get("attachment") as File;
+    const attachmentBuffer = await attachment.arrayBuffer();
+    const attachmentBase64 = Buffer.from(attachmentBuffer).toString("base64");
+
     const newUser = {
       name: formData.get("name") as string,
       email: formData.get("email") as string,
@@ -75,6 +79,13 @@ export async function POST(req: NextRequest) {
         to: ["info@apticon2024.com", "ravi.sirvi609@gmail.com"],
         subject: `${newUser.name} wants to connect with you!`,
         html: adminEmailTemplate(newUser),
+        attachments: [
+          {
+            filename: attachment.name, // Adjust the filename and mime type as needed
+            content: attachmentBase64,
+            encoding: "base64",
+          },
+        ],
       }),
     });
 
@@ -142,6 +153,13 @@ export async function POST(req: NextRequest) {
         to: `${newUser.email}`,
         subject: `Thanks for Connecting, ${newUser.name}`,
         html: userEmailTemplate(newUser),
+        attachments: [
+          {
+            filename: attachment.name, // Adjust the filename and mime type as needed
+            content: attachmentBase64,
+            encoding: "base64",
+          },
+        ],
       }),
     });
 
