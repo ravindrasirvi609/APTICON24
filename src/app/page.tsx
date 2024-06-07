@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import Contact from "@/components/contact";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { useEffect, useState } from "react";
+import NationalBody from "./national-body/page";
 
 export default function Home() {
   const settings1 = {
@@ -464,6 +465,22 @@ export default function Home() {
                 <li>
                   A model abstract is available for reference on the website.
                 </li>
+                <li className="text-green">
+                  <a
+                    href="https://docs.google.com/document/d/1NyU41IUlp_XWPR0K4A_2ljimyO2ORogt/edit?usp=sharing&ouid=112003801617762022134&rtpof=true&sd=true"
+                    download
+                  >
+                    APTICON MODEL ABSRAACT
+                  </a>
+                </li>
+                <li className="text-green">
+                  <a
+                    href="https://docs.google.com/document/d/1BTly4JCmC4QXkefE2bCrOXl1yRpSeNJ-/edit?usp=sharing&ouid=112003801617762022134&rtpof=true&sd=true"
+                    download
+                  >
+                    MODEL ABSTRACT POSTER
+                  </a>
+                </li>{" "}
               </ul>
             </div>
           </div>
@@ -511,6 +528,8 @@ export default function Home() {
             </ul>
           </div>
         </section>
+
+        <NationalBody />
 
         <Contact />
         <ScrollToTopButton />
