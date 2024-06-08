@@ -1,6 +1,5 @@
 import React from "react";
 
-// SVG icons (You can replace these with actual SVG imports or SVG paths)
 const FacebookIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
