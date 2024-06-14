@@ -213,8 +213,7 @@ const Privacy = () => {
             transferred to another individual or event. We appreciate your
             understanding as this policy helps us efficiently manage
             registrations and provide the best possible experience for all
-            participants. If you have any questions or concerns, please contact
-            us at help@opf.org.in.
+            participants.
           </p>
           <h2 className="text-2xl font-semibold">Shipping & Exchange Policy</h2>
           <p>
