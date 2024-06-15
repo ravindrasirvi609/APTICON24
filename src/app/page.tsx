@@ -79,7 +79,7 @@ export default function Home() {
         <Header />
       </div>
 
-      <main>
+      <main className="mt-20">
         <section className="overflow-hidden">
           <div className="relative slider-container overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 text-white z-10 flex flex-col items-center justify-center p-4 lg:items-start lg:justify-start">
