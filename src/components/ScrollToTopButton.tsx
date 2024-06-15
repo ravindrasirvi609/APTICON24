@@ -32,7 +32,7 @@ const ScrollToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
+          className="p-3 bg-green text-white rounded-full shadow-lg hover:bg-green transition"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -515,7 +515,7 @@ export default function Home() {
                     href="https://docs.google.com/document/d/1NyU41IUlp_XWPR0K4A_2ljimyO2ORogt/edit?usp=sharing&ouid=112003801617762022134&rtpof=true&sd=true"
                     download
                   >
-                    APTICON MODEL ABSRAACT
+                    APTICON MODEL ABSTRACT
                   </a>
                 </li>
                 <li className="text-green">
