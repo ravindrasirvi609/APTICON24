@@ -31,7 +31,7 @@ const metadata: Metadata = {
 export default function Registration() {
   const [hoveredPlan, setHoveredPlan] = useState("");
 
-  const paymentLinks = {
+  const paymentLinks: { [key: string]: string } = {
     members: "https://your-payment-page-url/members",
     students: "https://your-payment-page-url/students",
     nonMembers: "https://your-payment-page-url/non-members",
@@ -40,27 +40,34 @@ export default function Registration() {
     international: "https://your-payment-page-url/international",
   };
 
-  const registrationFees = [
+  type FeeType = {
+    type: string;
+    fees: { [key: string]: string };
+    Price: { [key: string]: string };
+  };
+
+  const registrationFees: FeeType[] = [
     {
       type: "Early Bird (Upto June 30)",
-      members: "₹ 2800",
-      students: "₹ 2500",
-      nonMembers: "₹ 3500",
-      industry: "₹ 4000",
-      companion: "₹ 1500",
-      international: "118 USD",
+      fees: {
+        members: "₹ 2800",
+        students: "₹ 2500",
+        nonMembers: "₹ 3500",
+        industry: "₹ 4000",
+        companion: "₹ 1500",
+        international: "118 USD",
+      },
+      Price: {
+        members: "₹ 3500",
+        students: "₹ 2900",
+        nonMembers: "₹ 4000",
+        industry: "₹ 4500",
+        companion: "-",
+        international: "118 USD",
+      },
     },
-    {
-      type: "Regular (Upto August 31)",
-      members: "₹ 3500",
-      students: "₹ 2900",
-      nonMembers: "₹ 4000",
-      industry: "₹ 4500",
-      companion: "-",
-      international: "118 USD",
-    },
+    // Add more fee types as needed
   ];
-
   return (
     <div className="bg-white">
       <Head>
@@ -97,7 +104,7 @@ export default function Registration() {
       <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
         <Header />
       </div>
-      <main>
+      <main className="mt-20">
         <section
           id="register-for-apticon"
           className="container mx-auto py-20 text-black"
@@ -126,87 +133,40 @@ export default function Registration() {
                             Registration Fee
                           </th>
                           <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                            Members of APTI
+                            Price
                           </th>
                           <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                            Students
-                          </th>
-                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                            Non-Members
-                          </th>
-                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                            Industry
-                          </th>
-                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                            Companion
-                          </th>
-                          <th className="py-2 px-4 bg-ashGrey text-black text-left text-sm font-semibold uppercase">
-                            International
+                            Pay Now
                           </th>
                         </tr>
                       </thead>
                       <tbody>
-                        {registrationFees.map((fee, index) => (
-                          <tr key={index}>
-                            <td className="py-2 px-4 border-b border-grey">
-                              {fee.type}
-                            </td>
-                            <td className="py-2 px-4 border-b border-grey">
-                              {fee.members} <br />
-                              <a
-                                href={paymentLinks.members}
-                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                              >
-                                Pay Now
-                              </a>
-                            </td>
-                            <td className="py-2 px-4 border-b border-grey">
-                              {fee.students} <br />
-                              <a
-                                href={paymentLinks.students}
-                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                              >
-                                Pay Now
-                              </a>
-                            </td>
-                            <td className="py-2 px-4 border-b border-grey">
-                              {fee.nonMembers} <br />
-                              <a
-                                href={paymentLinks.nonMembers}
-                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                              >
-                                Pay Now
-                              </a>
-                            </td>
-                            <td className="py-2 px-4 border-b border-grey">
-                              {fee.industry} <br />
-                              <a
-                                href={paymentLinks.industry}
-                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                              >
-                                Pay Now
-                              </a>
-                            </td>
-                            <td className="py-2 px-4 border-b border-grey">
-                              {fee.companion} <br />
-                              <a
-                                href={paymentLinks.companion}
-                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                              >
-                                Pay Now
-                              </a>
-                            </td>
-                            <td className="py-2 px-4 border-b border-grey">
-                              {fee.international} <br />
-                              <a
-                                href={paymentLinks.international}
-                                className="bg-green text-white py-1 px-4 rounded mt-2 inline-block"
-                              >
-                                Pay Now
-                              </a>
-                            </td>
-                          </tr>
-                        ))}
+                        {registrationFees.map((fee, index) =>
+                          Object.entries(fee.fees).map(([key, value]) => (
+                            <tr key={index + key}>
+                              <td className="py-2 px-4 border-b border-grey">
+                                {fee.type} -{" "}
+                                {key.charAt(0).toUpperCase() + key.slice(1)}
+                              </td>
+                              <td className="py-2 px-4 border-b border-grey">
+                                <span className="line-through">
+                                  {fee.Price[key]}
+                                </span>
+                                <span className="text-red-500 ml-2">
+                                  {fee.fees[key]}
+                                </span>
+                              </td>
+                              <td className="py-2 px-4 border-b border-grey">
+                                <a
+                                  href={paymentLinks[key]}
+                                  className="bg-green text-white py-1 px-4 rounded inline-block"
+                                >
+                                  Pay Now
+                                </a>
+                              </td>
+                            </tr>
+                          ))
+                        )}
                       </tbody>
                     </table>
                     <p className="text-center mt-4 text-sm text-gray-600">
@@ -217,74 +177,29 @@ export default function Registration() {
               </div>
             </div>
             <div className="block md:hidden">
-              {registrationFees.map((fee, index) => (
-                <div
-                  key={index}
-                  className="bg-white shadow-md rounded-lg mb-4 p-4"
-                >
-                  <h4 className="text-lg font-bold mb-2">{fee.type}</h4>
-                  <div className="mb-2 flex justify-between items-center">
-                    <span className="font-semibold">Members of APTI:</span>
-                    {fee.members}
-                  </div>
-                  <a
-                    href={paymentLinks.members}
-                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+              {registrationFees.map((fee, index) =>
+                Object.entries(fee.fees).map(([key, value]) => (
+                  <div
+                    key={index + key}
+                    className="bg-white shadow-md rounded-lg mb-4 p-4"
                   >
-                    Pay Now
-                  </a>
-                  <div className="mb-2 flex justify-between items-center mt-4">
-                    <span className="font-semibold">Students:</span>
-                    {fee.students}
+                    <h4 className="text-lg font-bold mb-2">
+                      {fee.type} - {key.charAt(0).toUpperCase() + key.slice(1)}
+                    </h4>
+                    <div className="mb-2">
+                      <span className="font-semibold">Price:</span>{" "}
+                      <span className="line-through">{fee.Price[key]}</span>
+                      <span className="text-red-500 ml-2">{fee.fees[key]}</span>
+                    </div>
+                    <a
+                      href={paymentLinks[key]}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                    >
+                      Pay Now
+                    </a>
                   </div>
-                  <a
-                    href={paymentLinks.students}
-                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
-                  >
-                    Pay Now
-                  </a>
-                  <div className="mb-2 flex justify-between items-center mt-4">
-                    <span className="font-semibold">Non-Members:</span>
-                    {fee.nonMembers}
-                  </div>
-                  <a
-                    href={paymentLinks.nonMembers}
-                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
-                  >
-                    Pay Now
-                  </a>
-                  <div className="mb-2 flex justify-between items-center mt-4">
-                    <span className="font-semibold">Industry:</span>
-                    {fee.industry}
-                  </div>
-                  <a
-                    href={paymentLinks.industry}
-                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
-                  >
-                    Pay Now
-                  </a>
-                  <div className="mb-2 flex justify-between items-center mt-4">
-                    <span className="font-semibold">Companion:</span>
-                    {fee.companion}
-                  </div>
-                  <a
-                    href={paymentLinks.companion}
-                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
-                  >
-                    Pay Now
-                  </a>
-                  <div className="mb-2 flex justify-between items-center mt-4">
-                    <span className="font-semibold">International:</span>
-                    {fee.international}
-                  </div>
-                  <a
-                    href={paymentLinks.international}
-                    className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
-                  >
-                    Pay Now
-                  </a>
-                </div>
-              ))}
+                ))
+              )}
               <p className="text-center mt-4 text-sm text-gray-600">
                 Note: Fees include 18% GST.
               </p>
