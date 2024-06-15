@@ -218,9 +218,20 @@ export default function Home() {
               <Link href="/loc">Local Organizing Committee </Link>
             </button>
           </div>{" "} */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:hidden">
+          <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-4 text-ochre">Vision</h3>
+              <div className="flex items-center">
+                <Image
+                  src="/vision.png"
+                  alt="vision"
+                  className="w-8 h-8 object-cover rounded-full align-middle mb-4 mx-3"
+                  width={480}
+                  height={480}
+                />
+                <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                  vision
+                </h3>
+              </div>{" "}
               <p className="leading-relaxed text-black">
                 To revolutionize pharmacy education by bridging the gap between
                 academia and industry, fostering innovation, and enhancing the
@@ -229,9 +240,18 @@ export default function Home() {
               </p>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                Mission
-              </h3>
+              <div className="flex items-center">
+                <Image
+                  src="/mission.png"
+                  alt="Mission"
+                  className="w-8 h-8 object-cover rounded-full align-middle mb-4 mx-3"
+                  width={480}
+                  height={480}
+                />
+                <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                  Mission
+                </h3>
+              </div>
               <p className="leading-relaxed text-black">
                 <ul className="list-disc pl-5 md:pl-8 lg:pl-10">
                   <li>
@@ -254,9 +274,18 @@ export default function Home() {
               </p>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                Event Highlights
-              </h3>
+              <div className="flex items-center">
+                <Image
+                  src="/highlight.png"
+                  alt="highlight"
+                  className="w-8 h-8 object-cover rounded-full align-middle mb-4 mx-3"
+                  width={480}
+                  height={480}
+                />
+                <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                  Event Highlights
+                </h3>
+              </div>{" "}
               <ul className="list-disc list-inside leading-relaxed text-black">
                 <li>
                   In-depth Sessions: Engage with a variety of sessions covering
@@ -280,7 +309,18 @@ export default function Home() {
               </ul>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-4 text-ochre">Impact</h3>
+              <div className="flex items-center">
+                <Image
+                  src="/stats.png"
+                  alt="stats"
+                  className="w-8 h-8 object-cover rounded-full align-middle mb-4 mx-3"
+                  width={480}
+                  height={480}
+                />
+                <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                  Impact
+                </h3>
+              </div>{" "}
               <p className="leading-relaxed text-black">
                 APTICON 2024 aims to make a significant impact on the healthcare
                 system by ensuring that pharmacists are well-prepared to
