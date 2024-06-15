@@ -217,7 +217,7 @@ export default function Home() {
               <Link href="/loc">Local Organizing Committee </Link>
             </button>
           </div>{" "} */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:hidden">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">Vision</h3>
               <p className="leading-relaxed text-black">
