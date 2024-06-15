@@ -7,7 +7,9 @@ const Loc = () => {
   return (
     <div>
       {" "}
-      <Header />
+      <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
+        <Header />
+      </div>{" "}
       <div className="bg-lightGrey p-6">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-darkBrown">

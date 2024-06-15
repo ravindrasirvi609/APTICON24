@@ -94,8 +94,9 @@ export default function Registration() {
         <meta name="twitter:image" content="/banner1.jpg" />
       </Head>
 
-      <Header />
-
+      <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
+        <Header />
+      </div>
       <main>
         <section
           id="register-for-apticon"

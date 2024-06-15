@@ -27,7 +27,9 @@ export const metadata: Metadata = {
 const Privacy = () => {
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-white">
-      <Header />
+      <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
+        <Header />
+      </div>{" "}
       <main className="container mx-auto py-16 px-6">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
           Privacy Policy

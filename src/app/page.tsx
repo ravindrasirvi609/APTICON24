@@ -75,8 +75,9 @@ export default function Home() {
         />
         <meta name="twitter:image" content="/1.png" />
       </Head>
-
-      <Header />
+      <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
+        <Header />
+      </div>
 
       <main>
         <section className="overflow-hidden">
