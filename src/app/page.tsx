@@ -127,7 +127,8 @@ export default function Home() {
                       </svg>
                     </span>{" "}
                     <span className="block lg:inline-block text-center lg:text-left">
-                      Bhubaneshwar | 27 & 28th of September 2024
+                      Bhubaneshwar | 27<sup>th</sup> & 28<sup>th</sup> of
+                      September 2024
                     </span>
                   </p>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
