@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white text-black px-4">
+    <header className="bg-white text-black px-4 pt-1">
       <div className="container mx-auto flex justify-between items-center">
         <Link href={"/"}>
           <Image
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
             alt="APTICON 2024"
             className="cursor-pointer"
             width={160}
-            height={40}
+            height={30}
           />
         </Link>
 

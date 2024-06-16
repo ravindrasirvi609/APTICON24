@@ -198,8 +198,8 @@ export default function Home() {
         </div>
 
         <section
-          id="about"
           className="container mx-auto lg:py-20 py-5 px-6 text-black"
+          id="about"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
             About APTICON 2024
@@ -253,7 +253,7 @@ export default function Home() {
                   Mission
                 </h3>
               </div>
-              <p className="leading-relaxed text-black">
+              <div className="leading-relaxed text-black">
                 <ul className="list-disc pl-5 md:pl-8 lg:pl-10">
                   <li>
                     To provide a platform for educators, industry experts, and
@@ -272,7 +272,7 @@ export default function Home() {
                     care and the healthcare system.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <div className="flex items-center">
@@ -416,11 +416,8 @@ export default function Home() {
           {" "}
           <Sponsors />
         </section> */}
-
-        <section
-          id="registration"
-          className="container mx-auto lg:py-20 py-5 text-black"
-        >
+        <div id="registration" className="container mx-auto"></div>
+        <section className="container mx-auto lg:py-20 py-5 text-black">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
             Register for APTICON 2024
           </h2>
@@ -436,6 +433,7 @@ export default function Home() {
             </button>
           </div>
         </section>
+        <div id="call-for-papers" className="container mx-auto"></div>
 
         <section
           id="call-for-papers"
