@@ -104,7 +104,7 @@ export default function Registration() {
       <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
         <Header />
       </div>
-      <main className="mt-20">
+      <main className="mt-16">
         <section
           id="register-for-apticon"
           className="container mx-auto py-20 text-black"

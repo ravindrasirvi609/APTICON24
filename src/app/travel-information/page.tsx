@@ -67,7 +67,7 @@ const TravelInformation = () => {
       <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
         <Header />
       </div>
-      <div className="bg-lightGrey p-6 mt-20">
+      <div className="bg-lightGrey p-6 mt-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-darkBrown">
             Travel Information
