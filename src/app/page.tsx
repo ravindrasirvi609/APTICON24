@@ -420,7 +420,7 @@ export default function Home() {
         <div id="registration" className="container mx-auto"></div>
         <section className="container mx-auto lg:py-20 py-5 text-black">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
-            Register for APTICON 2024
+            Register to APTICON 2024
           </h2>
           <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             Secure your spot at APTICON 2024 by registering today. Find out

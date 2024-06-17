@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const FacebookIcon = () => (
@@ -76,12 +77,16 @@ const Footer = () => {
     <footer className="bg-black text-white py-4 text-center shadow">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
-          <a
-            href="/"
-            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
-          >
-            <h1 className="text-2xl font-bold">APTICON 2024</h1>
-          </a>
+          <div className="flex flex-col items-center mb-4 sm:mb-0 space-y-3 rtl:space-y-reverse">
+            <Link href="/">
+              <h1 className="text-2xl font-bold">APTICON 2024</h1>
+            </Link>
+            <p className="text-blue-500">
+              <Link href="https://www.ravindrachoudhary.in/">
+                Developed and maintain page
+              </Link>
+            </p>
+          </div>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-gray-400">
             <li>
               <a href="/privacy" className="hover:underline me-4 md:me-6">

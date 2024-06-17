@@ -30,14 +30,14 @@ const metadata: Metadata = {
 
 export default function Registration() {
   const [hoveredPlan, setHoveredPlan] = useState("");
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const paymentLinks: { [key: string]: string } = {
-    members: "https://your-payment-page-url/members",
-    students: "https://your-payment-page-url/students",
-    nonMembers: "https://your-payment-page-url/non-members",
-    industry: "https://your-payment-page-url/industry",
-    companion: "https://your-payment-page-url/companion",
-    international: "https://your-payment-page-url/international",
+    members: "",
+    students: "",
+    nonMembers: "",
+    industry: "",
+    companion: "",
+    international: "",
   };
 
   type FeeType = {
@@ -68,6 +68,7 @@ export default function Registration() {
     },
     // Add more fee types as needed
   ];
+
   return (
     <div className="bg-white">
       <Head>
@@ -110,7 +111,7 @@ export default function Registration() {
           className="container mx-auto py-20 text-black"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
-            Register for APTICON 2024
+            Register to APTICON 2024
           </h2>
           <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             Secure your spot at APTICON 2024 by registering today. Find out
@@ -157,12 +158,12 @@ export default function Registration() {
                                 </span>
                               </td>
                               <td className="py-2 px-4 border-b border-grey">
-                                <a
-                                  href={paymentLinks[key]}
-                                  className="bg-green text-white py-1 px-4 rounded inline-block"
+                                <button
+                                  onClick={() => setIsModalOpen(true)}
+                                  className="bg-green text-white py-1 px-4 rounded inline-block cursor-pointer"
                                 >
                                   Pay Now
-                                </a>
+                                </button>
                               </td>
                             </tr>
                           ))
@@ -191,12 +192,12 @@ export default function Registration() {
                       <span className="line-through">{fee.Price[key]}</span>
                       <span className="text-red-500 ml-2">{fee.fees[key]}</span>
                     </div>
-                    <a
-                      href={paymentLinks[key]}
-                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full"
+                    <button
+                      onClick={() => setIsModalOpen(true)}
+                      className="bg-green text-white py-1 px-4 rounded mt-2 inline-block text-right w-full cursor-pointer"
                     >
                       Pay Now
-                    </a>
+                    </button>
                   </div>
                 ))
               )}
@@ -207,6 +208,25 @@ export default function Registration() {
           </div>
         </section>
       </main>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-center text-2xl text-gray-800 font-bold mb-4">
+              Registration Coming Soon...
+            </h2>
+            <p className="text-center text-gray-600 mb-4">
+              Stay tuned for more details.
+            </p>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="item-center bg-green py-2 px-2 rounded inline-block cursor-pointer w-full text-white text-2xl font-bold"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

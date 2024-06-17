@@ -74,7 +74,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a href="/travel-information" className="hover:text-ochre">
-                Travel Desk
+                Travel
               </a>
             </li>
           </ul>
@@ -121,7 +121,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a href="/travel-information" className="hover:text-ochre">
-                Travel Desk
+                Travel
               </a>
             </li>
           </ul>
