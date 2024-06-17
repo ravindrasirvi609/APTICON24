@@ -83,7 +83,7 @@ const Footer = () => {
             </Link>
             <p className="text-blue-500">
               <Link href="https://www.ravindrachoudhary.in/">
-                Developed and maintain page
+                Developed and maintain by Ravindra Choudhary
               </Link>
             </p>
           </div>
