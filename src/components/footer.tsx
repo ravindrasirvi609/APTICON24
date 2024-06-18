@@ -107,7 +107,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-center space-x-4 mt-4">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/profile.php?id=61560604442997&mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400"
@@ -115,7 +115,7 @@ const Footer = () => {
             <FacebookIcon />
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/apticon-bhubaneshwar-622683313"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400"
