@@ -114,18 +114,16 @@ const TravelInformation = () => {
         overlayClassName="fixed inset-0 bg-black bg-opacity-75"
       >
         <div className="bg-white p-4 rounded-lg max-w-3xl mx-auto flex flex-col items-center">
-          <button
-            onClick={closeModal}
-            className="self-end mb-4 bg-red-500 text-black px-4 py-2 rounded"
-          >
-            X
-          </button>
           <h3 className="text-lg font-bold text-black mb-2">
             {selectedPlace.alt}
           </h3>
-          <p className="text-black font-medium mb-4">
-            {selectedPlace.description}
-          </p>
+          <p className="text-black font-medium">{selectedPlace.description}</p>
+          <button
+            onClick={closeModal}
+            className="self-end px-2 bg-green hover:bg-pink-800 text-white  items-center text-center rounded"
+          >
+            X
+          </button>
           <div className="w-full">
             {selectedPlace.src && (
               <Image

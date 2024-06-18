@@ -332,6 +332,21 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section
+          className="container mx-auto lg:py-6 py-2 px-6 text-black"
+          id="about"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
+            About the Vanue
+          </h2>
+          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+            APTI, in association with the University Department of
+            Pharmaceutical Sciences (UDPS) at Utkal University, will host
+            APTICON 2024. This prestigious event will gather experts to discuss
+            advancements in pharmaceutical sciences, fostering collaboration and
+            knowledge sharing at the renowned Utkal University in Odisha.
+          </p>
+        </section>
         {/* <section
           id="speakers"
           className="container mx-auto py-20 px-6 text-black"
