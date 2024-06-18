@@ -336,17 +336,37 @@ export default function Home() {
           className="container mx-auto lg:py-6 py-2 px-6 text-black"
           id="about"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
-            About the Vanue
-          </h2>
-          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
-            APTI, in association with the University Department of
-            Pharmaceutical Sciences (UDPS) at Utkal University, will host
-            APTICON 2024. This prestigious event will gather experts to discuss
-            advancements in pharmaceutical sciences, fostering collaboration and
-            knowledge sharing at the renowned Utkal University in Odisha.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
+                About the APTI
+              </h2>
+              <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+                The Association of Pharmaceutical Teachers of India (APTI) is
+                the premier professional organization dedicated to the
+                advancement of pharmaceutical education and practice in India.
+                Founded with the vision of fostering excellence in the field of
+                pharmacy, APTI serves as a crucial link between educators,
+                researchers, and practitioners, driving progress and innovation
+              </p>
+            </div>
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
+                About the Venue
+              </h2>
+              <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+                APTICON 2024 will be organized at Utkal University. Known as the
+                Mother University of Odisha, Utkal University has a rich history
+                and has made significant contributions to the development of
+                modern Odisha. Established in 1943, it is one of India&apos;s
+                oldest and largest affiliating universities. Located in
+                Bhubaneswar, the university is renowned for its academic and
+                research excellence, making it an ideal venue for this event.
+              </p>
+            </div>
+          </div>
         </section>
+
         {/* <section
           id="speakers"
           className="container mx-auto py-20 px-6 text-black"
