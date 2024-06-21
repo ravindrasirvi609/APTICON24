@@ -10,9 +10,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import { useEffect, useState } from "react";
 import NationalBody from "./national-body/page";
-import OpfModel from "@/components/opfModel";
 
 export default function Home() {
   const settings1 = {
@@ -62,7 +60,7 @@ export default function Home() {
           property="og:description"
           content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
         />
-        <meta property="og:image" content="/APTICON2024.png" />
+        <meta property="og:image" content="/favicon.ico" />
         <meta property="og:url" content="https://www.apticon2024.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -74,7 +72,7 @@ export default function Home() {
           name="twitter:description"
           content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
         />
-        <meta name="twitter:image" content="/1.png" />
+        <meta name="twitter:image" content="/favicon.ico" />
       </Head>
       <div className="bg-white overflow-hidden fixed top-0 left-0 w-full z-50">
         <Header />
