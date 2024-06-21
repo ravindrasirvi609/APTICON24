@@ -83,9 +83,10 @@ const Contact: React.FC = () => {
           Phone: 9437158898, 7978172679 & 9937111587
         </p>
         <p className="text-lg mb-8 text-center">
-          Address: Secretary, APTI Odisha State Branch, University Department of
+          Address: Organizing Secretary, APTICON 2024 Association of
+          Pharmaceutical Teachers of India, University Department of
           Pharmaceutical Sciences (UDPS), Utkal University, Vani Vihar,
-          Bhubaneswar
+          Bhubaneswar-751004
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

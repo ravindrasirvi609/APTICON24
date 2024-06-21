@@ -62,7 +62,7 @@ export default function Home() {
           property="og:description"
           content="Join us for APTICON 2024 on September 27-28 in Bhubaneswar, Odisha. Transforming Pharmacy Education with industry experts and educators."
         />
-        <meta property="og:image" content="/1.png" />
+        <meta property="og:image" content="/APTICON2024.png" />
         <meta property="og:url" content="https://www.apticon2024.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
