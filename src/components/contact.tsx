@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
       <div className="flex flex-col items-center mb-10">
         <p className="text-lg mb-4">Contact Email: info@apticon2024.com</p>
         <p className="text-lg mb-4">
-          Phone: 8249906480, 8328848093 & 8328817452
+          Phone: 9437158898, 7978172679 & 9937111587
         </p>
         <p className="text-lg mb-8 text-center">
           Address: Secretary, APTI Odisha State Branch, University Department of
