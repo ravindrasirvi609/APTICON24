@@ -41,7 +41,7 @@ export default function Home() {
       <Head>
         <title>APTICON 2024 - Transforming Pharmacy Education</title>
         <meta name="description" content="APTICON 2024 Conference" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
 
         <meta
           name="description"
