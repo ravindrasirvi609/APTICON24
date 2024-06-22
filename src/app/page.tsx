@@ -488,7 +488,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center my-4">
             <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
-              <Link href="https://forms.gle/SeBkWPaopQE16awd9">
+              <Link href="https://forms.gle/SeBkWPaopQE16awd9" target="_blank">
                 Submit Abstract
               </Link>
             </button>

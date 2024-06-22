@@ -44,7 +44,7 @@ const TravelInformation = () => {
     },
     {
       src: "/picnic/4.png",
-      alt: "Udayagiri and Khandagiri Caves",
+      alt: "Udayagiri & Khandagiri Caves, Bhubaneswar",
       description:
         "Located just outside Bhubaneswar, these ancient Jain rock-cut caves date back to the 1st century BCE. The caves are significant for their historical and archaeological importance and offer stunning views of the surrounding area.",
     },
@@ -56,7 +56,7 @@ const TravelInformation = () => {
     },
     {
       src: "/picnic/6.png",
-      alt: "Dhauli Giri",
+      alt: "Dhauli Giri, Bhubaneswar",
       description:
         "Known for the Dhauli Shanti Stupa (Peace Pagoda), this site marks the location where the Kalinga War was fought. The edicts of Emperor Ashoka, carved into rock, can be found here, reflecting his conversion to Buddhism and his message of peace.",
     },
