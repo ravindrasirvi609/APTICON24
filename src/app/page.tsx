@@ -85,8 +85,8 @@ export default function Home() {
               <div className="absolute top-5 left-0 lg:top-24 lg:left-24 w-full flex flex-col items-center lg:items-start p-4 lg:p-0 space-y-4 lg:pr-[72px]">
                 <div className="text-center lg:text-left">
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4 sm:block hidden">
-                    Welcome to APTICON 2024, The Annual National Convention of
-                    the Association of Pharmaceutical Teachers of India!
+                    Welcome to APTICON 2024, The 27th Annual National Convention
+                    of the Association of Pharmaceutical Teachers of India!
                   </p>
                   <h1 className="text-white font-black text-xs md:text-lg lg:text-3xl mb-2 md:mb-4 ">
                     {" "}
@@ -521,7 +521,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
                 Abstract Content
               </h3>
-              <ul className="list-disc list-inside leading-relaxed text-black">
+              <ul className="list-disc list-outside leading-relaxed text-black">
                 <li>
                   The abstract should summarize the work proposed to be
                   presented, including the objectives, methods, results, and
@@ -535,7 +535,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold mb-4 text-ochre mt-6">
                 Submission Instructions
               </h3>
-              <ul className="list-disc list-inside leading-relaxed text-black">
+              <ul className="list-disc list-outside leading-relaxed text-black">
                 <li>
                   The abstract should be prepared according to the guidelines
                   provided on the website.
