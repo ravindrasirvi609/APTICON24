@@ -132,7 +132,7 @@ export default function Home() {
                     </span>
                   </p>
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
-                    Organized by: APTI Eastern Region
+                    Host: APTI Eastern Region
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
                     <a
@@ -229,7 +229,7 @@ export default function Home() {
                   height={480}
                 />
                 <h3 className="text-2xl font-semibold mb-4 text-ochre">
-                  vision
+                  Vision
                 </h3>
               </div>{" "}
               <p className="leading-relaxed text-black">
@@ -484,8 +484,15 @@ export default function Home() {
             select those for Poster and/or Oral presentation. The best Poster
             and/or Oral presentations in each category will be announced by the
             ASC during the valedictory function. Winners will receive a
-            certificate, memento, and cash prize.
+            certificate and memento.
           </p>
+          <div className="flex justify-center my-4">
+            <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
+              <Link href="https://forms.gle/SeBkWPaopQE16awd9">
+                Submit Abstract
+              </Link>
+            </button>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
@@ -562,13 +569,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center mt-6">
-            <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
-              <Link href="https://forms.gle/SeBkWPaopQE16awd9">
-                Submit Abstract
-              </Link>
-            </button>
-          </div>
           <div className="bg-ashGrey p-6 rounded-lg shadow-md mt-10">
             <h3 className="text-2xl font-semibold mb-4 text-ochre">
               Review Process
@@ -600,7 +600,7 @@ export default function Home() {
             <ul className="list-disc list-inside leading-relaxed text-black">
               <li>
                 The best Poster and/or Oral presentations in each category will
-                receive a certificate, memento, and cash prize.
+                receive a certificate and a memento.
               </li>
             </ul>
           </div>

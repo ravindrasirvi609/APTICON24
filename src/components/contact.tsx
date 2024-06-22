@@ -73,9 +73,9 @@ const Contact: React.FC = () => {
       </h2>
       <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
         Have questions or need more information? Get in touch with the APTICON
-        2024 organizing committee. Find our contact details, send us an email,
+        2024 Organizing Committee. Find our contact details, send us an email,
         or fill out the contact form. We’re here to assist you with any
-        inquiries you may have regarding the conference.
+        enquiries you may have regarding the conference.
       </p>
       <div className="flex flex-col items-center mb-10">
         <p className="text-lg mb-4">Contact Email: info@apticon2024.com</p>
