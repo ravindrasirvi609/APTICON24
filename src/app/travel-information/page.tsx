@@ -60,6 +60,12 @@ const TravelInformation = () => {
       description:
         "Known for the Dhauli Shanti Stupa (Peace Pagoda), this site marks the location where the Kalinga War was fought. The edicts of Emperor Ashoka, carved into rock, can be found here, reflecting his conversion to Buddhism and his message of peace.",
     },
+    {
+      src: "/picnic/7.jpeg",
+      alt: "Nandankanan Zoological Park",
+      description:
+        "Spread over 990 acres, Nandankanan Zoological Park is home to a diverse range of wildlife, including white tigers, Asiatic lions, and crocodiles. The park also features a botanical garden and a lake, making it an ideal destination for nature lovers.",
+    },
   ];
 
   return (
@@ -96,7 +102,7 @@ const TravelInformation = () => {
         </div>
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-darkBrown">
-            Travel Arrangements By Air
+            Traveling to Bhubaneswar
           </h2>
         </div>
         <div className="text-center mb-12">
