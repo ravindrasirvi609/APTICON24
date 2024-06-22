@@ -62,9 +62,9 @@ const TravelInformation = () => {
     },
     {
       src: "/picnic/7.jpeg",
-      alt: "Nandankanan Zoological Park",
+      alt: "Nandankanan Zoological Park in Bhubaneswar",
       description:
-        "Spread over 990 acres, Nandankanan Zoological Park is home to a diverse range of wildlife, including white tigers, Asiatic lions, and crocodiles. The park also features a botanical garden and a lake, making it an ideal destination for nature lovers.",
+        " established in 1960, is a premier destination for wildlife and botanical enthusiasts. It houses over 160 animal species, including famous white tigers and Asiatic lions, and features a 75-hectare botanical garden with rare plants. Renowned for its breeding programs and safari experiences, Nandankanan offers close encounters with wildlife, making it a must-visit for both education and recreation.",
     },
   ];
 
