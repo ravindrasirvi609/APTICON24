@@ -116,7 +116,7 @@ const Footer = () => {
             <FacebookIcon />
           </a>
           <a
-            href="https://www.linkedin.com/in/apticon-bhubaneshwar-622683313"
+            href="https://www.linkedin.com/in/apticon-Bhubaneswar-622683313"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400"

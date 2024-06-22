@@ -95,7 +95,7 @@ const TravelInformation = () => {
         <div className="text-center mb-12">
           <p className="text-lg text-black max-w-3xl mx-auto">
             APTICON 2024 will be held in Utkal University, Vani Vihar,
-            Bhubaneshwar on September 27 and 28, 2024. The venue is conveniently
+            Bhubaneswar on September 27 and 28, 2024. The venue is conveniently
             located and offers excellent facilities for a productive and
             memorable conference experience.
           </p>
@@ -117,7 +117,7 @@ const TravelInformation = () => {
 
         <div className="text-center mb-12">
           <p className="text-lg text-black max-w-3xl mx-auto">
-            Bhubaneshwar Railway Station (BBS) is well-connected to major cities
+            Bhubaneswar Railway Station (BBS) is well-connected to major cities
             across India. The station is about 4 kilometers from the event
             venue, and you can easily reach the venue by taxi or auto-rickshaw.
           </p>
