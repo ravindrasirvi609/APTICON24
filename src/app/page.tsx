@@ -345,7 +345,7 @@ export default function Home() {
                 advancement of pharmaceutical education and practice in India.
                 Founded with the vision of fostering excellence in the field of
                 pharmacy, APTI serves as a crucial link between educators,
-                researchers, and practitioners, driving progress and innovation
+                researchers, and practitioners, driving progress and innovation.
               </p>
             </div>
             <div>

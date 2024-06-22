@@ -75,10 +75,45 @@ const TravelInformation = () => {
         </div>
         <div className="text-center mb-12">
           <p className="text-lg text-black max-w-3xl mx-auto">
-            Welcome to APTICON 2024! Here you will find essential travel
-            information to help you plan your visit. Whether youre arriving by
-            plane, train, or car, weve got you covered. Explore the local
-            attractions and make the most of your stay.
+            Welcome to the APTICON 2024 Travel Desk! We are delighted to assist
+            you in planning your journey to the premier event of the year,
+            APTICON 2024. Our goal is to ensure that your travel experience is
+            as seamless and enjoyable as possible. Below you will find essential
+            information and helpful tips to make your trip to APTICON 2024 a
+            success.
+          </p>
+        </div>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-darkBrown">Event Location</h2>
+        </div>
+        <div className="text-center mb-12">
+          <p className="text-lg text-black max-w-3xl mx-auto">
+            APTICON 2024 will be held in Utkal University, Vani Vihar,
+            Bhubaneshwar on September 27 and 28, 2024. The venue is conveniently
+            located and offers excellent facilities for a productive and
+            memorable conference experience.
+          </p>
+        </div>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-darkBrown">
+            Travel Arrangements By Air
+          </h2>
+        </div>
+        <div className="text-center mb-12">
+          <p className="text-lg text-black max-w-3xl mx-auto">
+            For attendees flying in, the nearest airport is Biju Patnaik
+            International Airport (BBI), located approximately 7 kilometers from
+            the city center. Major airlines operate daily flights to this
+            airport, making it convenient for both domestic and international
+            travelers.
+          </p>
+        </div>
+
+        <div className="text-center mb-12">
+          <p className="text-lg text-black max-w-3xl mx-auto">
+            Bhubaneshwar Railway Station (BBS) is well-connected to major cities
+            across India. The station is about 4 kilometers from the event
+            venue, and you can easily reach the venue by taxi or auto-rickshaw.
           </p>
         </div>
         <div className="text-center mb-8">
