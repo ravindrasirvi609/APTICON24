@@ -8,7 +8,7 @@ const About = () => {
       <Header />
       <section
         id="about"
-        className="container mx-auto lg:py-20 py-5 px-6 text-black"
+        className="container mx-auto lg:py-20 py-5 px-6 text-black bg-white"
       >
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
           About APTICON 2024
@@ -59,7 +59,7 @@ const About = () => {
                 Mission
               </h3>
             </div>
-            <p className="leading-relaxed text-black">
+            <div className="leading-relaxed text-black">
               <ul className="list-disc pl-5 md:pl-8 lg:pl-10">
                 <li>
                   To provide a platform for educators, industry experts, and
@@ -78,7 +78,7 @@ const About = () => {
                   care and the healthcare system.
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
           <div className="bg-ashGrey p-6 rounded-lg shadow-md">
             <div className="flex items-center">

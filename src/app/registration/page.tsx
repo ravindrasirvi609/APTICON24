@@ -1,44 +1,11 @@
 "use client";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { Metadata } from "next";
 import Head from "next/head";
 import { useState } from "react";
 
-const metadata: Metadata = {
-  title: "Registration - APTICON 2024",
-  description:
-    "Register for APTICON 2024 to secure your spot at this prestigious pharmacy conference held on September 27-28, 2024, in Bhubaneswar, Odisha. Discover registration fees, deadlines, and benefits of attending.",
-  keywords: [
-    "APTICON 2024",
-    "Registration",
-    "Pharmacy Conference",
-    "Bhubaneswar",
-    "Odisha",
-    "Pharmacy Education",
-    "Conference Registration",
-  ],
-  openGraph: {
-    title: "Registration - APTICON 2024",
-    description:
-      "Register for APTICON 2024 to secure your spot at this prestigious pharmacy conference held on September 27-28, 2024, in Bhubaneswar, Odisha.",
-    images: [{ url: "/banner1.jpg" }],
-    url: "https://www.apticon2024.com/registration",
-    type: "website",
-  },
-};
-
 export default function Registration() {
-  const [hoveredPlan, setHoveredPlan] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const paymentLinks: { [key: string]: string } = {
-    members: "",
-    students: "",
-    nonMembers: "",
-    industry: "",
-    companion: "",
-    international: "",
-  };
 
   type FeeType = {
     type: string;
@@ -50,23 +17,22 @@ export default function Registration() {
     {
       type: "Early Bird (Upto June 30)",
       fees: {
-        members: "₹ 2800",
+        "APTI Members": "₹ 2800",
         students: "₹ 2500",
-        nonMembers: "₹ 3500",
+        "non-Members": "₹ 3300",
         industry: "₹ 4000",
         companion: "₹ 1500",
         international: "118 USD",
       },
       Price: {
-        members: "₹ 3500",
+        "APTI Members": "₹ 3500",
         students: "₹ 2900",
-        nonMembers: "₹ 4000",
+        "non-Members": "₹ 4000",
         industry: "₹ 4500",
         companion: "-",
         international: "118 USD",
       },
     },
-    // Add more fee types as needed
   ];
 
   return (
