@@ -62,9 +62,9 @@ const TravelInformation = () => {
     },
     {
       src: "/picnic/7.jpeg",
-      alt: "Nandankanan Zoological Park in Bhubaneswar",
+      alt: "Nandankanan Zoological Park, Bhubaneswar",
       description:
-        " established in 1960, is a premier destination for wildlife and botanical enthusiasts. It houses over 160 animal species, including famous white tigers and Asiatic lions, and features a 75-hectare botanical garden with rare plants. Renowned for its breeding programs and safari experiences, Nandankanan offers close encounters with wildlife, making it a must-visit for both education and recreation.",
+        "Established in 1960, is a premier destination for wildlife and botanical enthusiasts. It houses over 160 animal species, including famous white tigers and Asiatic lions, and features a 75-hectare botanical garden with rare plants. Renowned for its breeding programs and safari experiences, Nandankanan offers close encounters with wildlife, making it a must-visit for both education and recreation.",
     },
   ];
 
