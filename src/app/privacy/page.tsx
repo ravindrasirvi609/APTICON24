@@ -44,7 +44,7 @@ const Privacy = () => {
           </p>
           <h2 className="text-2xl font-semibold">Information We Collect</h2>
           <p>We may collect the following types of information:</p>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>
               <strong>Personal Information:</strong> Name, email address, phone
               number, affiliation, and payment details when you register for the
@@ -63,7 +63,7 @@ const Privacy = () => {
             How We Use Your Information
           </h2>
           <p>We use the collected information for the following purposes:</p>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>
               <strong>Conference Registration:</strong> To process your
               registration and manage your participation in the event.
@@ -88,7 +88,7 @@ const Privacy = () => {
             We do not sell, trade, or otherwise transfer your personal
             information to outside parties except for:
           </p>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>
               <strong>Service Providers:</strong> Third-party companies that
               assist us in operating our website, conducting our business, or
@@ -108,7 +108,7 @@ const Privacy = () => {
           </p>
           <h2 className="text-2xl font-semibold">Your Rights</h2>
           <p>You have the right to:</p>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>Access, correct, or delete your personal information.</li>
             <li>Opt-out of receiving marketing communications.</li>
             <li>
@@ -138,7 +138,7 @@ const Privacy = () => {
             website.
           </p>
           <h2 className="text-2xl font-semibold">Use of the Website</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>
               <strong>Eligibility:</strong> You must be at least 18 years old to
               use our website.
@@ -155,7 +155,7 @@ const Privacy = () => {
             </li>
           </ul>
           <h2 className="text-2xl font-semibold">Registration and Payment</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>
               <strong>Accuracy:</strong> You agree to provide accurate, current,
               and complete information during the registration process.
@@ -167,7 +167,7 @@ const Privacy = () => {
             </li>
           </ul>
           <h2 className="text-2xl font-semibold">Intellectual Property</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>
               <strong>Ownership:</strong> All content on this website, including
               text, graphics, logos, and images, is the property of APTICON 2024
@@ -181,7 +181,7 @@ const Privacy = () => {
             </li>
           </ul>
           <h2 className="text-2xl font-semibold">Limitation of Liability</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>
               <strong>No Warranties:</strong> The website is provided as is
               without any warranties of any kind, either express or implied.

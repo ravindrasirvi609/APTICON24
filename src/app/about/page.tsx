@@ -93,7 +93,7 @@ const About = () => {
                 Event Highlights
               </h3>
             </div>{" "}
-            <ul className="list-disc list-inside leading-relaxed text-black">
+            <ul className="list-disc list-outside leading-relaxed text-black">
               <li>
                 In-depth Sessions: Engage with a variety of sessions covering
                 the latest trends, research, and practices in pharmaceutical

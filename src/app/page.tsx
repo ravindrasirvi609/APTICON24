@@ -286,7 +286,7 @@ export default function Home() {
                   Event Highlights
                 </h3>
               </div>{" "}
-              <ul className="list-disc list-inside leading-relaxed text-black">
+              <ul className="list-disc list-outside leading-relaxed text-black">
                 <li>
                   In-depth Sessions: Engage with a variety of sessions covering
                   the latest trends, research, and practices in pharmaceutical
@@ -498,7 +498,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
                 Areas of Specialization
               </h3>
-              <ul className="list-disc list-inside leading-relaxed text-black">
+              <ul className="list-disc list-outside leading-relaxed text-black">
                 {[
                   "Pharmaceutical Technology",
                   "Medicinal Chemistry",
@@ -573,7 +573,7 @@ export default function Home() {
             <h3 className="text-2xl font-semibold mb-4 text-ochre">
               Review Process
             </h3>
-            <ul className="list-disc list-inside leading-relaxed text-black">
+            <ul className="list-disc list-outside leading-relaxed text-black">
               <li>All submitted abstracts will be reviewed by the ASC.</li>
               <li>
                 Selected abstracts will be notified for Poster and/or Oral
@@ -587,7 +587,7 @@ export default function Home() {
             <h3 className="text-2xl font-semibold mb-4 text-ochre mt-6">
               Presentation Guidelines
             </h3>
-            <ul className="list-disc list-inside leading-relaxed text-black">
+            <ul className="list-disc list-outside leading-relaxed text-black">
               <li>
                 Detailed guidelines for Poster and Oral presentations will be
                 provided upon acceptance of the abstract.
@@ -597,7 +597,7 @@ export default function Home() {
             <h3 className="text-2xl font-semibold mb-4 text-ochre mt-6">
               Rewards
             </h3>
-            <ul className="list-disc list-inside leading-relaxed text-black">
+            <ul className="list-disc list-outside leading-relaxed text-black">
               <li>
                 The best Poster and/or Oral presentations in each category will
                 receive a certificate and a memento.

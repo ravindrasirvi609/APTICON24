@@ -61,7 +61,7 @@ const Refund = () => {
             checkout. Delivery times may vary based on location and shipping
             method chosen:
           </p>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-outside space-y-2">
             <li>Standard Shipping: 5-7 business days</li>
             <li>Express Shipping: 2-3 business days</li>
             <li>Overnight Shipping: 1-2 business days</li>
