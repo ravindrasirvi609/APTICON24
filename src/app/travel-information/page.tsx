@@ -37,7 +37,7 @@ const TravelInformation = () => {
         "One of the Char Dham pilgrimage sites, the Jagannath Temple in Puri is a significant religious site for Hindus. The temple is famous for its annual Rath Yatra (Chariot Festival) and its rich cultural and spiritual heritage.",
     },
     {
-      src: "/picnic/3.png",
+      src: "/picnic/9.jpeg",
       alt: "Chilika Lake",
       description:
         "Asia's largest brackish water lagoon, Chilika Lake is a haven for birdwatchers and nature enthusiasts. It hosts a wide variety of migratory birds and is home to the endangered Irrawaddy dolphins. The lake offers picturesque views and opportunities for boat rides.",
