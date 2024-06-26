@@ -15,7 +15,7 @@ export default function Registration() {
 
   const registrationFees: FeeType[] = [
     {
-      type: "Early Bird (Upto June 30)",
+      type: "Early Bird (Upto 15th July)",
       fees: {
         "APTI Members": "₹ 2800",
         students: "₹ 2500",
@@ -29,7 +29,7 @@ export default function Registration() {
         students: "₹ 2900",
         "non-Members": "₹ 4000",
         industry: "₹ 4500",
-        companion: "-",
+        companion: "",
         international: "118 USD",
       },
     },
