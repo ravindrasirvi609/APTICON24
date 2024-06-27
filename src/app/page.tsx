@@ -127,7 +127,7 @@ export default function Home() {
                       </svg>
                     </span>{" "}
                     <span className="block lg:inline-block text-center lg:text-left">
-                      Bhubaneswar | 27<sup>th</sup> & 28<sup>th</sup> of
+                      Utkal University | 27<sup>th</sup> & 28<sup>th</sup> of
                       September 2024
                     </span>
                   </p>

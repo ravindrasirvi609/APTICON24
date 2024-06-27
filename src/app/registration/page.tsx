@@ -30,7 +30,7 @@ export default function Registration() {
         "non-Members": "₹ 4000",
         industry: "₹ 4500",
         companion: "",
-        international: "118 USD",
+        international: "",
       },
     },
   ];
