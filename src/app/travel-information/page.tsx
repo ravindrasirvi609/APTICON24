@@ -37,7 +37,7 @@ const TravelInformation = () => {
         "One of the Char Dham pilgrimage sites, the Jagannath Temple in Puri is a significant religious site for Hindus. The temple is famous for its annual Rath Yatra (Chariot Festival) and its rich cultural and spiritual heritage.",
     },
     {
-      src: "/picnic/9.jpeg",
+      src: "/picnic/3.jpeg",
       alt: "Chilika Lake",
       description:
         "Asia's largest brackish water lagoon, Chilika Lake is a haven for birdwatchers and nature enthusiasts. It hosts a wide variety of migratory birds and is home to the endangered Irrawaddy dolphins. The lake offers picturesque views and opportunities for boat rides.",
@@ -49,13 +49,13 @@ const TravelInformation = () => {
         "Located just outside Bhubaneswar, these ancient Jain rock-cut caves date back to the 1st century BCE. The caves are significant for their historical and archaeological importance and offer stunning views of the surrounding area.",
     },
     {
-      src: "/picnic/5.png",
+      src: "/picnic/5.jpeg",
       alt: "Lingaraj Temple, Bhubaneswar",
       description:
         "An architectural masterpiece, the Lingaraj Temple is one of the oldest and largest temples in Bhubaneswar. Dedicated to Lord Shiva, this temple exemplifies the Kalinga style of architecture and is a major pilgrimage site.",
     },
     {
-      src: "/picnic/6.png",
+      src: "/picnic/6.jpeg",
       alt: "Dhauli Giri, Bhubaneswar",
       description:
         "Known for the Dhauli Shanti Stupa (Peace Pagoda), this site marks the location where the Kalinga War was fought. The edicts of Emperor Ashoka, carved into rock, can be found here, reflecting his conversion to Buddhism and his message of peace.",
@@ -65,6 +65,19 @@ const TravelInformation = () => {
       alt: "Nandankanan Zoological Park, Bhubaneswar",
       description:
         "Established in 1960, is a premier destination for wildlife and botanical enthusiasts. It houses over 160 animal species, including famous white tigers and Asiatic lions, and features a 75-hectare botanical garden with rare plants. Renowned for its breeding programs and safari experiences, Nandankanan offers close encounters with wildlife, making it a must-visit for both education and recreation.",
+    },
+    {
+      src: "/picnic/9.jpeg",
+      alt: "Bhitarkanika, Bhubaneswar",
+      description:
+        "A unique ecosystem, Bhitarkanika National Park is a biodiversity hotspot known for its mangrove forests, estuaries, and wildlife. The park is home to saltwater crocodiles, migratory birds, and other species, making it a paradise for nature lovers and wildlife enthusiasts.",
+    },
+
+    {
+      src: "/picnic/10.jpeg",
+      alt: "Satapada, Bhubaneswar",
+      description:
+        "Located on the shores of Chilika Lake, Satapada is a popular destination for dolphin watching and boat cruises. The tranquil waters of the lake, the lush greenery, and the diverse birdlife make Satapada an ideal spot for nature lovers and photographers.",
     },
   ];
 
