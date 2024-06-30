@@ -2,7 +2,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 
 const TravelInformation = () => {
