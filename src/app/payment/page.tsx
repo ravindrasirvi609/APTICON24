@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import crc32 from "crc-32";
 
 const Payment: React.FC = () => {
   const [name, setName] = useState("");
@@ -8,13 +9,74 @@ const Payment: React.FC = () => {
   const [cardNumber, setCardNumber] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
   const [cvv, setCvv] = useState("");
+  const [orderId, setOrderId] = useState("");
+  const [transactionAmount, setTransactionAmount] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle payment processing here
 
-    // Simulate a successful payment
-    const isPaymentSuccessful = true;
+    const messageType = "0100";
+    const merchantId = "UATAPTISG0000001631";
+    const serviceId = "Education";
+    const customerId = "123456789012";
+    const currencyCode = "INR";
+    const requestDateTime = new Date().toISOString();
+    const successUrl = "https://www.apticon2024.com/success";
+    const failUrl = "https://www.apticon2024.com/failure";
+
+    const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}`;
+    const secretKey =
+      "7f6de8da9776966c5393975870a2752ae434310bb80296efdc3666093d7435b8"; // The secret key provided by SurePay
+
+    const checksumValue = generateCRC32Checksum(message, secretKey);
+
+    const payload = {
+      merchantId,
+      messageType,
+      serviceId,
+      orderId,
+      customerId,
+      transactionAmount,
+      currencyCode,
+      requestDateTime,
+      successUrl,
+      failUrl,
+      checksum: checksumValue,
+    };
+
+    try {
+      const response = await fetch(
+        "https://pilot.surepay.ndml.in/SurePayPayment/sp/processRequest",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (response.ok) {
+        // Handle successful payment response
+        const data = await response.json();
+        console.log(data);
+      } else {
+        // Handle failed payment response
+        console.error("Payment failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  const generateCRC32Checksum = (
+    message: string,
+    secretKey: string
+  ): string => {
+    const msg = message + "|" + secretKey;
+    const bytes = new TextEncoder().encode(msg);
+    const checksumValue = crc32.buf(bytes);
+    return checksumValue.toString();
   };
 
   return (
@@ -51,56 +113,38 @@ const Payment: React.FC = () => {
               required
             />
           </div>
+
           <div>
             <label
               className="block text-darkBrown text-lg mb-2"
-              htmlFor="cardNumber"
+              htmlFor="orderId"
             >
-              Card Number
+              Order ID
             </label>
             <input
-              id="cardNumber"
+              id="orderId"
               type="text"
-              value={cardNumber}
-              onChange={(e) => setCardNumber(e.target.value)}
+              value={orderId}
+              onChange={(e) => setOrderId(e.target.value)}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
               required
             />
           </div>
-          <div className="flex space-x-4">
-            <div className="flex-1">
-              <label
-                className="block text-darkBrown text-lg mb-2"
-                htmlFor="expiryDate"
-              >
-                Expiry Date
-              </label>
-              <input
-                id="expiryDate"
-                type="text"
-                value={expiryDate}
-                onChange={(e) => setExpiryDate(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
-                placeholder="MM/YY"
-                required
-              />
-            </div>
-            <div className="flex-1">
-              <label
-                className="block text-darkBrown text-lg mb-2"
-                htmlFor="cvv"
-              >
-                CVV
-              </label>
-              <input
-                id="cvv"
-                type="text"
-                value={cvv}
-                onChange={(e) => setCvv(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
-                required
-              />
-            </div>
+          <div>
+            <label
+              className="block text-darkBrown text-lg mb-2"
+              htmlFor="transactionAmount"
+            >
+              Transaction Amount
+            </label>
+            <input
+              id="transactionAmount"
+              type="text"
+              value={transactionAmount}
+              onChange={(e) => setTransactionAmount(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
+              required
+            />
           </div>
           <button
             type="submit"
