@@ -6,9 +6,6 @@ import crc32 from "crc-32";
 const Payment: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [cardNumber, setCardNumber] = useState("");
-  const [expiryDate, setExpiryDate] = useState("");
-  const [cvv, setCvv] = useState("");
   const [orderId, setOrderId] = useState("");
   const [transactionAmount, setTransactionAmount] = useState("");
 
@@ -20,13 +17,16 @@ const Payment: React.FC = () => {
     const serviceId = "Education";
     const customerId = "123456789012";
     const currencyCode = "INR";
-    const requestDateTime = new Date().toISOString();
+    const requestDateTime = new Date()
+      .toISOString()
+      .replace(/T/, " ")
+      .replace(/\..+/, ""); // Convert to the correct format
     const successUrl = "https://www.apticon2024.com/success";
     const failUrl = "https://www.apticon2024.com/failure";
 
     const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}`;
     const secretKey =
-      "7f6de8da9776966c5393975870a2752ae434310bb80296efdc3666093d7435b8"; // The secret key provided by SurePay
+      "7f6de8da9776966c5393975870a2752ae434310bb80296efdc3666093d7435b8";
 
     const checksumValue = generateCRC32Checksum(message, secretKey);
 
@@ -113,7 +113,6 @@ const Payment: React.FC = () => {
               required
             />
           </div>
-
           <div>
             <label
               className="block text-darkBrown text-lg mb-2"
