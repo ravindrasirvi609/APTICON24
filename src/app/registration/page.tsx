@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Head from "next/head";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Registration() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -178,15 +179,78 @@ export default function Registration() {
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-center text-2xl text-gray-800 font-bold mb-4">
-              Registration Coming Soon...
-            </h2>
-            <p className="text-center text-gray-600 mb-4">
-              Stay tuned for more details.
-            </p>
+            <Image
+              src="/APTICON_QR.png"
+              alt="APTICON QR Code"
+              width={300}
+              height={300}
+              className="mx-auto"
+            />
+
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Transaction ID
+                </label>
+                <input
+                  type="text"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Fee Type
+                </label>
+                <select
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  required
+                >
+                  {registrationFees.map((fee, index) => (
+                    <optgroup key={index} label={fee.type}>
+                      {Object.entries(fee.fees).map(([key, value]) => (
+                        <option key={key} value={key}>
+                          {key.charAt(0).toUpperCase() + key.slice(1)} - {value}
+                        </option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-green text-white py-2 px-4 rounded-md shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green"
+              >
+                Submit
+              </button>
+            </form>
+
             <button
               onClick={() => setIsModalOpen(false)}
-              className="item-center bg-green py-2 px-2 rounded inline-block cursor-pointer w-full text-white text-2xl font-bold"
+              className="mt-4 w-full bg-ochre text-white py-2 px-4 rounded-md shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
             >
               Close
             </button>
