@@ -10,11 +10,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { name, email, transactionId, feeType } = await req.json();
+    const { name, email, transactionId, feeType, mobileNumber } =
+      await req.json();
 
     const newUser = {
       name,
       email,
+      mobileNumber,
       transactionId,
       feeType,
       createdAt: new Date().toLocaleString("en-US", {
@@ -30,6 +32,7 @@ export async function POST(req: NextRequest) {
     const adminEmailTemplate = (newUser: {
       name: any;
       email: any;
+      mobileNumber: any;
       transactionId: any;
       feeType: any;
       createdAt: any;
@@ -42,6 +45,7 @@ export async function POST(req: NextRequest) {
         <ul style="font-size: 18px;">
           <li><strong>Name:</strong> ${newUser.name}</li>
           <li><strong>Email:</strong> ${newUser.email}</li>
+          <li><strong>Mobile Number:</strong> ${newUser.mobileNumber}</li>
           <li><strong>Transaction ID:</strong> ${newUser.transactionId}</li>
           <li><strong>Fee Type:</strong> ${newUser.feeType}</li>
           <li><strong>Registered At:</strong> ${newUser.createdAt}</li>
@@ -56,6 +60,7 @@ export async function POST(req: NextRequest) {
       name: any;
       email: any;
       transactionId: any;
+      mobileNumber: any;
       feeType: any;
       createdAt: any;
     }) => `
@@ -71,6 +76,7 @@ export async function POST(req: NextRequest) {
         <ul style="font-size: 18px;">
           <li><strong>Name:</strong> ${newUser.name}</li>
           <li><strong>Email:</strong> ${newUser.email}</li>
+          <li><strong>Mobile Number:</strong> ${newUser.mobileNumber}</li>
           <li><strong>Transaction ID:</strong> ${newUser.transactionId}</li>
           <li><strong>Fee Type:</strong> ${newUser.feeType}</li>
           <li><strong>Registered At:</strong> ${newUser.createdAt}</li>

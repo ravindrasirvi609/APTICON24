@@ -7,6 +7,13 @@ import Image from "next/image";
 
 export default function Registration() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobileNumber: "",
+    transactionId: "",
+    feeType: "",
+  });
 
   type FeeType = {
     type: string;
@@ -35,6 +42,35 @@ export default function Registration() {
       },
     },
   ];
+
+  const handleChange = (e: { target: { name: any; value: any } }) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/registrationDetails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+      if (res.ok) {
+        alert("Registration successful!");
+        setIsModalOpen(false);
+      } else {
+        alert(`Error: ${result.error}`);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred while submitting the form.");
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -186,8 +222,7 @@ export default function Registration() {
               height={300}
               className="mx-auto"
             />
-
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
                   Name
@@ -196,6 +231,9 @@ export default function Registration() {
                   type="text"
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
                   required
+                  onChange={handleChange}
+                  value={formData.name}
+                  name="name"
                 />
               </div>
 
@@ -207,6 +245,23 @@ export default function Registration() {
                   type="email"
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
                   required
+                  value={formData.email}
+                  onChange={handleChange}
+                  name="email"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Mobile Number
+                </label>
+                <input
+                  type="number"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  required
+                  value={formData.mobileNumber}
+                  onChange={handleChange}
+                  name="mobileNumber"
                 />
               </div>
 
@@ -218,6 +273,9 @@ export default function Registration() {
                   type="text"
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
                   required
+                  value={formData.transactionId}
+                  onChange={handleChange}
+                  name="transactionId"
                 />
               </div>
 
@@ -228,7 +286,13 @@ export default function Registration() {
                 <select
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
                   required
+                  value={formData.feeType}
+                  onChange={handleChange}
+                  name="feeType"
                 >
+                  <option value="" disabled>
+                    Select Fee Type
+                  </option>
                   {registrationFees.map((fee, index) => (
                     <optgroup key={index} label={fee.type}>
                       {Object.entries(fee.fees).map(([key, value]) => (
