@@ -257,7 +257,7 @@ export default function Registration() {
                 </label>
                 <input
                   type="number"
-                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  className="mt-1 block w-full p-2 border border-gray-300  text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
                   required
                   value={formData.mobileNumber}
                   onChange={handleChange}
@@ -271,7 +271,7 @@ export default function Registration() {
                 </label>
                 <input
                   type="text"
-                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  className="mt-1 block w-full p-2 border border-gray-300 text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
                   required
                   value={formData.transactionId}
                   onChange={handleChange}
@@ -284,7 +284,7 @@ export default function Registration() {
                   Fee Type
                 </label>
                 <select
-                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                  className="mt-1 block w-full p-2 border border-gray-300 text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
                   required
                   value={formData.feeType}
                   onChange={handleChange}
