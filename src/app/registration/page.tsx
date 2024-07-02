@@ -222,6 +222,9 @@ export default function Registration() {
               height={300}
               className="mx-auto"
             />
+            <h3 className="text-2xl font-bold text-center text-green mt-4">
+              Scan the QR code to pay and add the transaction ID.{" "}
+            </h3>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
