@@ -213,111 +213,127 @@ export default function Registration() {
       </main>
 
       {isModalOpen && (
+        // <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
+        //   <div className="bg-white p-8 rounded-lg shadow-lg">
+        //     <Image
+        //       src="/APTICON_QR.png"
+        //       alt="APTICON QR Code"
+        //       width={300}
+        //       height={300}
+        //       className="mx-auto"
+        //     />
+        //     <h3 className="text-2xl font-bold text-center text-green mt-4">
+        //       Scan the QR code to pay and add the transaction ID.{" "}
+        //     </h3>
+        //     <form className="space-y-4" onSubmit={handleSubmit}>
+        //       <div>
+        //         <label className="block text-sm font-medium text-gray-700">
+        //           Name
+        //         </label>
+        //         <input
+        //           type="text"
+        //           className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+        //           required
+        //           onChange={handleChange}
+        //           value={formData.name}
+        //           name="name"
+        //         />
+        //       </div>
+
+        //       <div>
+        //         <label className="block text-sm font-medium text-gray-700">
+        //           Email
+        //         </label>
+        //         <input
+        //           type="email"
+        //           className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+        //           required
+        //           value={formData.email}
+        //           onChange={handleChange}
+        //           name="email"
+        //         />
+        //       </div>
+
+        //       <div>
+        //         <label className="block text-sm font-medium text-gray-700">
+        //           Mobile Number
+        //         </label>
+        //         <input
+        //           type="number"
+        //           className="mt-1 block w-full p-2 border border-gray-300  text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+        //           required
+        //           value={formData.mobileNumber}
+        //           onChange={handleChange}
+        //           name="mobileNumber"
+        //         />
+        //       </div>
+
+        //       <div>
+        //         <label className="block text-sm font-medium text-gray-700">
+        //           Transaction ID
+        //         </label>
+        //         <input
+        //           type="text"
+        //           className="mt-1 block w-full p-2 border border-gray-300 text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+        //           required
+        //           value={formData.transactionId}
+        //           onChange={handleChange}
+        //           name="transactionId"
+        //         />
+        //       </div>
+
+        //       <div>
+        //         <label className="block text-sm font-medium text-gray-700">
+        //           Fee Type
+        //         </label>
+        //         <select
+        //           className="mt-1 block w-full p-2 border border-gray-300 text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+        //           required
+        //           value={formData.feeType}
+        //           onChange={handleChange}
+        //           name="feeType"
+        //         >
+        //           <option value="" disabled>
+        //             Select Fee Type
+        //           </option>
+        //           {registrationFees.map((fee, index) => (
+        //             <optgroup key={index} label={fee.type}>
+        //               {Object.entries(fee.fees).map(([key, value]) => (
+        //                 <option key={key} value={key}>
+        //                   {key.charAt(0).toUpperCase() + key.slice(1)} - {value}
+        //                 </option>
+        //               ))}
+        //             </optgroup>
+        //           ))}
+        //         </select>
+        //       </div>
+        //       <button
+        //         type="submit"
+        //         className="w-full bg-green text-white py-2 px-4 rounded-md shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green"
+        //       >
+        //         Submit
+        //       </button>
+        //     </form>
+
+        //     <button
+        //       onClick={() => setIsModalOpen(false)}
+        //       className="mt-4 w-full bg-ochre text-white py-2 px-4 rounded-md shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+        //     >
+        //       Close
+        //     </button>
+        //   </div>
+        // </div>
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <Image
-              src="/APTICON_QR.png"
-              alt="APTICON QR Code"
-              width={300}
-              height={300}
-              className="mx-auto"
-            />
-            <h3 className="text-2xl font-bold text-center text-green mt-4">
-              Scan the QR code to pay and add the transaction ID.{" "}
-            </h3>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
-                  required
-                  onChange={handleChange}
-                  value={formData.name}
-                  name="name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  name="email"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Mobile Number
-                </label>
-                <input
-                  type="number"
-                  className="mt-1 block w-full p-2 border border-gray-300  text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
-                  required
-                  value={formData.mobileNumber}
-                  onChange={handleChange}
-                  name="mobileNumber"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Transaction ID
-                </label>
-                <input
-                  type="text"
-                  className="mt-1 block w-full p-2 border border-gray-300 text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
-                  required
-                  value={formData.transactionId}
-                  onChange={handleChange}
-                  name="transactionId"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Fee Type
-                </label>
-                <select
-                  className="mt-1 block w-full p-2 border border-gray-300 text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
-                  required
-                  value={formData.feeType}
-                  onChange={handleChange}
-                  name="feeType"
-                >
-                  <option value="" disabled>
-                    Select Fee Type
-                  </option>
-                  {registrationFees.map((fee, index) => (
-                    <optgroup key={index} label={fee.type}>
-                      {Object.entries(fee.fees).map(([key, value]) => (
-                        <option key={key} value={key}>
-                          {key.charAt(0).toUpperCase() + key.slice(1)} - {value}
-                        </option>
-                      ))}
-                    </optgroup>
-                  ))}
-                </select>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-green text-white py-2 px-4 rounded-md shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green"
-              >
-                Submit
-              </button>
-            </form>
-
+            <h2 className="text-center text-2xl text-gray-800 font-bold mb-4">
+              Registration Coming Soon...
+            </h2>
+            <p className="text-center text-gray-600 mb-4">
+              Stay tuned for more details.
+            </p>
             <button
               onClick={() => setIsModalOpen(false)}
-              className="mt-4 w-full bg-ochre text-white py-2 px-4 rounded-md shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              className="item-center bg-green py-2 px-2 rounded inline-block cursor-pointer w-full text-white text-2xl font-bold"
             >
               Close
             </button>
