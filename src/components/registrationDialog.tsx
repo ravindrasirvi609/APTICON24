@@ -87,7 +87,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               Title
             </label>
             <select
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="title"
               value={formData.title}
@@ -109,7 +109,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="text"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="fullName"
               value={formData.fullName}
@@ -123,7 +123,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="email"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="email"
               value={formData.email}
@@ -137,7 +137,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="text"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="whatsappNumber"
               value={formData.whatsappNumber}
@@ -150,7 +150,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               Country Code
             </label>
             <select
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="countryCode"
               value={formData.countryCode}
@@ -167,7 +167,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="date"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="dob"
               value={formData.dob}
@@ -180,7 +180,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               ID Card and Number
             </label>
             <select
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="idCardType"
               value={formData.idCardType}
@@ -198,7 +198,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </select>
             <input
               type="text"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="idNumber"
               value={formData.idNumber}
@@ -211,7 +211,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               Gender
             </label>
             <select
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="gender"
               value={formData.gender}
@@ -231,7 +231,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="text"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="institution"
               value={formData.institution}
@@ -244,7 +244,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               Complete Postal Address
             </label>
             <textarea
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="address"
               value={formData.address}
@@ -258,7 +258,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="text"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="city"
               value={formData.city}
@@ -272,7 +272,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="text"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="state"
               value={formData.state}
@@ -286,7 +286,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </label>
             <input
               type="text"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="pincode"
               value={formData.pincode}
@@ -299,7 +299,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               Food Choice
             </label>
             <select
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="foodChoice"
               value={formData.foodChoice}
@@ -319,7 +319,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               Accommodation Required?
             </label>
             <select
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="accommodation"
               value={formData.accommodation}
@@ -338,7 +338,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               Accompanying Person
             </label>
             <select
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
               name="accompanyingPerson"
               value={formData.accompanyingPerson}
