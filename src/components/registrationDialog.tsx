@@ -15,6 +15,8 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
     title: "",
     fullName: "",
     email: "",
+    transactionId: "",
+    feeType: "",
     whatsappNumber: "",
     countryCode: "+91",
     dob: "",
@@ -30,6 +32,34 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
     accommodation: "",
     accompanyingPerson: "",
   });
+
+  type FeeType = {
+    type: string;
+    fees: { [key: string]: string };
+    Price: { [key: string]: string };
+  };
+
+  const registrationFees: FeeType[] = [
+    {
+      type: "Early Bird (Upto 15th July)",
+      fees: {
+        "APTI Members": "₹ 2800",
+        students: "₹ 2500",
+        "non-Members": "₹ 3300",
+        industry: "₹ 4000",
+        companion: "₹ 1500",
+        international: "118 USD",
+      },
+      Price: {
+        "APTI Members": "₹ 3500",
+        students: "₹ 2900",
+        "non-Members": "₹ 4000",
+        industry: "₹ 4500",
+        companion: "",
+        international: "",
+      },
+    },
+  ];
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -129,6 +159,46 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               value={formData.email}
               onChange={handleChange}
             />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Transaction ID
+            </label>
+            <input
+              type="text"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              required
+              name="transactionId"
+              value={formData.transactionId}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Fee Type
+            </label>
+            <select
+              className="mt-1 block w-full p-2 border border-gray-300 text-black rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              required
+              value={formData.feeType}
+              onChange={handleChange}
+              name="feeType"
+            >
+              <option value="" disabled>
+                Select Fee Type
+              </option>
+              {registrationFees.map((fee, index) => (
+                <optgroup key={index} label={fee.type}>
+                  {Object.entries(fee.fees).map(([key, value]) => (
+                    <option key={key} value={key}>
+                      {key.charAt(0).toUpperCase() + key.slice(1)} - {value}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
           </div>
 
           <div>

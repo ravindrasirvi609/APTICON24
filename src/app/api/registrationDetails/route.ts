@@ -1,3 +1,4 @@
+import { appendRowToSheet } from "@/ googleSheets";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -199,7 +200,28 @@ export async function POST(req: NextRequest) {
     if (!userResponse.ok) {
       throw new Error(`Error sending user email: ${userResponse.status}`);
     }
-
+    await appendRowToSheet([
+      newUser.title,
+      newUser.fullName,
+      newUser.email,
+      newUser.whatsappNumber,
+      newUser.transactionId,
+      newUser.feeType,
+      newUser.countryCode,
+      newUser.dob,
+      newUser.idCardType,
+      newUser.idNumber,
+      newUser.gender,
+      newUser.institution,
+      newUser.address,
+      newUser.city,
+      newUser.state,
+      newUser.pincode,
+      newUser.foodChoice,
+      newUser.accompanyingPerson,
+      newUser.accommodation,
+      newUser.createdAt,
+    ]);
     return NextResponse.json({
       message: "Registration successful",
       user: newUser,
