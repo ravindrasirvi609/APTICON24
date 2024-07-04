@@ -33,6 +33,9 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
     accompanyingPerson: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
   type FeeType = {
     type: string;
     fees: { [key: string]: string };
@@ -72,6 +75,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       const res = await fetch("/api/registrationDetails", {
         method: "POST",
@@ -82,14 +86,16 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
       });
 
       const result = await res.json();
+      setIsLoading(false);
       if (res.ok) {
-        alert("Registration successful!");
+        alert("Registration successful! Check your email for confirmation.");
         onClose();
       } else {
         alert(`Error: ${result.error}`);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      setIsLoading(false);
       alert("An error occurred while submitting the form.");
     }
   };
@@ -101,6 +107,13 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
       <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full relative overflow-auto max-h-screen">
+        {!isLoading && successMessage && (
+          <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75 z-50">
+            <div className="text-green-600 font-bold text-xl">
+              {successMessage}
+            </div>
+          </div>
+        )}
         <Image
           src="/APTICON_QR.png"
           alt="APTICON QR Code"
@@ -247,7 +260,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              aadhar Number{" "}
+              Aadhar Number{" "}
             </label>
 
             <input
@@ -413,6 +426,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               className="bg-green text-white px-4 py-2 rounded-md shadow-sm hover:bg-green-dark focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-green"
             >
               Register Now
+              {isLoading && <span className="loader"></span>}
             </button>
           </div>
         </form>
