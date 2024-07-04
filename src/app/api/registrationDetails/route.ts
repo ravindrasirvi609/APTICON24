@@ -20,8 +20,7 @@ export async function POST(req: NextRequest) {
       whatsappNumber,
       countryCode,
       dob,
-      idCardType,
-      idNumber,
+      aadharNumber,
       gender,
       institution,
       address,
@@ -42,8 +41,7 @@ export async function POST(req: NextRequest) {
       feeType,
       countryCode,
       dob,
-      idCardType,
-      idNumber,
+      aadharNumber,
       gender,
       institution,
       address,
@@ -73,8 +71,7 @@ export async function POST(req: NextRequest) {
       feeType: any;
       countryCode: any;
       dob: any;
-      idCardType: any;
-      idNumber: any;
+      aadharNumber: any;
       gender: any;
       institution: any;
       address: any;
@@ -100,8 +97,7 @@ export async function POST(req: NextRequest) {
           <li><strong>Fee Type:</strong> ${newUser.feeType}</li>
           <li><strong>Country Code:</strong> ${newUser.countryCode}</li>
           <li><strong>Date of Birth:</strong> ${newUser.dob}</li>
-          <li><strong>ID Card Type:</strong> ${newUser.idCardType}</li>
-          <li><strong>ID Number:</strong> ${newUser.idNumber}</li>
+          <li><strong>Aadhar Number:</strong> ${newUser.aadharNumber}</li>
           <li><strong>Gender:</strong> ${newUser.gender}</li>
           <li><strong>Institution:</strong> ${newUser.institution}</li>
           <li><strong>Address:</strong> ${newUser.address}</li>
@@ -128,8 +124,7 @@ export async function POST(req: NextRequest) {
       feeType: any;
       countryCode: any;
       dob: any;
-      idCardType: any;
-      idNumber: any;
+      aadharNumber: any;
       gender: any;
       institution: any;
       address: any;
@@ -172,7 +167,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: "dev@ravindrachoudhary.in",
+        from: "admin@apticon2024.com",
         to: ["info@apticon2024.com", "ravi.sirvi609@gmail.com"],
         subject: `${newUser.fullName} has registered for APTICON 2024!`,
         html: adminEmailTemplate(newUser),
@@ -190,7 +185,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: "dev@ravindrachoudhary.in",
+        from: "admin@apticon2024.com",
         to: newUser.email,
         subject: `Thank You for Registering, ${newUser.fullName}`,
         html: userEmailTemplate(newUser),
@@ -209,8 +204,7 @@ export async function POST(req: NextRequest) {
       newUser.feeType,
       newUser.countryCode,
       newUser.dob,
-      newUser.idCardType,
-      newUser.idNumber,
+      newUser.aadharNumber,
       newUser.gender,
       newUser.institution,
       newUser.address,

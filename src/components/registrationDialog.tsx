@@ -21,7 +21,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
     countryCode: "+91",
     dob: "",
     idCardType: "",
-    idNumber: "",
+    aadharNumber: "",
     gender: "",
     institution: "",
     address: "",
@@ -247,32 +247,17 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              ID Card and Number
+              aadhar Number{" "}
             </label>
-            <select
-              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
-              required
-              name="idCardType"
-              value={formData.idCardType}
-              onChange={handleChange}
-            >
-              <option value="" disabled>
-                Select ID Card
-              </option>
-              <option value="Aadhar">Aadhar</option>
-              <option value="College ID">College ID</option>
-              <option value="Staff ID issued by employer">
-                Staff ID issued by employer
-              </option>
-              <option value="Driving License">Driving License</option>
-            </select>
+
             <input
               type="text"
               className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
               required
-              name="idNumber"
-              value={formData.idNumber}
+              name="aadharNumber"
+              value={formData.aadharNumber}
               onChange={handleChange}
+              placeholder="Enter aadhar number"
             />
           </div>
 
