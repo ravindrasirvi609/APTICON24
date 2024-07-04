@@ -178,10 +178,26 @@ export default function Registration() {
       </main>
 
       {isModalOpen && (
-        <RegistrationDialog
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-        />
+        // <RegistrationDialog
+        //   isOpen={isModalOpen}
+        //   onClose={() => setIsModalOpen(false)}
+        // />
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-center text-2xl text-gray-800 font-bold mb-4">
+              Registration Coming Soon...
+            </h2>
+            <p className="text-center text-gray-600 mb-4">
+              Stay tuned for more details.
+            </p>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="item-center bg-green py-2 px-2 rounded inline-block cursor-pointer w-full text-white text-2xl font-bold"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       )}
 
       <Footer />
