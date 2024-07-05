@@ -31,6 +31,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
     foodChoice: "",
     accommodation: "",
     accompanyingPerson: "",
+    membershipNumber: "", // Added field
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -214,6 +215,23 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             </select>
           </div>
 
+          {formData.feeType === "APTI Members" && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Membership Number
+              </label>
+              <input
+                type="text"
+                className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+                required
+                name="membershipNumber"
+                value={formData.membershipNumber}
+                onChange={handleChange}
+                placeholder="Enter membership number"
+              />
+            </div>
+          )}
+
           <div>
             <label className="block text-sm font-medium text-gray-700">
               WhatsApp Number
@@ -260,9 +278,23 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Aadhar Number{" "}
+              ID Card Type
             </label>
+            <select
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              required
+              name="idCardType"
+              value={formData.idCardType}
+              onChange={handleChange}
+            >
+              <option value="Aadhar Card">Aadhar Card</option>
+            </select>
+          </div>
 
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Aadhar Number
+            </label>
             <input
               type="text"
               className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
@@ -270,7 +302,6 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               name="aadharNumber"
               value={formData.aadharNumber}
               onChange={handleChange}
-              placeholder="Enter aadhar number"
             />
           </div>
 
@@ -285,17 +316,15 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               value={formData.gender}
               onChange={handleChange}
             >
-              <option value="" disabled>
-                Select Gender
-              </option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
+              <option value="Others">Others</option>
             </select>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Institution / Organization
+              Institution
             </label>
             <input
               type="text"
@@ -309,7 +338,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Complete Postal Address
+              Address
             </label>
             <textarea
               className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
@@ -317,7 +346,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               name="address"
               value={formData.address}
               onChange={handleChange}
-            ></textarea>
+            />
           </div>
 
           <div>
@@ -373,18 +402,15 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               value={formData.foodChoice}
               onChange={handleChange}
             >
-              <option value="" disabled>
-                Select Food Choice
-              </option>
-              <option value="Veg">Veg</option>
-              <option value="Non Veg">Non Veg</option>
-              <option value="Both">Both</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Non-Vegetarian">Non-Vegetarian</option>
+              <option value="Vegan">Vegan</option>
             </select>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Accommodation Required?
+              Accommodation
             </label>
             <select
               className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
@@ -393,9 +419,6 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               value={formData.accommodation}
               onChange={handleChange}
             >
-              <option value="" disabled>
-                Select Accommodation Option
-              </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -405,31 +428,48 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
             <label className="block text-sm font-medium text-gray-700">
               Accompanying Person
             </label>
-            <select
+            <input
+              type="text"
               className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
-              required
               name="accompanyingPerson"
               value={formData.accompanyingPerson}
               onChange={handleChange}
-            >
-              <option value="" disabled>
-                Select Accompanying Person
-              </option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            />
           </div>
 
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="bg-green text-white px-4 py-2 rounded-md shadow-sm hover:bg-green-dark focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-green"
-            >
-              Register Now
-              {isLoading && <span className="loader"></span>}
-            </button>
-          </div>
+          <button
+            type="submit"
+            className={`w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+              isLoading
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-green hover:bg-green"
+            } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500`}
+            disabled={isLoading}
+          >
+            {isLoading ? "Submitting..." : "Submit"}
+          </button>
         </form>
+        <button
+          className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 focus:outline-none"
+          onClick={onClose}
+        >
+          <span className="sr-only">Close</span>
+          <svg
+            className="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );

@@ -30,6 +30,7 @@ export async function POST(req: NextRequest) {
       foodChoice,
       accompanyingPerson,
       accommodation,
+      membershipNumber,
     } = await req.json();
 
     const newUser = {
@@ -51,6 +52,7 @@ export async function POST(req: NextRequest) {
       foodChoice,
       accompanyingPerson,
       accommodation,
+      membershipNumber,
 
       createdAt: new Date().toLocaleString("en-US", {
         month: "long",
@@ -81,6 +83,7 @@ export async function POST(req: NextRequest) {
       foodChoice: any;
       accompanyingPerson: any;
       accommodation: any;
+      membershipNumber: any;
       createdAt: any;
     }) => `
       <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
@@ -95,6 +98,7 @@ export async function POST(req: NextRequest) {
           <li><strong>Mobile Number:</strong> ${newUser.whatsappNumber}</li>
           <li><strong>Transaction ID:</strong> ${newUser.transactionId}</li>
           <li><strong>Fee Type:</strong> ${newUser.feeType}</li>
+          <li><strong>Membership Number:</strong> ${newUser.membershipNumber}</li>
           <li><strong>Country Code:</strong> ${newUser.countryCode}</li>
           <li><strong>Date of Birth:</strong> ${newUser.dob}</li>
           <li><strong>Aadhar Number:</strong> ${newUser.aadharNumber}</li>
@@ -215,6 +219,7 @@ export async function POST(req: NextRequest) {
       newUser.accompanyingPerson,
       newUser.accommodation,
       newUser.createdAt,
+      newUser.membershipNumber,
     ]);
     return NextResponse.json({
       message: "Registration successful",
