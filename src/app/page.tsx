@@ -156,6 +156,7 @@ export default function Home() {
             </div>
             <Slider {...settings1}>
               {[
+                { src: "/new/13.jpeg", alt: "Slide 13" },
                 { src: "/new/1.png", alt: "Slide 1" },
                 { src: "/new/2.png", alt: "Slide 2" },
                 { src: "/new/3.png", alt: "Slide 3" },
