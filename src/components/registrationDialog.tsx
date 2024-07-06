@@ -316,6 +316,9 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               value={formData.gender}
               onChange={handleChange}
             >
+              <option value="" disabled>
+                Select Gender
+              </option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
@@ -402,6 +405,9 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               value={formData.foodChoice}
               onChange={handleChange}
             >
+              <option value="" disabled>
+                Select Food Choice
+              </option>
               <option value="Vegetarian">Vegetarian</option>
               <option value="Non-Vegetarian">Non-Vegetarian</option>
               <option value="Vegan">Vegan</option>
@@ -419,6 +425,9 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               value={formData.accommodation}
               onChange={handleChange}
             >
+              <option value="" disabled>
+                Select Accommodation
+              </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
