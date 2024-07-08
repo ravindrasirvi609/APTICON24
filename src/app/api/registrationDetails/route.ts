@@ -142,23 +142,17 @@ export async function POST(req: NextRequest) {
     }) => `
       <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px;">
         <h1 style="font-size: 24px; color: #333; text-align: center; margin-bottom: 20px;">APTICON Conference 2024 - Thank You for Registering!</h1>
-        <p style="font-size: 18px;">Hi ${newUser.fullName},</p>
+        <p style="font-size: 18px;">Dear ${newUser.title} ${newUser.fullName},</p>
         <p style="font-size: 18px;">
-          Thank you for registering for APTICON Conference 2024! We have received your registration and will keep you updated with the latest information.
+          Thank you for registering to APTICON 2024!
+
         </p>
         <p style="font-size: 18px;">
-          Here are the details you provided:
-        </p>
-        <ul style="font-size: 18px;">
-          <li><strong>Name:</strong> ${newUser.fullName}</li>
-          <li><strong>Email:</strong> ${newUser.email}</li>
-          <li><strong>Mobile Number:</strong> ${newUser.whatsappNumber}</li>
-          <li><strong>Transaction ID:</strong> ${newUser.transactionId}</li>
-          <li><strong>Fee Type:</strong> ${newUser.feeType}</li>
-          <li><strong>Registered At:</strong> ${newUser.createdAt}</li>
-        </ul>
-        <p style="font-size: 18px;">We look forward to seeing you at the conference!</p>
+Your registration will be confirmed upon verification of your transaction details. You will receive your registration number on your registered WhatsApp number and email address. Please stay tuned for further updates.
+       </p>
+
         <p style="font-size: 18px;">Best regards,</p>
+        <p style="font-size: 18px; font-weight: bold;">APTICON Organizing Committee</p>
         <p style="font-size: 18px; font-weight: bold;">APTICON Team</p>
       </div>
     `;
@@ -191,7 +185,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: "admin@apticon2024.com",
         to: newUser.email,
-        subject: `Thank You for Registering, ${newUser.fullName}`,
+        subject: `APTICON 2024, Thankyou for registering`,
         html: userEmailTemplate(newUser),
       }),
     });
