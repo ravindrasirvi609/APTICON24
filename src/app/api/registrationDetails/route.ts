@@ -155,7 +155,7 @@ export async function POST(req: NextRequest) {
           <li><strong>Transaction ID:</strong> ${newUser.transactionId}</li>
           <li><strong>Fee Type:</strong> ${newUser.feeType}</li>
           <li><strong>Date of Birth:</strong> ${newUser.dob}</li>
-          <li><strong>Aadhar Number:</strong> ${newUser.aadharNumber}</li>
+          <li><strong>Registered At:</strong> ${newUser.createdAt}</li>
          </ul> 
         <p style="font-size: 18px;">
 The confirmation of your registration will be communicated at your registered Email Id and WhatsApp No. after the verification of your transaction details.       </p>
