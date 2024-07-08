@@ -138,12 +138,14 @@ export async function POST(req: NextRequest) {
       foodChoice: any;
       accompanyingPerson: any;
       accommodation: any;
+      membershipNumber: any;
       createdAt: any;
     }) => `
-        <p style="font-size: 18px;">Dear ${newUser.title} ${newUser.fullName},</p>
+        <p style="font-size: 18px;">Dear ${newUser.title} ${
+      newUser.fullName
+    },</p>
         <p style="font-size: 18px;">
           Thank you for registering to APTICON 2024!
-
         </p>
         <p style="font-size: 18px;">
           Here are your registration details:
@@ -155,16 +157,22 @@ export async function POST(req: NextRequest) {
           <li><strong>Transaction ID:</strong> ${newUser.transactionId}</li>
           <li><strong>Fee Type:</strong> ${newUser.feeType}</li>
           <li><strong>Date of Birth:</strong> ${newUser.dob}</li>
+          ${
+            newUser.membershipNumber
+              ? `<li><strong>APTI membership Number:</strong> ${newUser.membershipNumber}</li>`
+              : ""
+          }
           <li><strong>Registered At:</strong> ${newUser.createdAt}</li>
-         </ul> 
+        </ul> 
         <p style="font-size: 18px;">
-The confirmation of your registration will be communicated at your registered Email Id and WhatsApp No. after the verification of your transaction details.       </p>
+          The confirmation of your registration will be communicated at your registered Email Id and WhatsApp No. after the verification of your transaction details.
+        </p>
         <p style="font-size: 18px;">
-Please stay tuned for further updates.        
-</p>
+          Please stay tuned for further updates.
+        </p>
         <p style="font-size: 18px;">Best regards,</p>
-        <p style="font-size: 18px; font-weight: bold;">APTICON Organizing Committee, APTICON Team</p>
-      
+        <p style="font-size: 18px; font-weight: bold;">Organizing Committee</p>
+        <p style="font-size: 18px; font-weight: bold;"> APTICON 2024</p>
     `;
 
     const resend = new Resend(apiKey);
