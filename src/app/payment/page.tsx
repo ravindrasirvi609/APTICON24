@@ -23,10 +23,7 @@ const Payment: React.FC = () => {
     const serviceId = "Education";
     const customerId = "123456789012";
     const currencyCode = "INR";
-    const requestDateTime = new Date()
-      .toISOString()
-      .replace(/T/, " ")
-      .replace(/\..+/, ""); // Convert to the correct format
+    const requestDateTime = "09-07-2024"; // Convert to the correct format
     const successUrl = "https://apticon2024.com/success";
     const failUrl = "https://apticon2024.com/failure";
 
