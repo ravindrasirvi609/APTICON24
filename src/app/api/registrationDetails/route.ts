@@ -54,14 +54,15 @@ export async function POST(req: NextRequest) {
       accommodation,
       membershipNumber,
 
-      createdAt: new Date().toLocaleString("en-US", {
+      createdAt: new Intl.DateTimeFormat("en-US", {
         month: "long",
         day: "numeric",
         year: "numeric",
         hour: "numeric",
         minute: "numeric",
         hour12: true,
-      }),
+        timeZone: "Asia/Kolkata",
+      }).format(new Date()),
     };
 
     const adminEmailTemplate = (newUser: {
