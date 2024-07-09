@@ -21,7 +21,7 @@ const Payment: React.FC = () => {
     const serviceId = "Education";
     const customerId = "123456789012";
     const currencyCode = "INR";
-    const requestDateTime = "07-05-2024";
+    const requestDateTime = "18-07-2024";
     const successUrl = "https://apticon2024.com/success";
     const failUrl = "https://apticon2024.com/failure";
     const additionalField1 = "static_value_1";
