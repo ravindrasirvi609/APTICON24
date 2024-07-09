@@ -32,7 +32,7 @@ const Payment: React.FC = () => {
     const secretKey =
       "7f6de8da9776966c5393975870a2752ae434310bb80296efdc3666093d7435b8";
 
-    const checksumValue = generateCRC32Checksum(message, secretKey);
+    const checksumValue = generateChecksum(message, secretKey);
 
     const payload: { [key: string]: string } = {
       merchantId,
@@ -50,7 +50,7 @@ const Payment: React.FC = () => {
       additionalField3,
       additionalField4,
       additionalField5,
-      checksum: checksumValue,
+      checksum: checksumValue.toString(),
     };
 
     const formData = new FormData();
@@ -80,25 +80,11 @@ const Payment: React.FC = () => {
     }
   };
 
-  const generateCRC32Checksum = (message: string, secretKey: string) => {
-    // Generate the SHA-256 hash of the secret key
-    const sha256Hash = crypto
-      .createHash("sha256")
-      .update(secretKey, "utf-8")
-      .digest("hex");
-
-    // Append the SHA-256 hash to the message
-    const msg = message + "|" + sha256Hash;
-
-    // Encode the combined message and hash to bytes
-    const bytes = new TextEncoder().encode(msg);
-
-    // Generate the CRC32 checksum from the bytes
-    const checksumValue = crc32.buf(bytes);
-
-    // Convert the checksum value to a string and return it
-    return checksumValue.toString();
-  };
+  function generateChecksum(msg: string, secretkey: string) {
+    const inputData = `${msg}|"${secretkey}"`;
+    const crc32Value = crc32.str(inputData);
+    return crc32Value;
+  }
 
   return (
     <div className="bg-ashGrey min-h-screen flex items-center justify-center">
