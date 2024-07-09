@@ -27,8 +27,8 @@ const Payment: React.FC = () => {
       .toISOString()
       .replace(/T/, " ")
       .replace(/\..+/, ""); // Convert to the correct format
-    const successUrl = "https://www.apticon2024.com/success";
-    const failUrl = "https://www.apticon2024.com/failure";
+    const successUrl = "https://apticon2024.com/success";
+    const failUrl = "https://apticon2024.com/failure";
 
     const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}|${additionalField1}|${additionalField2}|${additionalField3}|${additionalField4}|${additionalField5}`;
     const secretKey =
