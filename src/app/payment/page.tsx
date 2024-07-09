@@ -82,7 +82,7 @@ const Payment: React.FC = () => {
 
   function generateChecksum(msg: string, secretkey: string) {
     const inputData = `${msg}|"${secretkey}"`;
-    const crc32Value = crc32.str(inputData);
+    const crc32Value = crc32.str(inputData) >>> 0; // Convert to unsigned 32-bit integer
     return crc32Value;
   }
 
