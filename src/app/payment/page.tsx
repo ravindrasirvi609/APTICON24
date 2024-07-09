@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
-import crypto from "crypto";
+import crc32 from "crc-32";
 
 const Payment: React.FC = () => {
   const [name, setName] = useState("");
@@ -11,9 +11,8 @@ const Payment: React.FC = () => {
 
   const generateChecksum = (msg: string, secretKey: string): string => {
     const inputData = `${msg}${secretKey}`;
-    const crc32 = crypto.createHash("crc32");
-    crc32.update(inputData);
-    return crc32.digest("hex").toUpperCase();
+    const crc32Value = crc32.str(inputData) >>> 0; // Convert to unsigned 32-bit integer
+    return crc32Value.toString(16).toUpperCase().padStart(8, "0");
   };
 
   const processPayment = async (orderId: string, transactionAmount: string) => {
@@ -22,10 +21,7 @@ const Payment: React.FC = () => {
     const serviceId = "Education";
     const customerId = "123456789012";
     const currencyCode = "INR";
-    const requestDateTime = new Date()
-      .toISOString()
-      .replace(/[-:T]/g, "")
-      .slice(0, 14); // YYYYMMDDhhmmss format
+    const requestDateTime = "07-05-2024";
     const successUrl = "https://apticon2024.com/success";
     const failUrl = "https://apticon2024.com/failure";
     const additionalField1 = "static_value_1";
