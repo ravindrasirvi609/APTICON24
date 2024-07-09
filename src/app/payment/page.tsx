@@ -2,12 +2,18 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import crc32 from "crc-32";
+import axios from "axios";
 
 const Payment: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [orderId, setOrderId] = useState("");
   const [transactionAmount, setTransactionAmount] = useState("");
+  const [additionalField1, setAdditionalField1] = useState("");
+  const [additionalField2, setAdditionalField2] = useState("");
+  const [additionalField3, setAdditionalField3] = useState("");
+  const [additionalField4, setAdditionalField4] = useState("");
+  const [additionalField5, setAdditionalField5] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,13 +30,13 @@ const Payment: React.FC = () => {
     const successUrl = "https://www.apticon2024.com/success";
     const failUrl = "https://www.apticon2024.com/failure";
 
-    const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}`;
+    const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}|${additionalField1}|${additionalField2}|${additionalField3}|${additionalField4}|${additionalField5}`;
     const secretKey =
       "7f6de8da9776966c5393975870a2752ae434310bb80296efdc3666093d7435b8";
 
     const checksumValue = generateCRC32Checksum(message, secretKey);
 
-    const payload = {
+    const payload: { [key: string]: string } = {
       merchantId,
       messageType,
       serviceId,
@@ -41,30 +47,37 @@ const Payment: React.FC = () => {
       requestDateTime,
       successUrl,
       failUrl,
+      additionalField1,
+      additionalField2,
+      additionalField3,
+      additionalField4,
+      additionalField5,
       checksum: checksumValue,
     };
 
+    const formData = new FormData();
+
+    // Append each property from payload to formData
+    Object.keys(payload).forEach((key) => {
+      formData.append(key, payload[key]);
+    });
+
     try {
-      const response = await fetch(
+      const response = await axios.post(
         "https://pilot.surepay.ndml.in/SurePayPayment/sp/processRequest",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
+        formData
       );
 
-      if (response.ok) {
+      // Axios automatically handles response.ok for status codes 200-299
+      if (response.status === 200) {
         // Handle successful payment response
-        const data = await response.json();
-        console.log(data);
+        console.log(response.data);
       } else {
         // Handle failed payment response
         console.error("Payment failed");
       }
     } catch (error) {
+      // Handle network errors or Axios-related errors
       console.error("Error:", error);
     }
   };
@@ -143,6 +156,81 @@ const Payment: React.FC = () => {
               onChange={(e) => setTransactionAmount(e.target.value)}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
               required
+            />
+          </div>
+          <div>
+            <label
+              className="block text-darkBrown text-lg mb-2"
+              htmlFor="additionalField1"
+            >
+              Additional Field 1
+            </label>
+            <input
+              id="additionalField1"
+              type="text"
+              value={additionalField1}
+              onChange={(e) => setAdditionalField1(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-darkBrown text-lg mb-2"
+              htmlFor="additionalField2"
+            >
+              Additional Field 2
+            </label>
+            <input
+              id="additionalField2"
+              type="text"
+              value={additionalField2}
+              onChange={(e) => setAdditionalField2(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-darkBrown text-lg mb-2"
+              htmlFor="additionalField3"
+            >
+              Additional Field 3
+            </label>
+            <input
+              id="additionalField3"
+              type="text"
+              value={additionalField3}
+              onChange={(e) => setAdditionalField3(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-darkBrown text-lg mb-2"
+              htmlFor="additionalField4"
+            >
+              Additional Field 4
+            </label>
+            <input
+              id="additionalField4"
+              type="text"
+              value={additionalField4}
+              onChange={(e) => setAdditionalField4(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-darkBrown text-lg mb-2"
+              htmlFor="additionalField5"
+            >
+              Additional Field 5
+            </label>
+            <input
+              id="additionalField5"
+              type="text"
+              value={additionalField5}
+              onChange={(e) => setAdditionalField5(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green"
             />
           </div>
           <button
