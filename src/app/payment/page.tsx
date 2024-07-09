@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import crc32 from "crc-32";
+import crypto from "crypto";
 import axios from "axios";
 
 const Payment: React.FC = () => {
@@ -79,13 +80,23 @@ const Payment: React.FC = () => {
     }
   };
 
-  const generateCRC32Checksum = (
-    message: string,
-    secretKey: string
-  ): string => {
-    const msg = message + "|" + secretKey;
+  const generateCRC32Checksum = (message: string, secretKey: string) => {
+    // Generate the SHA-256 hash of the secret key
+    const sha256Hash = crypto
+      .createHash("sha256")
+      .update(secretKey, "utf-8")
+      .digest("hex");
+
+    // Append the SHA-256 hash to the message
+    const msg = message + "|" + sha256Hash;
+
+    // Encode the combined message and hash to bytes
     const bytes = new TextEncoder().encode(msg);
+
+    // Generate the CRC32 checksum from the bytes
     const checksumValue = crc32.buf(bytes);
+
+    // Convert the checksum value to a string and return it
     return checksumValue.toString();
   };
 
