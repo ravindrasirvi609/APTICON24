@@ -21,7 +21,20 @@ const Payment: React.FC = () => {
     const serviceId = "Education";
     const customerId = "123456789012";
     const currencyCode = "INR";
-    const requestDateTime = "18-07-2024";
+    const now = new Date();
+    const requestDateTime =
+      [
+        ("0" + now.getDate()).slice(-2),
+        ("0" + (now.getMonth() + 1)).slice(-2),
+        now.getFullYear(),
+      ].join("-") +
+      " " +
+      [
+        ("0" + now.getHours()).slice(-2),
+        ("0" + now.getMinutes()).slice(-2),
+        ("0" + now.getSeconds()).slice(-2),
+      ].join(":");
+
     const successUrl = "https://apticon2024.com/success";
     const failUrl = "https://apticon2024.com/failure";
     const additionalField1 = "static_value_1";
