@@ -25,6 +25,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
     gender: "",
     institution: "",
     address: "",
+    paymentMethod: "",
     city: "",
     state: "",
     pincode: "",
@@ -177,7 +178,34 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Transaction ID
+              Payment Method
+            </label>
+            <select
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              required
+              name="paymentMethod"
+              value={formData.paymentMethod}
+              onChange={handleChange}
+            >
+              <option value="" disabled>
+                Select Payment Method
+              </option>
+              <option value="PhonePe">PhonePe</option>
+              <option value="Paytm">Paytm</option>
+              <option value="GooglePay">Google Pay</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              {formData.paymentMethod === "PhonePe"
+                ? "UTR Number"
+                : formData.paymentMethod === "Paytm"
+                ? "UPI Ref No."
+                : formData.paymentMethod === "GooglePay"
+                ? "UPI Transaction ID"
+                : "Transaction ID"}
             </label>
             <input
               type="text"
@@ -186,6 +214,15 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               name="transactionId"
               value={formData.transactionId}
               onChange={handleChange}
+              placeholder={`Enter ${
+                formData.paymentMethod === "PhonePe"
+                  ? "UTR Number"
+                  : formData.paymentMethod === "Paytm"
+                  ? "UPI Ref No."
+                  : formData.paymentMethod === "GooglePay"
+                  ? "UPI Transaction ID"
+                  : "Transaction ID"
+              }`}
             />
           </div>
 
