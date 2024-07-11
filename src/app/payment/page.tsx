@@ -6,6 +6,7 @@ const Payment: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [orderId, setOrderId] = useState("");
+  const [checksum, setChecksum] = useState("");
   const [transactionAmount, setTransactionAmount] = useState("");
 
   const generateChecksum = (message: string) => {
@@ -74,11 +75,35 @@ const Payment: React.FC = () => {
 
     const checksumValue = generateChecksum(message);
 
-    // Submit the form
+    // Get the form element
     const form = e.target as HTMLFormElement;
+
+    // Create a hidden input for the checksum
+    const checksumInput = document.createElement("input");
+    checksumInput.type = "hidden";
+    checksumInput.name = "checksum";
+    checksumInput.value = checksumValue.toString();
+
+    // Add the checksum input to the form
+    form.appendChild(checksumInput);
+
+    // Update the requestDateTime hidden input
+    const requestDateTimeInput = form.querySelector(
+      'input[name="requestDateTime"]'
+    ) as HTMLInputElement;
+    if (requestDateTimeInput) {
+      requestDateTimeInput.value = requestDateTime;
+    } else {
+      const newRequestDateTimeInput = document.createElement("input");
+      newRequestDateTimeInput.type = "hidden";
+      newRequestDateTimeInput.name = "requestDateTime";
+      newRequestDateTimeInput.value = requestDateTime;
+      form.appendChild(newRequestDateTimeInput);
+    }
+
+    // Submit the form
     form.submit();
   };
-
   return (
     <div className="bg-ashGrey min-h-screen flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
@@ -89,7 +114,6 @@ const Payment: React.FC = () => {
           method="POST"
           className="space-y-4"
         >
-          {/* Add hidden inputs for all required fields */}
           <input type="hidden" name="merchantId" value="UATAPTISG0000001631" />
           <input type="hidden" name="messageType" value="0100" />
           <input type="hidden" name="serviceId" value="Education" />
@@ -110,7 +134,7 @@ const Payment: React.FC = () => {
           <input type="hidden" name="additionalField3" value="static_value_3" />
           <input type="hidden" name="additionalField4" value="static_value_4" />
           <input type="hidden" name="additionalField5" value="static_value_5" />
-
+          <input type="hidden" name="requestDateTime" value="" />
           {/* Visible form fields */}
           <div>
             <label className="block text-darkBrown text-lg mb-2" htmlFor="name">
