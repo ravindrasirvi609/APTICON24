@@ -9,11 +9,17 @@ const Payment: React.FC = () => {
   const [orderId, setOrderId] = useState("");
   const [transactionAmount, setTransactionAmount] = useState("");
 
-  const generateChecksum = (msg: string, secretKey: string): string => {
-    const inputData = `${msg}${secretKey}`;
-    const crc32Value = crc32.str(inputData) >>> 0; // Convert to unsigned 32-bit integer
-    return crc32Value.toString(16).toUpperCase().padStart(8, "0");
-  };
+  // const generateChecksum = (msg: string, secretKey: string): string => {
+  //   const inputData = `${msg}${secretKey}`;
+  //   const crc32Value = crc32.str(inputData) >>> 0;
+  //   return crc32Value.toString(16).toUpperCase().padStart(8, "0");
+  // };
+
+  // const generateChecksum = (msg: string, secretKey: string): any => {
+  //   const inputData = `${msg}|${secretKey}`;
+  //   const crc32Value = crc32.str(inputData);
+  //   return crc32Value;
+  // };
 
   const processPayment = async (orderId: string, transactionAmount: string) => {
     const messageType = "0100";
@@ -42,12 +48,39 @@ const Payment: React.FC = () => {
     const additionalField3 = "static_value_3";
     const additionalField4 = "static_value_4";
     const additionalField5 = "static_value_5";
-
-    const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}|${additionalField1}|${additionalField2}|${additionalField3}|${additionalField4}|${additionalField5}`;
     const secretKey =
       "7f6de8da9776966c5393975870a2752ae434310bb80296efdc3666093d7435b8";
 
-    const checksumValue = generateChecksum(message, secretKey);
+    const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}|${additionalField1}|${additionalField2}|${additionalField3}|${additionalField4}|${additionalField5}|${secretKey}`;
+    function unsignedChecksum(n: any) {
+      if (n >= 0) {
+        return n;
+      }
+      return 0xffffffff - n * -1 + 1;
+    }
+
+    function checksum(message: any) {
+      const encoder = new TextEncoder();
+      const bytes = encoder.encode(message);
+      const divisor = 0xedb88320;
+      let crc = 0xffffffff;
+      for (const byte of Array.from(bytes)) {
+        crc = crc ^ byte;
+
+        for (let i = 0; i < 8; i++) {
+          if (crc & 1) {
+            crc = (crc >>> 1) ^ divisor;
+          } else {
+            crc = crc >>> 1;
+          }
+        }
+      }
+      return unsignedChecksum(crc ^ 0xffffffff);
+    }
+
+    console.log("CheckSum generated: " + checksum(message));
+
+    const checksumValue = checksum(message);
 
     const payload: { [key: string]: string } = {
       merchantId,
@@ -67,6 +100,7 @@ const Payment: React.FC = () => {
       additionalField5,
       checksum: checksumValue,
     };
+    console.log("Payload:", payload);
 
     const formData = new FormData();
 
