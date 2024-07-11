@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import axios from "axios";
 import crc32 from "crc-32";
 
 const Payment: React.FC = () => {
@@ -9,19 +8,39 @@ const Payment: React.FC = () => {
   const [orderId, setOrderId] = useState("");
   const [transactionAmount, setTransactionAmount] = useState("");
 
-  // const generateChecksum = (msg: string, secretKey: string): string => {
-  //   const inputData = `${msg}${secretKey}`;
-  //   const crc32Value = crc32.str(inputData) >>> 0;
-  //   return crc32Value.toString(16).toUpperCase().padStart(8, "0");
-  // };
+  const generateChecksum = (message: string) => {
+    function unsignedChecksum(n: any) {
+      if (n >= 0) {
+        return n;
+      }
+      return 0xffffffff - n * -1 + 1;
+    }
 
-  // const generateChecksum = (msg: string, secretKey: string): any => {
-  //   const inputData = `${msg}|${secretKey}`;
-  //   const crc32Value = crc32.str(inputData);
-  //   return crc32Value;
-  // };
+    function checksum(message: any) {
+      const encoder = new TextEncoder();
+      const bytes = encoder.encode(message);
+      const divisor = 0xedb88320;
+      let crc = 0xffffffff;
+      for (const byte of Array.from(bytes)) {
+        crc = crc ^ byte;
 
-  const processPayment = async (orderId: string, transactionAmount: string) => {
+        for (let i = 0; i < 8; i++) {
+          if (crc & 1) {
+            crc = (crc >>> 1) ^ divisor;
+          } else {
+            crc = crc >>> 1;
+          }
+        }
+      }
+      return unsignedChecksum(crc ^ 0xffffffff);
+    }
+
+    return checksum(message);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Generate all the required fields
     const messageType = "0100";
     const merchantId = "UATAPTISG0000001631";
     const serviceId = "Education";
@@ -52,97 +71,54 @@ const Payment: React.FC = () => {
       "7f6de8da9776966c5393975870a2752ae434310bb80296efdc3666093d7435b8";
 
     const message = `${messageType}|${merchantId}|${serviceId}|${orderId}|${customerId}|${transactionAmount}|${currencyCode}|${requestDateTime}|${successUrl}|${failUrl}|${additionalField1}|${additionalField2}|${additionalField3}|${additionalField4}|${additionalField5}|${secretKey}`;
-    function unsignedChecksum(n: any) {
-      if (n >= 0) {
-        return n;
-      }
-      return 0xffffffff - n * -1 + 1;
-    }
 
-    function checksum(message: any) {
-      const encoder = new TextEncoder();
-      const bytes = encoder.encode(message);
-      const divisor = 0xedb88320;
-      let crc = 0xffffffff;
-      for (const byte of Array.from(bytes)) {
-        crc = crc ^ byte;
+    const checksumValue = generateChecksum(message);
 
-        for (let i = 0; i < 8; i++) {
-          if (crc & 1) {
-            crc = (crc >>> 1) ^ divisor;
-          } else {
-            crc = crc >>> 1;
-          }
-        }
-      }
-      return unsignedChecksum(crc ^ 0xffffffff);
-    }
-
-    console.log("CheckSum generated: " + checksum(message));
-
-    const checksumValue = checksum(message);
-
-    const payload: { [key: string]: string } = {
-      merchantId,
-      messageType,
-      serviceId,
-      orderId,
-      customerId,
-      transactionAmount,
-      currencyCode,
-      requestDateTime,
-      successUrl,
-      failUrl,
-      additionalField1,
-      additionalField2,
-      additionalField3,
-      additionalField4,
-      additionalField5,
-      checksum: checksumValue,
-    };
-    console.log("Payload:", payload);
-
-    const formData = new FormData();
-
-    Object.entries(payload).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
-
-    try {
-      const response = await axios.post(
-        "https://pilot.surepay.ndml.in/SurePayPayment/sp/processRequest",
-        formData
-      );
-
-      if (response.status === 200) {
-        console.log(response.data);
-        // Handle successful response
-      } else {
-        console.error("Payment failed");
-        // Handle payment failure
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      // Handle error
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await processPayment(orderId, transactionAmount);
+    // Submit the form
+    const form = e.target as HTMLFormElement;
+    form.submit();
   };
 
   return (
     <div className="bg-ashGrey min-h-screen flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
         <h1 className="text-green text-4xl font-bold mb-4">Payment Details</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          action="https://pilot.surepay.ndml.in/SurePayPayment/sp/processRequest"
+          method="POST"
+          className="space-y-4"
+        >
+          {/* Add hidden inputs for all required fields */}
+          <input type="hidden" name="merchantId" value="UATAPTISG0000001631" />
+          <input type="hidden" name="messageType" value="0100" />
+          <input type="hidden" name="serviceId" value="Education" />
+          <input type="hidden" name="customerId" value="123456789012" />
+          <input type="hidden" name="currencyCode" value="INR" />
+          <input
+            type="hidden"
+            name="successUrl"
+            value="https://apticon2024.com/success"
+          />
+          <input
+            type="hidden"
+            name="failUrl"
+            value="https://apticon2024.com/failure"
+          />
+          <input type="hidden" name="additionalField1" value="static_value_1" />
+          <input type="hidden" name="additionalField2" value="static_value_2" />
+          <input type="hidden" name="additionalField3" value="static_value_3" />
+          <input type="hidden" name="additionalField4" value="static_value_4" />
+          <input type="hidden" name="additionalField5" value="static_value_5" />
+
+          {/* Visible form fields */}
           <div>
             <label className="block text-darkBrown text-lg mb-2" htmlFor="name">
               Name
             </label>
             <input
               id="name"
+              name="name"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -159,6 +135,7 @@ const Payment: React.FC = () => {
             </label>
             <input
               id="email"
+              name="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -175,6 +152,7 @@ const Payment: React.FC = () => {
             </label>
             <input
               id="orderId"
+              name="orderId"
               type="text"
               value={orderId}
               onChange={(e) => setOrderId(e.target.value)}
@@ -191,6 +169,7 @@ const Payment: React.FC = () => {
             </label>
             <input
               id="transactionAmount"
+              name="transactionAmount"
               type="text"
               value={transactionAmount}
               onChange={(e) => setTransactionAmount(e.target.value)}
