@@ -75,8 +75,8 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: "dev@ravindrachoudhary.in",
-        to: ["info@apticon2024.com", "ravi.sirvi609@gmail.com"],
+        from: "admin@apticon2024.com",
+        to: ["info@apticon2024.com"],
         subject: `${newUser.name} wants to connect with you!`,
         html: adminEmailTemplate(newUser),
         attachments: [
@@ -117,10 +117,10 @@ export async function POST(req: NextRequest) {
           We appreciate your interest in our conference and will ensure that your questions are answered promptly.
         </p>
         <p style="font-size: 18px;">
-          If you need to contact us directly, please feel free to call us at <strong>8107199052</strong>.
+          If you need to contact us directly.
         </p>
         <p style="font-size: 18px;">Best regards,</p>
-        <p style="font-size: 18px; font-weight: bold;">Ravindra Choudhary</p>
+        <p style="font-size: 18px; font-weight: bold;">Operant Pharmacy Federation</p>
       </div>
       <style>
         @media only screen and (max-width: 600px) {
@@ -149,7 +149,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: "dev@ravindrachoudhary.in",
+        from: "admin@apticon2024.com",
         to: `${newUser.email}`,
         subject: `Thanks for Connecting, ${newUser.name}`,
         html: userEmailTemplate(newUser),

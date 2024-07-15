@@ -123,6 +123,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
           height={300}
           className="mx-auto"
         />
+        <p className="text-center items-center">UPI ID: 325478610453529@cnrb</p>
         <h3 className="text-2xl font-bold text-center text-green mt-4">
           Scan the QR code to pay and add the transaction ID.{" "}
         </h3>

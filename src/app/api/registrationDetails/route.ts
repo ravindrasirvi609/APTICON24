@@ -188,7 +188,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: "admin@apticon2024.com",
-        to: ["info@apticon2024.com", "ravi.sirvi609@gmail.com"],
+        to: ["info@apticon2024.com"],
         subject: `${newUser.fullName} has registered for APTICON 2024!`,
         html: adminEmailTemplate(newUser),
       }),
