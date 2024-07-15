@@ -1,12 +1,8 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 
 const Failure: React.FC = () => {
-  const searchParams = useSearchParams();
-  const orderId = searchParams.get("orderId");
-  const errorMessage = searchParams.get("errorMessage");
   return (
     <div className="bg-ashGrey min-h-screen flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center">
@@ -15,8 +11,6 @@ const Failure: React.FC = () => {
           Unfortunately, your payment could not be processed. Please try again
           or contact our support team for assistance.
         </p>
-        <p>Order ID: {orderId}</p>
-        <p>Error: {errorMessage}</p>
         <div className="flex flex-col space-y-4">
           <Link href="/try-again">
             <p className="bg-ochre text-white px-4 py-2 rounded-full">
