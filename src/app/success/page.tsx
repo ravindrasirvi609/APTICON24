@@ -1,8 +1,12 @@
-// pages/success.tsx
+"use client";
 import React from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 const Success: React.FC = () => {
+  const searchParams = useSearchParams();
+  const orderId = searchParams.get("orderId");
+  const transactionId = searchParams.get("transactionId");
   return (
     <div className="bg-ashGrey min-h-screen flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center">
@@ -11,6 +15,9 @@ const Success: React.FC = () => {
           Thank you for registering for APTICON 2024. We have received your
           payment successfully.
         </p>
+        <h1>Payment Successful</h1>
+        <p>Order ID: {orderId}</p>
+        <p>Transaction ID: {transactionId}</p>
         <Link href="https://wa.me/YourWhatsAppChannel">
           <p className="bg-green text-white px-4 py-2 rounded-full inline-flex items-center">
             <svg
