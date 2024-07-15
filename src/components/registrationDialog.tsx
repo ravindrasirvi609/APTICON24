@@ -46,7 +46,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
 
   const registrationFees: FeeType[] = [
     {
-      type: "Early Bird (Upto 15th July)",
+      type: "Early Bird (Upto 31st July)",
       fees: {
         "APTI Members": "₹ 2800",
         students: "₹ 2500",
