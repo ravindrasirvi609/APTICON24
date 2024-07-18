@@ -23,6 +23,7 @@ export async function POST(req: NextRequest) {
       aadharNumber,
       gender,
       institution,
+      designation,
       address,
       city,
       state,
@@ -46,6 +47,7 @@ export async function POST(req: NextRequest) {
       aadharNumber,
       gender,
       institution,
+      designation,
       address,
       city,
       state,
@@ -237,6 +239,7 @@ export async function POST(req: NextRequest) {
       newUser.createdAt,
       newUser.membershipNumber,
       newUser.paymentMethod,
+      newUser.designation,
     ]);
     return NextResponse.json({
       message: "Registration successful",

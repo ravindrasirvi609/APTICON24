@@ -24,6 +24,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
     aadharNumber: "",
     gender: "",
     institution: "",
+    designation: "",
     address: "",
     paymentMethod: "",
     city: "",
@@ -374,6 +375,20 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               required
               name="institution"
               value={formData.institution}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Designation
+            </label>
+            <input
+              type="text"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 focus:ring-green"
+              required
+              name="designation"
+              value={formData.designation}
               onChange={handleChange}
             />
           </div>
