@@ -281,6 +281,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
               name="whatsappNumber"
               value={formData.whatsappNumber}
               onChange={handleChange}
+              maxLength={10}
             />
           </div>
 
