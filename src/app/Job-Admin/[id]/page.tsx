@@ -1,24 +1,23 @@
 "use client";
 
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import React from "react";
 
-const SuccessPage = () => {
-  const router = useRouter();
+const SuccessPage = (params: any) => {
+  const { msg } = params;
+  console.log("msg", msg);
+
   const [paymentDetails, setPaymentDetails] = useState<string[]>([]);
 
   useEffect(() => {
-    if (router.isReady) {
-      const { msg } = router.query;
-      if (msg && typeof msg === "string") {
-        // Decode the URL-encoded string
-        const decodedMsg = decodeURIComponent(msg);
-        // Split the string by '|' to extract individual pieces of information
-        const detailsArray = decodedMsg.split("|");
-        setPaymentDetails(detailsArray);
-      }
+    if (msg && typeof msg === "string") {
+      // Decode the URL-encoded string
+      const decodedMsg = decodeURIComponent(msg);
+      // Split the string by '|' to extract individual pieces of information
+      const detailsArray = decodedMsg.split("|");
+      setPaymentDetails(detailsArray);
     }
-  }, [router.isReady, router.query]);
+  }, [msg]);
 
   if (!paymentDetails.length) {
     return <div>Loading...</div>;
