@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
   // Construct the absolute URL
   const baseUrl = new URL(req.url).origin; // Extract the base URL from the request
-  const redirectUrl = new URL(`${baseUrl}/Job-Admin`);
+  const redirectUrl = new URL(`${baseUrl}/payment-succesful`);
   redirectUrl.searchParams.set("msg", encodedMsg);
 
   // Redirect to the success page with the msg as a query parameter
