@@ -15,5 +15,5 @@ export async function POST(req: NextRequest) {
   const encodedMsg = encodeURIComponent(msg);
 
   // Redirect to the success page with the msg as a query parameter
-  return NextResponse.redirect(`/success?msg=${encodedMsg}`);
+  return NextResponse.redirect(`/Job-Admin?msg=${encodedMsg}`);
 }
