@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import React from "react";
 
 const SuccessPage = (params: any) => {
+  console.log("params", params);
   const { msg } = params;
-  console.log("msg", msg);
 
   const [paymentDetails, setPaymentDetails] = useState<string[]>([]);
 
