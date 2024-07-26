@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 interface PaymentDetail {
@@ -8,7 +8,7 @@ interface PaymentDetail {
   value: string;
 }
 
-const SuccessPage: React.FC = () => {
+const SuccessPageClient: React.FC = () => {
   const searchParams = useSearchParams();
   const [paymentDetails, setPaymentDetails] = useState<PaymentDetail[]>([]);
 
@@ -71,4 +71,4 @@ const SuccessPage: React.FC = () => {
   );
 };
 
-export default SuccessPage;
+export default SuccessPageClient;

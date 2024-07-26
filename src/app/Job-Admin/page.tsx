@@ -1,63 +1,17 @@
-"use client";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 
-import { useEffect, useState } from "react";
-import React from "react";
+const SuccessPageClient = dynamic(
+  () => import("../../components/SuccessPageClient"),
+  { ssr: false }
+);
 
-const SuccessPage = (params: any) => {
-  console.log("params", params);
-  const { msg } = params;
-
-  const [paymentDetails, setPaymentDetails] = useState<string[]>([]);
-
-  useEffect(() => {
-    if (msg && typeof msg === "string") {
-      // Decode the URL-encoded string
-      const decodedMsg = decodeURIComponent(msg);
-      // Split the string by '|' to extract individual pieces of information
-      const detailsArray = decodedMsg.split("|");
-      setPaymentDetails(detailsArray);
-    }
-  }, [msg]);
-
-  if (!paymentDetails.length) {
-    return <div>Loading...</div>;
-  }
-
-  // Define labels for the payment details
-  const labels = [
-    "Status",
-    "Response Code",
-    "Merchant ID",
-    "Product Info",
-    "Transaction ID",
-    "Reference Number",
-    "Amount",
-    "Currency",
-    "Payment Mode",
-    "Transaction Date",
-    "Bank Ref Number",
-    "Payment Gateway Transaction ID",
-    "Auth Status",
-    "Custom Field 1",
-    "Custom Field 2",
-    "Custom Field 3",
-    "Custom Field 4",
-    "Custom Field 5",
-    "Checksum",
-  ];
-
+const JobAdminPage: React.FC = () => {
   return (
-    <div>
-      <h1>Payment Successful</h1>
-      <ul>
-        {paymentDetails.map((detail, index) => (
-          <li key={index}>
-            <strong>{labels[index]}:</strong> {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <SuccessPageClient />
+    </Suspense>
   );
 };
 
-export default SuccessPage;
+export default JobAdminPage;
