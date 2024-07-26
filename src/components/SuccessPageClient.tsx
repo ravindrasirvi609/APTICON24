@@ -15,12 +15,18 @@ const SuccessPageClient: React.FC = () => {
   useEffect(() => {
     const msg = searchParams.get("msg");
     if (msg) {
-      // Decode the URL-encoded string
       const decodedMsg = decodeURIComponent(msg);
-      // Split the string by '|' to extract individual pieces of information
       const detailsArray = decodedMsg.split("|");
 
-      // Define labels for the payment details
+      const importantFields = [
+        "Status",
+        "Transaction ID",
+        "Amount",
+        "Currency",
+        "Payment Mode",
+        "Transaction Date",
+      ];
+
       const labels = [
         "Status",
         "Response Code",
@@ -43,30 +49,63 @@ const SuccessPageClient: React.FC = () => {
         "Checksum",
       ];
 
-      // Create an array of objects with labels and values
-      const details = detailsArray.map((detail, index) => ({
-        label: labels[index] || `Field ${index + 1}`,
-        value: detail,
-      }));
+      const details = detailsArray
+        .map((detail, index) => ({
+          label: labels[index] || `Field ${index + 1}`,
+          value: detail,
+        }))
+        .filter((detail) => importantFields.includes(detail.label));
 
       setPaymentDetails(details);
     }
   }, [searchParams]);
 
   if (!paymentDetails.length) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+      </div>
+    );
   }
 
   return (
-    <div>
-      <h1>Payment Successful</h1>
-      <ul>
-        {paymentDetails.map((detail, index) => (
-          <li key={index}>
-            <strong>{detail.label}:</strong> {detail.value}
-          </li>
-        ))}
-      </ul>
+    <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-light-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+        <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+          <div className="max-w-md mx-auto">
+            <div className="divide-y divide-gray-200">
+              <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                <h1 className="text-3xl font-extrabold text-center text-gray-900">
+                  Payment Successful
+                </h1>
+                <svg
+                  className="w-20 h-20 text-green-500 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                {paymentDetails.map((detail, index) => (
+                  <div key={index} className="flex justify-between">
+                    <span className="font-medium">{detail.label}:</span>
+                    <span className="text-gray-900">{detail.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
