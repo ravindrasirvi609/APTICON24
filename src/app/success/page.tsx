@@ -21,18 +21,28 @@ interface ParsedData {
 }
 
 export default function SuccessPage() {
-  const searchParams = useSearchParams();
   const [paymentData, setPaymentData] = useState<ParsedData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
     const data = searchParams.get("data");
     if (data) {
-      setPaymentData(JSON.parse(decodeURIComponent(data)));
+      try {
+        setPaymentData(JSON.parse(decodeURIComponent(data)));
+      } catch (error) {
+        console.error("Error parsing payment data:", error);
+      }
     }
-  }, [searchParams]);
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   if (!paymentData) {
-    return <div>Loading...</div>;
+    return <div>No payment data available.</div>;
   }
 
   return (
