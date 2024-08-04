@@ -546,7 +546,7 @@ export default function Home() {
                   the designated space on the submission portal.
                 </li>
                 <li>Abstracts must be submitted online only.</li>
-                <li>The deadline for submission is 31 July, 2024.</li>
+                <li>The deadline for submission is 15 Aug, 2024.</li>
                 <li>
                   A model abstract is available for reference on the website.
                 </li>
@@ -602,6 +602,13 @@ export default function Home() {
               <li>
                 The best Poster and/or Oral presentations in each category will
                 receive a certificate and a memento.
+              </li>
+              <li>
+                All abstracts and proceedings will be compiled by APTI&apos;s
+                SCOPUS indexed Impact Factor Journal, the Indian Journal of
+                Pharmaceutical Education and Research (IJPER). Selected
+                full-length papers will be published in IJPER after a thorough
+                peer review process.
               </li>
             </ul>
           </div>
