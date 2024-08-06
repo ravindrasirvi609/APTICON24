@@ -14,7 +14,7 @@ type FeeType = {
 
 const registrationFees: FeeType[] = [
   {
-    type: "Early Bird (Upto 31st July)",
+    type: "Early Bird (Upto 10th August)",
     fees: {
       "APTI Members": "₹ 2800",
       students: "₹ 2500",

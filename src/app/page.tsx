@@ -482,10 +482,14 @@ export default function Home() {
             delegates to submit their original scientific work as abstracts for
             presentation during the Congress as Poster and/or Oral
             presentations. The ASC will review all submitted abstracts and
-            select those for Poster and/or Oral presentation. The best Poster
-            and/or Oral presentations in each category will be announced by the
-            ASC during the valedictory function. Winners will receive a
-            certificate and memento.
+            select those for Poster and/or Oral presentation. All abstracts and
+            proceedings will be compiled by APTI&apos;s SCOPUS indexed Impact
+            Factor Journal, the Indian Journal of Pharmaceutical Education and
+            Research (IJPER). Selected full-length papers will be published in
+            IJPER after a thorough peer review process. The best Poster and/or
+            Oral presentations in each category will be announced by the ASC
+            during the valedictory function. Winners will receive a certificate
+            and memento.
           </p>
           <div className="flex justify-center my-4">
             <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
@@ -602,13 +606,6 @@ export default function Home() {
               <li>
                 The best Poster and/or Oral presentations in each category will
                 receive a certificate and a memento.
-              </li>
-              <li>
-                All abstracts and proceedings will be compiled by APTI&apos;s
-                SCOPUS indexed Impact Factor Journal, the Indian Journal of
-                Pharmaceutical Education and Research (IJPER). Selected
-                full-length papers will be published in IJPER after a thorough
-                peer review process.
               </li>
             </ul>
           </div>
