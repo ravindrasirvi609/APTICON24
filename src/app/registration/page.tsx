@@ -174,7 +174,7 @@ export default function Registration() {
               </p>
             </div>
             <p className="text-center mt-4 text-lg text-gray-800">
-              If you have any deficulty in registration, please contact us at{" "}
+              If you have any difficulty in registration, please contact us at{" "}
               <a className="hover:text-blue-600" href="phone: +91 6371343074">
                 +91 6371343074
               </a>
