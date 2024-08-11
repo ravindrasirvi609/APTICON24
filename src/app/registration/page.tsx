@@ -9,27 +9,18 @@ import RegistrationDialog from "@/components/registrationDialog";
 type FeeType = {
   type: string;
   fees: { [key: string]: string };
-  Price: { [key: string]: string };
 };
 
 const registrationFees: FeeType[] = [
   {
-    type: "Early Bird (Upto 10th August)",
+    type: "",
     fees: {
-      "APTI Members": "₹ 2800",
-      students: "₹ 2500",
-      "non-Members": "₹ 3300",
-      industry: "₹ 4000",
-      companion: "₹ 1500",
-      international: "118 USD",
-    },
-    Price: {
       "APTI Members": "₹ 3500",
       students: "₹ 2900",
       "non-Members": "₹ 4000",
       industry: "₹ 4500",
-      companion: "",
-      international: "",
+      companion: "₹ 1500",
+      international: "118 USD",
     },
   },
 ];
@@ -118,9 +109,6 @@ export default function Registration() {
                                 {key.charAt(0).toUpperCase() + key.slice(1)}
                               </td>
                               <td className="py-2 px-4 border-b border-grey">
-                                <span className="line-through">
-                                  {fee.Price[key]}
-                                </span>
                                 <span className="text-red-500 ml-2">
                                   {fee.fees[key]}
                                 </span>
@@ -157,7 +145,6 @@ export default function Registration() {
                     </h4>
                     <div className="mb-2">
                       <span className="font-semibold">Price:</span>{" "}
-                      <span className="line-through">{fee.Price[key]}</span>
                       <span className="text-red-500 ml-2">{fee.fees[key]}</span>
                     </div>
                     <button
