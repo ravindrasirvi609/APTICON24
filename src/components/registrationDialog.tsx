@@ -40,29 +40,18 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
   const [successMessage, setSuccessMessage] = useState("");
 
   type FeeType = {
-    type: string;
     fees: { [key: string]: string };
-    Price: { [key: string]: string };
   };
 
   const registrationFees: FeeType[] = [
     {
-      type: "Early Bird (Upto 31st July)",
       fees: {
-        "APTI Members": "₹ 2800",
-        students: "₹ 2500",
-        "non-Members": "₹ 3300",
-        industry: "₹ 4000",
-        companion: "₹ 1500",
-        international: "118 USD",
-      },
-      Price: {
         "APTI Members": "₹ 3500",
         students: "₹ 2900",
         "non-Members": "₹ 4000",
         industry: "₹ 4500",
-        companion: "",
-        international: "",
+        companion: "₹ 1500",
+        international: "118 USD",
       },
     },
   ];
@@ -243,7 +232,7 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
                 Select Fee Type
               </option>
               {registrationFees.map((fee, index) => (
-                <optgroup key={index} label={fee.type}>
+                <optgroup key={index}>
                   {Object.entries(fee.fees).map(([key, value]) => (
                     <option key={key} value={key}>
                       {key.charAt(0).toUpperCase() + key.slice(1)} - {value}
