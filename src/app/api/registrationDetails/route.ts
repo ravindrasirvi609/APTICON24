@@ -203,7 +203,7 @@ export async function POST(req: NextRequest) {
     ]);
 
     // Send emails in the background
-    sendEmailsInBackground(newUser, apiKey);
+    await sendEmailsInBackground(newUser, apiKey);
 
     // Return response immediately after saving data
     return NextResponse.json({
