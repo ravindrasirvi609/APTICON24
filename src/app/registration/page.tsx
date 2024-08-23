@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useState } from "react";
 import Image from "next/image";
 import RegistrationDialog from "@/components/registrationDialog";
+import Link from "next/link";
 
 type FeeType = {
   type: string;
@@ -78,6 +79,11 @@ export default function Registration() {
             the conference. Join us for an enriching experience that promises to
             transform your understanding of pharmacy education and practice.
           </p>
+          <h3 className="text-3xl md:text-4xl font-bold text-center text-[#3075ff] underline hover:text-[#084fdd]">
+            <Link href={"/RegistrationList"}>
+              <span>Know Your Registration Number</span>
+            </Link>
+          </h3>
           <div className="overflow-x-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-ochre">
               Registration Fees
