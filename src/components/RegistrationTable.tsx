@@ -16,7 +16,7 @@ interface RegistrationTableProps {
 
 const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
   const [page, setPage] = useState<number>(0);
-  const [rowsPerPage, setRowsPerPage] = useState<number>(5);
+  const [rowsPerPage, setRowsPerPage] = useState<number>(25);
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const filteredData = useMemo(() => {
@@ -70,8 +70,9 @@ const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
                 "Title",
                 "Full Name",
                 "Institution",
-                "Fee Type",
                 "Registration No.",
+
+                "Fee Type",
               ].map((header) => (
                 <th
                   key={header}
