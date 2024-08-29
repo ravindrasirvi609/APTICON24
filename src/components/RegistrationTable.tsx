@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface RegistrationData {
   Title: string;
@@ -17,17 +18,16 @@ const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(5);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [filteredData, setFilteredData] = useState<RegistrationData[]>(data);
 
-  const handleSearch = () => {
-    const filtered = data.filter((row) =>
+  const filteredData = useMemo(() => {
+    return data.filter((row) =>
       Object.values(row).some((value) =>
-        value.toLowerCase().includes(searchTerm.toLowerCase())
+        String(value).toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
-    setFilteredData(filtered);
-    setPage(0);
-  };
+  }, [data, searchTerm]);
+
+  const totalPages = Math.ceil(filteredData.length / rowsPerPage);
 
   const handleChangePage = (newPage: number) => {
     setPage(newPage);
@@ -41,98 +41,97 @@ const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">
+    <div className="container mx-auto px-4 py-8 bg-[#C8BEB7]">
+      <h1 className="text-3xl font-bold mb-6 text-[#231F20] text-center">
         Confirmed Registrations
       </h1>
 
-      <div className="mb-6 flex">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="flex-grow px-4 py-2 border text-black border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button
-          onClick={handleSearch}
-          className="bg-blue-500 text-white px-6 py-2 rounded-r-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          Search
-        </button>
+      <div className="mb-6">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full px-4 py-2 pr-10 border text-[#231F20] border-[#6D2200] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2C5F2D]"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <Search
+            className="absolute right-3 top-2.5 text-[#6D2200]"
+            size={20}
+          />
+        </div>
       </div>
 
       <div className="overflow-x-auto bg-white shadow-md rounded-lg">
         <table className="min-w-full table-auto">
-          <thead className="bg-gray-200">
+          <thead className="bg-[#2C5F2D] text-white">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                Title
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                Full Name
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                Institution
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                Fee Type
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-                Registration No.
-              </th>
+              {[
+                "Title",
+                "Full Name",
+                "Institution",
+                "Fee Type",
+                "Registration No.",
+              ].map((header) => (
+                <th
+                  key={header}
+                  className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                >
+                  {header}
+                </th>
+              ))}
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="bg-white divide-y divide-[#C8BEB7]">
             {filteredData
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row: RegistrationData, index: number) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {row.Title}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {row.FullName}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {row.Institution}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {row.FeeType}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {row["Regn No"]}
-                  </td>
+                <tr
+                  key={index}
+                  className="hover:bg-[#C8BEB7] transition-colors duration-200"
+                >
+                  {Object.values(row).map((value, cellIndex) => (
+                    <td
+                      key={cellIndex}
+                      className="px-4 py-3 whitespace-nowrap text-sm text-[#231F20]"
+                    >
+                      {String(value)}
+                    </td>
+                  ))}
                 </tr>
               ))}
           </tbody>
         </table>
       </div>
 
-      <div className="mt-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+      <div className="mt-4 flex flex-col sm:flex-row items-center justify-between">
+        <div className="flex items-center space-x-2 mb-2 sm:mb-0">
           <button
             onClick={() => handleChangePage(page - 1)}
             disabled={page === 0}
-            className="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 disabled:opacity-50"
+            className="px-3 py-1 bg-[#B5814F] text-white rounded hover:bg-[#C75400] disabled:opacity-50 transition-colors duration-200 flex items-center"
           >
-            Previous
+            <ChevronLeft size={16} className="mr-1" /> Previous
           </button>
           <button
             onClick={() => handleChangePage(page + 1)}
-            disabled={(page + 1) * rowsPerPage >= filteredData.length}
-            className="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 disabled:opacity-50"
+            disabled={page >= totalPages - 1}
+            className="px-3 py-1 bg-[#B5814F] text-white rounded hover:bg-[#C75400] disabled:opacity-50 transition-colors duration-200 flex items-center"
           >
-            Next
+            Next <ChevronRight size={16} className="ml-1" />
           </button>
+        </div>
+        <div className="flex items-center space-x-2">
           <select
             value={rowsPerPage}
             onChange={handleChangeRowsPerPage}
-            className="px-2 py-1 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-2 py-1 bg-white border border-[#6D2200] rounded focus:outline-none focus:ring-2 focus:ring-[#2C5F2D]"
           >
-            <option value={5}>5 rows</option>
-            <option value={10}>10 rows</option>
-            <option value={25}>25 rows</option>
+            {[5, 10, 25].map((value) => (
+              <option key={value} value={value}>
+                {value} rows
+              </option>
+            ))}
           </select>
         </div>
       </div>
