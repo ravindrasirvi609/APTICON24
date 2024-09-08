@@ -1,6 +1,14 @@
 import React from "react";
-import { PhoneIcon, MapPinIcon, CreditCard } from "lucide-react";
+import {
+  PhoneIcon,
+  MapPinIcon,
+  CalendarIcon,
+  InfoIcon,
+  Mail,
+  MailIcon,
+} from "lucide-react";
 import Header from "@/components/header";
+import Link from "next/link";
 
 const accommodationData = [
   {
@@ -98,8 +106,9 @@ const Accommodation = () => {
         </h1>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-semibold text-darkBrown mb-4">
+          <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <h2 className="text-2xl font-semibold text-darkBrown mb-4 flex items-center">
+              <InfoIcon className="w-6 h-6 mr-2 text-ochre" />
               Contact Information
             </h2>
             <div className="flex items-center mb-2">
@@ -115,37 +124,57 @@ const Accommodation = () => {
                 <span className="font-medium">Mobile No.:</span> +91 7440090003
               </p>
             </div>
+            <div className="flex items-center">
+              <MailIcon className="w-5 h-5 mr-2 text-ochre" />
+              <p>
+                <span className="font-medium">Email:</span>{" "}
+                accomodation.apticon@gmail.com
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-semibold text-darkBrown mb-4">
-              Quick Booking
+          <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <h2 className="text-2xl font-semibold text-darkBrown mb-4 flex items-center">
+              <CalendarIcon className="w-6 h-6 mr-2 text-ochre" />
+              Travels Plan and Accommodations
             </h2>
-            <p className="mb-4">
-              Ready to secure your accommodation? Click below to proceed with
-              payment.
+            <p className="mb-4 text-gray-600">
+              Submit your Travels Plan and Accommodations Requirements
             </p>
-            <button className="bg-green hover:bg-darkBrown text-white font-bold py-2 px-4 rounded transition duration-300 flex items-center justify-center w-full md:w-auto">
-              <CreditCard className="mr-2" />
-              Pay Now
-            </button>
+            <Link href="https://forms.gle/9Szfpt7pR1TMeHPYA">
+              <button className="bg-green hover:bg-darkBrown text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center w-full md:w-auto shadow-md hover:shadow-lg">
+                <CalendarIcon className="w-5 h-5 mr-2" />
+                Submit Details
+              </button>
+            </Link>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-12">
-          <h2 className="text-2xl font-semibold text-darkBrown mb-6">
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-12 hover:shadow-xl transition duration-300">
+          <h2 className="text-2xl font-semibold text-darkBrown mb-6 flex items-center">
+            <MapPinIcon className="w-6 h-6 mr-2 text-ochre" />
             Hotel Accommodations
           </h2>
-          <div className="overflow-x-auto">
+          <div className="mb-4 p-4 bg-lightGrey rounded-lg">
+            <p className="text-sm text-darkBrown flex items-center mb-2">
+              <CalendarIcon className="w-4 h-4 mr-2 text-ochre" />
+              From September 26th afternoon to 28th morning
+            </p>
+            <p className="text-sm text-darkBrown flex items-center">
+              <InfoIcon className="w-4 h-4 mr-2 text-ochre" />
+              All rooms are on above mentioned occupancies without breakfast
+            </p>
+          </div>
+          <div className="overflow-x-auto mt-4">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-lightBrown text-white">
                   <th className="p-3 text-left">Hotel</th>
                   <th className="p-3 text-left">Rates</th>
                   <th className="p-3 text-left">Occupancy</th>
-                  <th className="p-3 text-left">Venue (Km)</th>
-                  <th className="p-3 text-left">Station (Km)</th>
-                  <th className="p-3 text-left">Airport (Km)</th>
+                  <th className="p-3 text-left">Distance from Venue (Km)</th>
+                  <th className="p-3 text-left">Distance from Station (Km)</th>
+                  <th className="p-3 text-left">Distance from Airport (Km)</th>
                 </tr>
               </thead>
               <tbody>
@@ -156,7 +185,7 @@ const Accommodation = () => {
                       index % 2 === 0 ? "bg-white" : "bg-ashGrey"
                     } hover:bg-lightGrey transition duration-300`}
                   >
-                    <td className="p-3">{hotel.name}</td>
+                    <td className="p-3 font-medium">{hotel.name}</td>
                     <td className="p-3">{hotel.rate}</td>
                     <td className="p-3">{hotel.occupancy}</td>
                     <td className="p-3">{hotel.distanceVenue}</td>
@@ -167,19 +196,17 @@ const Accommodation = () => {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-sm italic text-grey">
-            All rooms are on above mentioned occupancies without breakfast only.
-          </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-darkBrown mb-4">
+        <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+          <h2 className="text-2xl font-semibold text-darkBrown mb-4 flex items-center">
+            <MapPinIcon className="w-6 h-6 mr-2 text-ochre" />
             Student Accommodations
           </h2>
-          <p className="mb-2">
+          <p className="mb-4 text-gray-600">
             For Student Accommodations (Hostels/ Guest Houses/ Dormitories):
           </p>
-          <div className="flex items-center">
+          <div className="flex items-center bg-lightGrey p-4 rounded-lg">
             <PhoneIcon className="w-5 h-5 mr-2 text-ochre" />
             <p>
               <span className="font-medium">Contact:</span> 7978603675,
