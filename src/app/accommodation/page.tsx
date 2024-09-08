@@ -162,7 +162,7 @@ const Accommodation = () => {
             </p>
             <p className="text-sm text-darkBrown flex items-center">
               <InfoIcon className="w-4 h-4 mr-2 text-ochre" />
-              All rooms are on above mentioned occupancies without breakfast
+              All rooms are on mentioned occupancies only (without breakfast).
             </p>
           </div>
           <div className="overflow-x-auto mt-4">
