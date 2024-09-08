@@ -462,10 +462,17 @@ export default function Home() {
             the conference. Join us for an enriching experience that promises to
             transform your understanding of pharmacy education and practice.
           </p>
-          <div className="flex justify-center">
-            <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
-              <Link href="/registration">Register Now</Link>
-            </button>
+          <div className="flex flex-col items-center space-y-6 md:space-y-8 p-6 md:p-8 ">
+            <h3 className="text-3xl md:text-4xl font-bold text-center text-darkBrown underline hover:text-green">
+              <Link href="/RegistrationList">
+                <span>Know Your Registration Number</span>
+              </Link>
+            </h3>
+            <Link href="/registration">
+              <button className="bg-green text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-darkBrown transition duration-300 ease-in-out">
+                Register Now
+              </button>
+            </Link>
           </div>
         </section>
         <div id="call-for-papers" className="container mx-auto"></div>
@@ -475,8 +482,12 @@ export default function Home() {
           className="container mx-auto lg:py-20 py-5 px-6 text-black"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
-            Submit Abstract
+            Abstract Submission{" "}
           </h2>
+          <div className="text-2xl flex justify-center my-4 text-ochre">
+            Abstract Submission is Closed
+          </div>
+
           <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             The APTICON Scientific Committee (ASC) is delighted to invite
             delegates to submit their original scientific work as abstracts for
@@ -491,13 +502,6 @@ export default function Home() {
             during the valedictory function. Winners will receive a certificate
             and memento.
           </p>
-          <div className="flex justify-center my-4">
-            <button className="bg-green text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-darkBrown">
-              <Link href="https://forms.gle/SeBkWPaopQE16awd9" target="_blank">
-                Submit Abstract
-              </Link>
-            </button>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
