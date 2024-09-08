@@ -141,12 +141,12 @@ export default function Home() {
                     >
                       Register Now
                     </a>
-                    <a
-                      href="#call-for-papers"
+                    <Link
+                      href="/accommodation"
                       className="bg-green px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
-                      Submit Abstract
-                    </a>
+                      Accommodation Details
+                    </Link>
                   </div>
                   <div className="hidden sm:block md:block text-center lg:text-left mt-4">
                     <Timestamps />
