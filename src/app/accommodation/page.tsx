@@ -173,7 +173,9 @@ const Accommodation = () => {
                   <th className="p-3 text-left">Rates</th>
                   <th className="p-3 text-left">Occupancy</th>
                   <th className="p-3 text-left">Distance from Venue (Km)</th>
-                  <th className="p-3 text-left">Distance from Station (Km)</th>
+                  <th className="p-3 text-left">
+                    Distance from Railway Station (Km)
+                  </th>
                   <th className="p-3 text-left">Distance from Airport (Km)</th>
                 </tr>
               </thead>
