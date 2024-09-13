@@ -50,7 +50,7 @@ const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
         <div className="relative">
           <input
             type="text"
-            placeholder="Search..."
+            placeholder="Search across all columns..."
             className="w-full px-4 py-2 pr-10 border text-[#231F20] border-[#6D2200] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2C5F2D]"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -71,7 +71,6 @@ const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
                 "Full Name",
                 "Institution",
                 "Registration No.",
-
                 "Fee Type",
               ].map((header) => (
                 <th
@@ -91,14 +90,21 @@ const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
                   key={index}
                   className="hover:bg-[#C8BEB7] transition-colors duration-200"
                 >
-                  {Object.values(row).map((value, cellIndex) => (
-                    <td
-                      key={cellIndex}
-                      className="px-4 py-3 whitespace-nowrap text-sm text-[#231F20]"
-                    >
-                      {String(value)}
-                    </td>
-                  ))}
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-[#231F20]">
+                    {row.Title}
+                  </td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-[#231F20]">
+                    {row.FullName}
+                  </td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-[#231F20]">
+                    {row.Institution}
+                  </td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-[#231F20]">
+                    {row["Regn No"]}
+                  </td>
+                  <td className="px-4 py-3 whitespace-nowrap text-sm text-[#231F20]">
+                    {row.FeeType}
+                  </td>
                 </tr>
               ))}
           </tbody>
@@ -126,7 +132,7 @@ const RegistrationTable: React.FC<RegistrationTableProps> = ({ data }) => {
           <select
             value={rowsPerPage}
             onChange={handleChangeRowsPerPage}
-            className="px-2 py-1 bg-white border border-[#6D2200] rounded focus:outline-none focus:ring-2 focus:ring-[#2C5F2D]"
+            className="px-2 py-1 text-[#6D2200] bg-white border border-[#6D2200] rounded focus:outline-none focus:ring-2 focus:ring-[#2C5F2D]"
           >
             {[5, 10, 25].map((value) => (
               <option key={value} value={value}>
