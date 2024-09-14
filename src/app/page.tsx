@@ -484,6 +484,12 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
             Abstract Submission{" "}
           </h2>
+
+          <h3 className="text-3xl md:text-4xl font-bold text-center text-darkBrown underline hover:text-green">
+            <Link href="/abstractData">
+              <span>Know Your Abstract Details</span>
+            </Link>
+          </h3>
           <div className="text-2xl flex justify-center my-4 text-ochre">
             Abstract Submission is Closed
           </div>
