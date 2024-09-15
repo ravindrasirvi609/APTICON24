@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import Contact from "@/components/contact";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import NationalBody from "./national-body/page";
+import { Download } from "lucide-react";
 
 export default function Home() {
   const settings1 = {
@@ -490,11 +491,39 @@ export default function Home() {
               <span>Know Your Abstract Details</span>
             </Link>
           </h3>
-          <div className="text-2xl flex justify-center my-4 text-ochre">
-            Abstract Submission is Closed
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                Poster Presentation Guidelines
+              </h3>
+              <a
+                href={`/APTICON 2024  Oral Presentation Guidelines and  Best Scientific Practices.pdf`}
+                download
+                className="inline-flex items-center px-4 py-2 bg-ochre text-white rounded-md hover:bg-ochre-dark transition-colors duration-300"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Guidelines
+              </a>
+            </div>
+            <div className="bg-ashGrey p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold mb-4 text-ochre">
+                Oral Presentation Guidelines
+              </h3>
+              <a
+                href={`/APTICON 2024  Oral Presentation Guidelines and  Best Scientific Practices.pdf`}
+                download
+                className="inline-flex items-center px-4 py-2 bg-ochre text-white rounded-md hover:bg-ochre-dark transition-colors duration-300"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Guidelines
+              </a>
+            </div>
           </div>
+          {/* <div className="text-2xl flex justify-center my-4 text-ochre">
+            Abstract Submission is Closed
+          </div> 
 
-          <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
+           <p className="text-center text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-darkBrown">
             The APTICON Scientific Committee (ASC) is delighted to invite
             delegates to submit their original scientific work as abstracts for
             presentation during the Congress as Poster and/or Oral
@@ -618,7 +647,7 @@ export default function Home() {
                 receive a certificate and a memento.
               </li>
             </ul>
-          </div>
+          </div> */}
         </section>
 
         <NationalBody />
