@@ -497,8 +497,9 @@ export default function Home() {
                 Poster Presentation Guidelines
               </h3>
               <a
-                href={`/APTICON 2024  Oral Presentation Guidelines and  Best Scientific Practices.pdf`}
+                href={`https://drive.google.com/file/d/15rdGtUMgcodGah6dYntQkEct21zxT7zj/view?usp=sharing`}
                 download
+                target="_blank"
                 className="inline-flex items-center px-4 py-2 bg-ochre text-white rounded-md hover:bg-ochre-dark transition-colors duration-300"
               >
                 <Download className="mr-2 h-5 w-5" />
@@ -510,8 +511,9 @@ export default function Home() {
                 Oral Presentation Guidelines
               </h3>
               <a
-                href={`/APTICON 2024  Oral Presentation Guidelines and  Best Scientific Practices.pdf`}
+                href={`https://drive.google.com/file/d/15rdGtUMgcodGah6dYntQkEct21zxT7zj/view?usp=sharing`}
                 download
+                target="_blank"
                 className="inline-flex items-center px-4 py-2 bg-ochre text-white rounded-md hover:bg-ochre-dark transition-colors duration-300"
               >
                 <Download className="mr-2 h-5 w-5" />
