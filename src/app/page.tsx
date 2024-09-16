@@ -497,7 +497,7 @@ export default function Home() {
                 Poster Presentation Guidelines
               </h3>
               <a
-                href={`https://drive.google.com/file/d/15rdGtUMgcodGah6dYntQkEct21zxT7zj/view?usp=sharing`}
+                href={`https://drive.google.com/file/d/150ALsO2NYukGgaXl6XMQzQAiAlSgB0e7/view?usp=sharing`}
                 download
                 target="_blank"
                 className="inline-flex items-center px-4 py-2 bg-ochre text-white rounded-md hover:bg-ochre-dark transition-colors duration-300"
