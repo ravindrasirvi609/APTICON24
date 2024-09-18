@@ -5,8 +5,9 @@ import { Search } from "lucide-react";
 
 export interface Abstract {
   "Presentation Code": string;
-  "Presenting Author": string;
-  "Title of Abstract": string;
+  "Presentation Type": string;
+  "Name of Presenting Author": string;
+  "Paper Title": string;
 }
 
 const AbstractListTable: React.FC = () => {
@@ -41,6 +42,7 @@ const AbstractListTable: React.FC = () => {
           <thead>
             <tr className="bg-[#2C5F2D] text-white">
               <th className="py-3 px-4 text-left">Presentation Code</th>
+              <th className="py-3 px-4 text-left">Presentation Type</th>
               <th className="py-3 px-4 text-left">Presenting Author</th>
               <th className="py-3 px-4 text-left">Title of Abstract</th>
             </tr>
@@ -57,10 +59,13 @@ const AbstractListTable: React.FC = () => {
                   {abstract["Presentation Code"]}
                 </td>
                 <td className="py-3 px-4 text-[#231F20]">
-                  {abstract["Presenting Author"]}
+                  {abstract["Presentation Type"]}
                 </td>
                 <td className="py-3 px-4 text-[#231F20]">
-                  {abstract["Title of Abstract"]}
+                  {abstract["Name of Presenting Author"]}
+                </td>
+                <td className="py-3 px-4 text-[#231F20]">
+                  {abstract["Paper Title"]}
                 </td>
               </tr>
             ))}
