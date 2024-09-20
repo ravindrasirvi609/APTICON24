@@ -486,11 +486,22 @@ export default function Home() {
             Abstract Submission{" "}
           </h2>
 
-          <h3 className="text-3xl md:text-4xl font-bold text-center text-darkBrown underline hover:text-green">
-            <Link href="/abstractData">
-              <span>Know Your Abstract Details</span>
-            </Link>
-          </h3>
+          <div className="flex flex-col items-center space-y-6 p-6 md:p-8 bg-lightGray rounded-lg shadow-lg">
+            <h3 className="text-3xl md:text-4xl font-bold text-center text-darkBrown underline hover:text-green transition duration-300 ease-in-out">
+              <Link href="/abstractData">
+                <span>Know Your Abstract Details</span>
+              </Link>
+            </h3>
+            <p className="text-lg md:text-xl text-center text-darkGray mt-4">
+              For any queries, contact{" "}
+              <a
+                href="tel:+8249906480"
+                className="text-green hover:text-darkBrown transition duration-300 ease-in-out"
+              >
+                8249906480
+              </a>
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">

@@ -211,8 +211,8 @@ const Accommodation = () => {
           <div className="flex items-center bg-lightGrey p-4 rounded-lg">
             <PhoneIcon className="w-5 h-5 mr-2 text-ochre" />
             <p>
-              <span className="font-medium">Contact:</span> 7978603675,
-              8763900121
+              <span className="font-medium">Contact:</span> 8763900121,
+              7008984029
             </p>
           </div>
         </div>
