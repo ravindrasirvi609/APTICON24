@@ -12,6 +12,7 @@ import Contact from "@/components/contact";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import NationalBody from "./national-body/page";
 import { Download } from "lucide-react";
+import OpfModel from "@/components/opfModel";
 
 export default function Home() {
   const settings1 = {
@@ -667,7 +668,7 @@ export default function Home() {
 
         <Contact />
         <ScrollToTopButton />
-        {/* <OpfModel /> */}
+        <OpfModel />
       </main>
 
       <Footer />
