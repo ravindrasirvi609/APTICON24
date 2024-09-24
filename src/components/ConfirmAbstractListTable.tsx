@@ -4,16 +4,18 @@ import { abstracts } from "../../abstractData";
 import { Search } from "lucide-react";
 
 export interface Abstract {
+  Venue: string;
+  "Presentation Track": string;
+  "Day of Presentation": string;
+  "Time of Presentation": string;
   "Presentation Code": string;
-  "Presentation Type": string;
-  "Name of Presenting Author": string;
-  "Paper Title": string;
+  Name: string;
 }
 
 const AbstractListTable: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredAbstracts = abstracts.filter((abstract) =>
+  const filteredAbstracts = abstracts.filter((abstract: Abstract) =>
     Object.values(abstract).some((value) =>
       value.toLowerCase().includes(searchTerm.toLowerCase())
     )
@@ -42,13 +44,15 @@ const AbstractListTable: React.FC = () => {
           <thead>
             <tr className="bg-[#2C5F2D] text-white">
               <th className="py-3 px-4 text-left">Presentation Code</th>
-              <th className="py-3 px-4 text-left">Presentation Type</th>
-              <th className="py-3 px-4 text-left">Presenting Author</th>
-              <th className="py-3 px-4 text-left">Title of Abstract</th>
+              <th className="py-3 px-4 text-left">Presentation Track</th>
+              <th className="py-3 px-4 text-left">Day of Presentation</th>
+              <th className="py-3 px-4 text-left">Time of Presentation</th>
+              <th className="py-3 px-4 text-left">Name</th>
+              <th className="py-3 px-4 text-left">Venue</th>
             </tr>
           </thead>
           <tbody>
-            {filteredAbstracts.map((abstract, index) => (
+            {filteredAbstracts.map((abstract: Abstract, index: number) => (
               <tr
                 key={index}
                 className={`border-b border-[#C8BEB7] hover:bg-[#C8BEB7] transition-colors duration-200 ${
@@ -59,14 +63,16 @@ const AbstractListTable: React.FC = () => {
                   {abstract["Presentation Code"]}
                 </td>
                 <td className="py-3 px-4 text-[#231F20]">
-                  {abstract["Presentation Type"]}
+                  {abstract["Presentation Track"]}
                 </td>
                 <td className="py-3 px-4 text-[#231F20]">
-                  {abstract["Name of Presenting Author"]}
+                  {abstract["Day of Presentation"]}
                 </td>
                 <td className="py-3 px-4 text-[#231F20]">
-                  {abstract["Paper Title"]}
+                  {abstract["Time of Presentation"]}
                 </td>
+                <td className="py-3 px-4 text-[#231F20]">{abstract.Name}</td>
+                <td className="py-3 px-4 text-[#231F20]">{abstract.Venue}</td>
               </tr>
             ))}
           </tbody>
