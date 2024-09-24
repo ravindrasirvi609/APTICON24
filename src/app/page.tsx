@@ -13,6 +13,8 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import NationalBody from "./national-body/page";
 import { Download } from "lucide-react";
 import OpfModel from "@/components/opfModel";
+import ConferenceSchedule from "@/components/schedule";
+import { scheduleData } from "@/lib/data";
 
 export default function Home() {
   const settings1 = {
@@ -444,15 +446,15 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-        {/* 
-        <div id="schedule" className="container mx-auto py-20">
-          <Schedule />
+
+        <div id="schedule">
+          <ConferenceSchedule schedule={scheduleData} />
         </div>
 
-        <section id="sponsors" className="container mx-auto py-20 px-6">
+        {/* <section id="sponsors" className="container mx-auto py-20 px-6">
           {" "}
           <Sponsors />
-        </section> */}
+        </section>  */}
         <div id="registration" className="container mx-auto"></div>
         <section className="container mx-auto lg:py-20 py-5 text-black">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
