@@ -25,7 +25,7 @@ const ConferenceSchedule: React.FC<{ schedule: ConferenceSchedule }> = ({
   schedule,
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-4xl mx-auto">
+    <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-8xl mx-auto">
       <header className="mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-green">
           Conference Schedule
@@ -38,7 +38,7 @@ const ConferenceSchedule: React.FC<{ schedule: ConferenceSchedule }> = ({
             {day.events.map((event, eventIndex) => (
               <div key={eventIndex} className="bg-grey rounded-lg p-6">
                 <header className="flex items-center justify-between mb-2">
-                  <div className="bg-primary text-white font-bold px-3 py-1 rounded-full">
+                  <div className="bg-primary text-darkBrown font-bold px-3 py-1 rounded-full">
                     {event.time}
                   </div>
                   <h4 className="text-lg font-bold text-ochre">
