@@ -1,7 +1,7 @@
 import ConferenceSchedule from "@/components/schedule";
 
 export const scheduleData: ConferenceSchedule = {
-  conference: "APTICON 2024",
+  conference: "Program Schedule",
   location: "Utkal University, Bhubaneswar",
   schedule: [
     {
@@ -36,9 +36,14 @@ export const scheduleData: ConferenceSchedule = {
           ],
         },
         {
-          time: "12:00 PM - 12:40 PM",
+          time: "12:30 PM - 1:00 PM",
           event: "Plenary Session I - KLE Oration Lecture",
           location: "Convocation Hall, Utkal University",
+          speaker:
+            "Prof. P. R. Vavia, Director, Institute of Chemical Technology, Bhubaneswar",
+          chair: "Prof. Milind J. Umekar, President, APTI",
+          coChair:
+            "Dr. Sohan S. Chitlange, Vice President, APTI Western Region",
         },
         {
           time: "1:00 PM - 2:30 PM",
@@ -46,30 +51,54 @@ export const scheduleData: ConferenceSchedule = {
           location: "Food Court",
         },
         {
-          time: "2:00 PM - 2:40 PM",
+          time: "2:30 PM - 3:00 PM",
           event: "Plenary Session II - Dr. G. Bhagwant Memorial Lecture",
           location: "Convocation Hall, Utkal University",
+          speaker: "Dr. Debasis Dash, Director, DBT-ILS, Bhubaneswar",
+          chair: "Dr. Deependra Singh, Vice President, APTI Central Region",
+          coChair: "Dr. Rohit Dutt, Vice President, APTI Northern Region",
         },
         {
-          time: "2:45 PM - 3:25 PM",
+          time: "3:00 PM - 3:30 PM",
           event: "Plenary Session III - M. L. Schroff Memorial Lecture",
           location: "Convocation Hall, Utkal University",
+          speaker:
+            "Prof. Pulok K. Mukherjee, Director, IBSD, Govt. of India, Imphal, Manipur",
+          chair: "Dr. Raman Dang, Secretary, APTI",
+          coChair: "Dr. Anil M. Pethe, Associate Secretary, APTI",
         },
         {
-          time: "3:30 PM - 4:10 PM",
+          time: "3:30 PM - 4:00 PM",
           event: "Plenary Session IV - Prof. G. P. Srivastava Memorial Lecture",
           location: "Convocation Hall, Utkal University",
+          topic:
+            "Indian Pharma Industry & Academia Integration -- Driving Growth through Collaboration",
+          speaker:
+            "Dr. Parag Das, Vice President Technical, Oman Pharmaceutical Products Co. LLC, Sultanate of Oman",
+          chair: "Dr. M. Venkata Ramana, Vice President Southern Region",
+          coChair:
+            "Dr. Sachin W. Lohe, HOD, Anurag College of Pharmacy, Bhandara",
         },
         {
-          time: "4:15 PM - 4:55 PM",
+          time: "4:00 PM - 4:30 PM",
           event: "Plenary Session V - JSS Oration Lecture",
           location: "Convocation Hall",
+          speaker:
+            "Dr. Deependra Singh, Principal, UIP, Pt. Ravishankar Shukla University, Raipur",
+          chair:
+            "Prof PN Murthy, Director, Royal College of Pharmacy and Health Sciences",
+          coChair: "Dr. Somzeet Panda, President, APTI Odisha State Branch",
         },
         {
-          time: "5:00 PM - 5:30 PM",
+          time: "4:30 PM - 5:00 PM",
           event:
             "Ambikanandan Mishra Memorial Lecture in Pharmaceutical Technology",
           location: "Convocation Hall, Utkal University",
+          speaker:
+            "Muralidhara Anandamurthy, JMP Statistical Discovery LLC, NC, USA",
+          chair:
+            "Dr. Arnab Samanta, Principal, Netaji Subhash Chandra Bose IOP, WB",
+          coChair: "Dr. Nityananda Mondal, President, West Bengal State Branch",
         },
         {
           time: "2:00 PM - 4:00 PM",
@@ -91,20 +120,20 @@ export const scheduleData: ConferenceSchedule = {
           location: "Scientific Poster Hall",
           tracks: [
             {
+              time: "2:00 PM - 2:45 PM",
               track: "Poster Track 1: PCTC501 to PCTC550 & PHCG301 to PHCG350",
-              location: "Scientific Poster Hall",
             },
             {
+              time: "2:45 PM - 3:30 PM",
               track: "Poster Track 2: PCTC551 to PCTC600 & PHCH151 to PHCH200",
-              location: "Scientific Poster Hall",
             },
             {
+              time: "3:30 PM - 4:15 PM",
               track: "Poster Track 3: PCTC601 to PCTC650 & PHCL801 to PHCL850",
-              location: "Scientific Poster Hall",
             },
             {
+              time: "4:15 PM - 5:00 PM",
               track: "Poster Track 4: PCTC651 to PCTC700 & PHCL851 to PHCL900",
-              location: "Scientific Poster Hall",
             },
           ],
         },
@@ -137,24 +166,43 @@ export const scheduleData: ConferenceSchedule = {
         {
           time: "10:00 AM - 10:40 AM",
           event: "Plenary Session VI - 54th IPC Sponsored Lecture",
-          speaker:
-            "Muralidhara Anandamurthy, JMP Statistical Discovery LLC, NC, USA",
           location: "Convocation Hall, Utkal University",
+          topic:
+            "Technological Advancements revolutionizing healthcare: Is our Educational Ecosystem Ready ?",
+          speaker: "Prof. Vandana Patravale, Professor, ICT, Mumbai",
+          chair:
+            "Dr. Md. Salahhudin, National Coordination, Teachers Training Institute, APTI",
+          coChair: "Dr. Bhargab Jyoti Sahariah, President, Assam State Branch",
         },
         {
           time: "10:45 AM - 11:25 AM",
           event: "Plenary Session VII",
           location: "Convocation Hall, Utkal University",
+          title:
+            "Practical Application of AI tools - Ex Pharm & Ex Physio Software",
+          speaker:
+            "Prof. Dharmendra Ahuja, Principal Mentor, Bureau For Health & Education Status Upliftment (India)",
+          chair:
+            "Dr. Susanta Kr. Panda, Principal, Royal College of Pharmacy, Odisha",
+          coChair:
+            "Dr. Shambaditya Goswami, Vice President, Bihar State Branch",
         },
         {
           time: "11:30 AM - 12:00 PM",
           event: "Plenary Session VIII",
           location: "Convocation Hall, Utkal University",
+          speaker: "C.S. Mujeebudun",
+          chair: "Dr. Rajat Ghosh, President, Tripura State Branch",
+          coChair: "Dr. Sudipta Das, Vice President, West Bengal State Branch",
         },
         {
           time: "12:00 PM - 12:30 PM",
           event: "Plenary Session IX",
           location: "Convocation Hall, Utkal University",
+          speaker: "elite & GDC",
+          chair: "Dr. Guru Dutta Pattnaik, EC Member Odisha State Branch",
+          coChair:
+            "Dr. Subhashree Sahoo, Convenor, Women Forums, Odisha State Branch",
         },
         {
           time: "10:00 AM - 12:00 PM",
@@ -177,23 +225,24 @@ export const scheduleData: ConferenceSchedule = {
         {
           time: "10:00 AM - 1:00 PM",
           event: "Poster Presentations (Parallel Tracks)",
+          location: "Scientific Poster Hall",
           tracks: [
             {
-              track: "Poster Track 5: PHTC701 to PHTC750 & PHCL901 to PHCL950",
-              location: "Scientific Poster Hall",
+              time: "10:00 AM - 10:45 AM",
+              track: "Poster Track 5: PCTC701 to PCTC750 & PHCL901 to PHCL950",
             },
             {
+              time: "10:45 AM - 11:30 AM",
               track: "Poster Track 6: PCTC751 to PCTC800 & PHCH201 to PHCH250",
-              location: "Scientific Poster Hall",
             },
             {
+              time: "11:30 AM - 12:15 PM",
               track:
                 "Poster Track 7: PCTC801 to PCTC811 & PHCG351 to PHCG400 & PHCH251 to PHCH285",
-              location: "Scientific Poster Hall",
             },
             {
+              time: "12:15 PM - 1:00 PM",
               track: "Poster Track 8: PHCG401 to PHCG454 & PHCL951 to PHCL989",
-              location: "Scientific Poster Hall",
             },
           ],
         },
