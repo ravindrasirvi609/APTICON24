@@ -38,6 +38,7 @@ export const scheduleData: ConferenceSchedule = {
         {
           time: "12:30 PM - 1:00 PM",
           event: "Plenary Session I - KLE Oration Lecture",
+          topic: "Pharmacy Education for the Pharmaceutical Industry",
           location: "Convocation Hall, Utkal University",
           speaker:
             "Prof. P. R. Vavia, Director, Institute of Chemical Technology, Bhubaneswar",
@@ -53,6 +54,8 @@ export const scheduleData: ConferenceSchedule = {
         {
           time: "2:30 PM - 3:00 PM",
           event: "Plenary Session II - Dr. G. Bhagwant Memorial Lecture",
+          topic:
+            "Development of a ML based method to identify infection status in whole virion based vaccinated individuals",
           location: "Convocation Hall, Utkal University",
           speaker: "Dr. Debasis Dash, Director, DBT-ILS, Bhubaneswar",
           chair: "Dr. Deependra Singh, Vice President, APTI Central Region",
