@@ -146,14 +146,17 @@ export default function Home() {
                       Register Now
                     </a>
                     <Link
-                      href="/accommodation"
+                      href="/RegistrationList"
                       className="bg-green px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
-                      Accommodation Details
+                      Know Your Registration Number{" "}
                     </Link>
-                  </div>
-                  <div className="hidden sm:block md:block text-center lg:text-left mt-4">
-                    <Timestamps />
+                    <Link
+                      href="/abstractData"
+                      className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
+                    >
+                      Know Your Presentation Schedule{" "}
+                    </Link>
                   </div>
                 </div>
               </div>
