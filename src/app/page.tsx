@@ -3,8 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Slider from "react-slick";
 import Link from "next/link";
-import Timestamps from "@/components/timesstamps";
-import Schedule from "@/components/schedule";
 import Sponsors from "@/components/sponsors";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -201,7 +199,6 @@ export default function Home() {
             Participate and contribute to the evolving role of pharmacy
             education in shaping the future of healthcare.
           </p>
-          <Timestamps />
         </div>
 
         <section
