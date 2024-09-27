@@ -13,6 +13,7 @@ import { Download } from "lucide-react";
 import OpfModel from "@/components/opfModel";
 import ConferenceSchedule from "@/components/schedule";
 import { scheduleData } from "@/lib/data";
+import PPtlist from "@/components/pptList";
 
 export default function Home() {
   const settings1 = {
@@ -189,7 +190,6 @@ export default function Home() {
             </Slider>
           </div>
         </section>
-
         <div className="container mx-auto py-2 px-6 lg:hidden">
           <p className="text-sm md:text-md text-black font-medium text-center lg:text-xl mb-3">
             &quot;Welcome to APTICON 2024, The Annual National Convention of the
@@ -200,7 +200,6 @@ export default function Home() {
             education in shaping the future of healthcare.
           </p>
         </div>
-
         <section
           className="container mx-auto lg:py-20 py-5 px-6 text-black"
           id="about"
@@ -369,7 +368,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* <section
           id="speakers"
           className="container mx-auto py-20 px-6 text-black"
@@ -446,11 +444,9 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-
         <div id="schedule">
           <ConferenceSchedule schedule={scheduleData} />
         </div>
-
         {/* <section id="sponsors" className="container mx-auto py-20 px-6">
           {" "}
           <Sponsors />
@@ -480,7 +476,6 @@ export default function Home() {
           </div>
         </section>
         <div id="call-for-papers" className="container mx-auto"></div>
-
         <section
           id="call-for-papers"
           className="container mx-auto lg:py-20 py-5 px-6 text-black"
@@ -665,9 +660,8 @@ export default function Home() {
             </ul>
           </div> */}
         </section>
-
+        <PPtlist />
         <NationalBody />
-
         <Contact />
         <ScrollToTopButton />
         <OpfModel />
