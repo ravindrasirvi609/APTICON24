@@ -181,6 +181,8 @@ export const scheduleData: ConferenceSchedule = {
           time: "10:45 AM - 11:25 AM",
           event: "Plenary Session VII",
           location: "Convocation Hall, Utkal University",
+          topic:
+            "Practical Application of AI tools - Ex Pharm & Ex Physio Software",
           title:
             "Practical Application of AI tools - Ex Pharm & Ex Physio Software",
           speaker:
