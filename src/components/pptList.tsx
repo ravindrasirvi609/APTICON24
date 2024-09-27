@@ -45,7 +45,7 @@ export default function PPtlist() {
       </Head>
 
       {/* Navbar */}
-      <nav className="bg-blue-500 p-4">
+      <nav className="bg-green p-4">
         <div className="container mx-auto">
           <h1 className="text-white text-2xl font-bold">
             Track List Presentation
