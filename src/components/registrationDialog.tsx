@@ -46,11 +46,11 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({
   const registrationFees: FeeType[] = [
     {
       fees: {
-        "APTI Members": "₹ 3500",
-        students: "₹ 2900",
-        "non-Members": "₹ 4000",
-        industry: "₹ 4500",
-        companion: "₹ 1500",
+        "APTI Members": "₹ 4500",
+        students: "₹ 3500",
+        "non-Members": "₹ 5000",
+        industry: "₹ 5500",
+        companion: "₹ 2500",
         international: "118 USD",
       },
     },

@@ -8,17 +8,16 @@ import { AlertCircleIcon, CalendarIcon } from "lucide-react";
 
 type FeeType = {
   type: string;
-  regular: string;
   spot: string;
 };
 
 const registrationFees: FeeType[] = [
-  { type: "APTI Members", regular: "₹ 3500", spot: "₹ 4500" },
-  { type: "Students", regular: "₹ 2900", spot: "₹ 3500" },
-  { type: "Non-Members", regular: "₹ 4000", spot: "₹ 5000" },
-  { type: "Industry", regular: "₹ 4500", spot: "₹ 5500" },
-  { type: "Companion", regular: "₹ 1500", spot: "₹ 2500" },
-  { type: "International", regular: "118 USD", spot: "150 USD" },
+  { type: "APTI Members", spot: "₹ 4500" },
+  { type: "Students", spot: "₹ 3500" },
+  { type: "Non-Members", spot: "₹ 5000" },
+  { type: "Industry", spot: "₹ 5500" },
+  { type: "Companion", spot: "₹ 2500" },
+  { type: "International", spot: "150 USD" },
 ];
 
 export default function Registration() {
@@ -104,7 +103,6 @@ export default function Registration() {
                       className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
                     >
                       <td className="py-3 px-4 font-medium">{fee.type}</td>
-                      <td className="py-3 px-4">{fee.regular}</td>
                       <td className="py-3 px-4">{fee.spot}</td>
                       <td className="py-3 px-4">
                         <button
