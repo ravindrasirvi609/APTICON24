@@ -13,23 +13,23 @@ export default function PPtlist() {
   const trackLists: TrackList[] = [
     {
       name: "Track List 1",
-      link: "https://drive.google.com/drive/u/2/folders/1APJ059rK8NPcAqQpV7b5a8bBLtRKG6vT",
+      link: "https://drive.google.com/drive/folders/1APJ059rK8NPcAqQpV7b5a8bBLtRKG6vT?usp=sharing",
     },
     {
       name: "Track List 2",
-      link: "https://drive.google.com/drive/u/2/folders/18WyTuZSfTYsRJXBvvfMYJ8HD2L-yvV7p",
+      link: "https://drive.google.com/drive/folders/18WyTuZSfTYsRJXBvvfMYJ8HD2L-yvV7p?usp=sharing",
     },
     {
       name: "Track List 3",
-      link: "https://drive.google.com/drive/u/2/folders/1deyJBgbTGsARlEvm2b1pYAyygt4Pt_cn",
+      link: "https://drive.google.com/drive/folders/1deyJBgbTGsARlEvm2b1pYAyygt4Pt_cn?usp=sharing",
     },
     {
       name: "Track List 4",
-      link: "https://drive.google.com/drive/u/2/folders/1M5JEimfvRxrgU8z7ruUq7A0uWKJKNu5K",
+      link: "https://drive.google.com/drive/folders/1M5JEimfvRxrgU8z7ruUq7A0uWKJKNu5K?usp=sharing",
     },
     {
       name: "Track List 5",
-      link: "https://drive.google.com/drive/u/2/folders/1UIdafUnFRyLLrU5u-5taSd_8_VXWxJgL",
+      link: "https://drive.google.com/drive/folders/1UIdafUnFRyLLrU5u-5taSd_8_VXWxJgL?usp=sharing",
     },
   ];
 
