@@ -89,9 +89,6 @@ export default function Registration() {
                 <thead>
                   <tr className="bg-ashGrey">
                     <th className="py-3 px-4 text-left">Category</th>
-                    <th className="py-3 px-4 text-left">
-                      Regular Fee (Until Sep 10)
-                    </th>
                     <th className="py-3 px-4 text-left">Spot Registration</th>
                     <th className="py-3 px-4 text-left">Action</th>
                   </tr>
