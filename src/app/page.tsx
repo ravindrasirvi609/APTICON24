@@ -138,18 +138,6 @@ export default function Home() {
                     Host: APTI Eastern Region
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
-                    <a
-                      href="#registration"
-                      className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    >
-                      Register Now
-                    </a>
-                    <Link
-                      href="/RegistrationList"
-                      className="bg-green px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    >
-                      Know Your Registration Number{" "}
-                    </Link>
                     <Link
                       href="/abstractData"
                       className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
@@ -162,6 +150,7 @@ export default function Home() {
             </div>
             <Slider {...settings1}>
               {[
+                { src: "/new/14.JPG", alt: "Slide 14" },
                 { src: "/new/13.jpeg", alt: "Slide 13" },
                 { src: "/new/1.png", alt: "Slide 1" },
                 { src: "/new/2.png", alt: "Slide 2" },
