@@ -142,7 +142,7 @@ export default function Home() {
                       href="/abstractData"
                       className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
                     >
-                      Know Your Presentation Schedule{" "}
+                      Know Your Presentation{" "}
                     </Link>
                   </div>
                 </div>
