@@ -3,17 +3,15 @@ import Head from "next/head";
 import Image from "next/image";
 import Slider from "react-slick";
 import Link from "next/link";
-import Sponsors from "@/components/sponsors";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import NationalBody from "./national-body/page";
-import { Download } from "lucide-react";
-import OpfModel from "@/components/opfModel";
 import ConferenceSchedule from "@/components/schedule";
 import { scheduleData } from "@/lib/data";
 import PPtlist from "@/components/pptList";
+import OpfModel from "@/components/opfModel";
 
 export default function Home() {
   const settings1 = {
@@ -24,19 +22,6 @@ export default function Home() {
     autoplay: true,
     speed: 20000,
     autoplaySpeed: 20000,
-  };
-
-  const settings2 = {
-    dots: false,
-    lazyLoad: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    initialSlide: 2,
-    autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 4000,
-    cssEase: "linear",
   };
 
   return (
@@ -469,11 +454,11 @@ export default function Home() {
           id="call-for-papers"
           className="container mx-auto lg:py-20 py-5 px-6 text-black"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
+          {/* <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-green">
             Abstract Submission{" "}
-          </h2>
+          </h2> */}
 
-          <div className="flex flex-col items-center space-y-6 p-6 md:p-8 bg-lightGray rounded-lg shadow-lg">
+          {/* <div className="flex flex-col items-center space-y-6 p-6 md:p-8 bg-lightGray rounded-lg shadow-lg">
             <h3 className="text-3xl md:text-4xl font-bold text-center text-darkBrown underline hover:text-green transition duration-300 ease-in-out">
               <Link href="/abstractData">
                 <span>Know Your Abstract Details</span>
@@ -488,8 +473,8 @@ export default function Home() {
                 8249906480
               </a>
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+          </div> */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div className="bg-ashGrey p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4 text-ochre">
                 Poster Presentation Guidelines
@@ -518,7 +503,7 @@ export default function Home() {
                 Download Guidelines
               </a>
             </div>
-          </div>
+          </div> */}
           {/* <div className="text-2xl flex justify-center my-4 text-ochre">
             Abstract Submission is Closed
           </div> 
