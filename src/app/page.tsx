@@ -122,14 +122,6 @@ export default function Home() {
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
                     Host: APTI Eastern Region
                   </p>
-                  <div className="flex flex-wrap justify-center lg:justify-start space-x-2 sm:space-x-4">
-                    <Link
-                      href="/abstractData"
-                      className="bg-ochre px-3 py-2 rounded text-white text-xs md:text-sm lg:text-base transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    >
-                      Know Your Presentation{" "}
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
