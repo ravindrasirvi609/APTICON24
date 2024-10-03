@@ -122,6 +122,9 @@ export default function Home() {
                   <p className="text-xs md:text-md lg:text-xl mb-2 md:mb-4">
                     Host: APTI Eastern Region
                   </p>
+                  <button className="bg-green p-2 rounded-sm">
+                    <Link href={"/recieptList"}>Fees Recipt</Link>
+                  </button>
                 </div>
               </div>
             </div>
