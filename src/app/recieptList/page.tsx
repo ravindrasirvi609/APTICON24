@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { feesRecipt } from "@/recieptlist";
+import Header from "@/components/header";
 
 export interface FeeReceipt {
   Title?: string | null; // Optional and can be null explicitly
@@ -38,68 +39,72 @@ const FeeReceiptTable: React.FC = () => {
   });
 
   return (
-    <div className="container mx-auto p-4">
-      {/* Header Section */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Conference Fee Receipts</h1>
-        <p className="text-gray-600">
-          Below is a list of delegates for the conference. You can search by
-          delegate name or affiliation and download their fee receipt.
-        </p>
-      </div>
+    <>
+      {" "}
+      <Header />
+      <div className="container mx-auto p-4">
+        {/* Header Section */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold mb-2">Conference Fee Receipts</h1>
+          <p className="text-gray-600">
+            Below is a list of delegates for the conference. You can search by
+            delegate name or affiliation and download their fee receipt.
+          </p>
+        </div>
 
-      {/* Search Feature */}
-      <div className="mb-6">
-        <input
-          type="text"
-          className="border border-gray-300 rounded-md p-2 w-full"
-          placeholder="Search by Name or Affiliation"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-      </div>
+        {/* Search Feature */}
+        <div className="mb-6">
+          <input
+            type="text"
+            className="border border-gray-300 rounded-md p-2 w-full"
+            placeholder="Search by Name or Affiliation"
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+        </div>
 
-      {/* Table Section */}
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Title</TableHead>
-            <TableHead>Name of Delegate</TableHead>
-            <TableHead>Affiliation</TableHead>
-            <TableHead>Download Receipt</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {filteredReceipts.length > 0 ? (
-            filteredReceipts.map((receipt: FeeReceipt, index: number) => (
-              <TableRow key={index}>
-                <TableCell>{receipt.Title || "N/A"}</TableCell>
-                <TableCell>{receipt["Name of Delegate"]}</TableCell>
-                <TableCell>{receipt.Affiliation}</TableCell>
-                <TableCell>
-                  <Button
-                    onClick={() =>
-                      window.open(
-                        receipt["Link to Download Fee Receipt"],
-                        "_blank"
-                      )
-                    }
-                  >
-                    Download
-                  </Button>
+        {/* Table Section */}
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Title</TableHead>
+              <TableHead>Name of Delegate</TableHead>
+              <TableHead>Affiliation</TableHead>
+              <TableHead>Download Receipt</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {filteredReceipts.length > 0 ? (
+              filteredReceipts.map((receipt: FeeReceipt, index: number) => (
+                <TableRow key={index}>
+                  <TableCell>{receipt.Title || "N/A"}</TableCell>
+                  <TableCell>{receipt["Name of Delegate"]}</TableCell>
+                  <TableCell>{receipt.Affiliation}</TableCell>
+                  <TableCell>
+                    <Button
+                      onClick={() =>
+                        window.open(
+                          receipt["Link to Download Fee Receipt"],
+                          "_blank"
+                        )
+                      }
+                    >
+                      Download
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell colSpan={4} className="text-center">
+                  No results found.
                 </TableCell>
               </TableRow>
-            ))
-          ) : (
-            <TableRow>
-              <TableCell colSpan={4} className="text-center">
-                No results found.
-              </TableCell>
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
-    </div>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+    </>
   );
 };
 
