@@ -114,13 +114,6 @@ export default function Registration() {
                 </tbody>
               </table>
             </div>
-
-            <div className="p-4 bg-lightGrey">
-              <p className="text-center text-sm text-gray-600 flex items-center justify-center">
-                <AlertCircleIcon className="mr-2" size={16} />
-                Note: All fees include 18% GST
-              </p>
-            </div>
           </div>
 
           <div className="bg-white shadow-lg rounded-lg p-6">
