@@ -125,7 +125,7 @@ export default function Home() {
                   <button className="bg-green p-2 rounded-sm">
                     <Link href={"/recieptList"}>Fees Recipt</Link>
                   </button>
-                  <button className="bg-ochre p-2 rounded-sm m-2">
+                  {/* <button className="bg-ochre p-2 rounded-sm m-2">
                     <Link
                       href={
                         "https://drive.google.com/drive/folders/144QdnFzzjx4FHgRUudDr99pTXH9ffhTy"
@@ -133,7 +133,7 @@ export default function Home() {
                     >
                       APTICON Photos
                     </Link>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
