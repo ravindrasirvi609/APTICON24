@@ -178,6 +178,98 @@ export default function Home() {
             education in shaping the future of healthcare.
           </p>
         </div>
+
+        <section className="container mx-auto lg:py-20 py-10 px-6 text-black">
+          <h1 className="text-4xl font-bold text-center mb-10">
+            Conference Photo Gallery
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="https://drive.google.com/drive/folders/1Tp2CtG3GwmtL9KqvBpAsiFdmRNiTf0mA">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Inauguration
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1HwnvVSRWhHMSLzVWjLruZ9ZkW95S-NVc">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  APTI Annual Awards
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1zrUQ6kS4oYAieT6R6ebp1RhYfxO5hQC8">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Registration
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1fjWSc3DXDip9ZT0MfvOxLh75tRqzEiyh">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Plenary
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1lpiGrCItTcvl4I82rgRVbr801_TiFdOO">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Delegates
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1RruOrHa07rr3NlkPyye0r9C2nVz9v9n8">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Minister
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/10_yQP0nKNSwvwIMrv7n3iSp39vzSmxjM">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Montu Patel
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1MnPiWlx5izFjvBmJ3O2ZUAYZovRMpCZG">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Star Night
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/15ERG94X7Ov08bIyrkYOATOjbTchsaw1Y">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Row
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1zJnuhHUHZksSU9RoVin21-oN9dYwhOTc">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  AGM
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1hKeiL31Q9A09KyAEonqlQA3rpIPlADlt">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Valedictory
+                </h2>
+              </div>
+            </Link>
+            <Link href="https://drive.google.com/drive/folders/1FMeBd8KHhY92qkceW6yKZjiPoCcnkge9">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 className="text-xl font-semibold text-center text-darkBrown">
+                  Expo
+                </h2>
+              </div>
+            </Link>
+          </div>
+        </section>
         <section
           className="container mx-auto lg:py-20 py-5 px-6 text-black"
           id="about"
