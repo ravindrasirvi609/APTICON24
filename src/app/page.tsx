@@ -125,15 +125,6 @@ export default function Home() {
                   <button className="bg-green p-2 rounded-sm">
                     <Link href={"/recieptList"}>Fees Recipt</Link>
                   </button>
-                  <button className="bg-ochre p-2 rounded-sm m-2">
-                    <Link
-                      href={
-                        "https://drive.google.com/file/d/1YeDT39NTVY1JlUBz_5DWpQ7NJub9SyYm/view?usp=sharing"
-                      }
-                    >
-                      Abstract Book
-                    </Link>
-                  </button>
                 </div>
               </div>
             </div>
